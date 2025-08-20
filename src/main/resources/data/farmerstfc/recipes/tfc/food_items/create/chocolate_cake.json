@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "createaddition:chocolate_cake"
+  },
+  "hunger": 10,
+  "saturation": 1,
+  "decay_modifier": 1.25,
+  "grain": 1,
+  "protein": 0.5,
+  "dairy": 1
+}

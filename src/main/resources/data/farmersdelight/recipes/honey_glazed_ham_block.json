@@ -1,59 +1,7 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
+  "conditions": [
     {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/berries"
-      }
-    },
-    {
-      "tag": "forge:honey_jar"
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/berries"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/berries"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "farmersdelight:smoked_ham"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/berries"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:food/cooked/rice"
-      }
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:food/cooked/rice"
-      }
+      "type": "forge:false"
     }
-  ],
-  "result": {
-    "item": "farmersdelight:honey_glazed_ham_block",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
-  }
+  ]
 }

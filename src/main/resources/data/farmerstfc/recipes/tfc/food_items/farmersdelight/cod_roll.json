@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:cod_roll"
+  },
+  "category": "cooked_meat",
+  "hunger": 2,
+  "saturation": 1,
+  "decay_modifier": 2.25,
+  "protein": 1,
+  "grain": 0.8
+}

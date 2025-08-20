@@ -26,6 +26,11 @@ public class SkilletJEIPlugin implements IModPlugin {
     public static final RecipeType<HeatingRecipe> SKILLET_HEATING =
             new RecipeType<>(new ResourceLocation(farmersTFC.MOD_ID, "skillet_heating"), HeatingRecipe.class);
 
+    private static final TagKey<Item> CANT_COOK_TAG = TagKey.create(
+            net.minecraft.core.registries.Registries.ITEM,
+            new ResourceLocation("farmerstfc", "cant_cook")
+    );
+
     @Override
     public ResourceLocation getPluginUid() {
         return new ResourceLocation(farmersTFC.MOD_ID, "jei_skillet");
@@ -48,7 +53,6 @@ public class SkilletJEIPlugin implements IModPlugin {
                 .getAllRecipesFor(TFCRecipeTypes.HEATING.get())
                 .stream()
                 .filter(recipe -> {
-                    // 检查配方中的所有可能输入物品
                     return recipe.getIngredient().getItems().length > 0 &&
                             recipe.getTemperature() < 201 &&
                             Arrays.stream(recipe.getIngredient().getItems())
@@ -58,12 +62,6 @@ public class SkilletJEIPlugin implements IModPlugin {
 
         registration.addRecipes(SKILLET_HEATING, recipes);
     }
-
-    // 添加标签常量（与Mixin中一致）
-    private static final TagKey<Item> CANT_COOK_TAG = TagKey.create(
-            net.minecraft.core.registries.Registries.ITEM,
-            new ResourceLocation("farmerstfc", "cant_cook")
-    );
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {

@@ -12,6 +12,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vvxzv.farmerstfc.world.registry.block;
+import net.vvxzv.farmerstfc.world.registry.blockEntity;
 import net.vvxzv.farmerstfc.world.registry.creativeTAB;
 import net.vvxzv.farmerstfc.world.registry.item;
 import org.slf4j.Logger;
@@ -33,6 +34,7 @@ public class farmersTFC {
         block.BLOCKS.register(modEventBus);
         item.ITEMS.register(modEventBus);
         creativeTAB.CREATIVE_MODE_TAB.register(modEventBus);
+        blockEntity.BLOCK_ENTITIES.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

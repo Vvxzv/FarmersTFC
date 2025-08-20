@@ -18,6 +18,14 @@ public class creativeTAB {
                 output.accept(block.BROWN_MUSHROOM_BUNCH.get());
                 output.accept(block.RED_MUSHROOM_BUNCH.get());
                 output.accept(block.PAN.get());
+                output.accept(block.ROAST_CHICKEN_BLOCK.get());
+                output.accept(block.STUFFED_PUMPKIN_BLOCK.get());
+                output.accept(block.HONEY_GLAZED_HAM_BLOCK.get());
+                output.accept(block.SHEPHERDS_PIE_BLOCK.get());
+                output.accept(block.RICE_ROLL_MEDLEY_BLOCK.get());
+                output.accept(block.APPLE_PIE.get());
+                output.accept(block.SWEET_BERRY_CHEESECAKE.get());
+                output.accept(block.CHOCOLATE_PIE.get());
             })
             .build());
 }

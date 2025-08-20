@@ -1,50 +1,7 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
+  "conditions": [
     {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:grain/rice"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/onion"
-      }
-    },
-    {
-      "item": "minecraft:brown_mushroom"
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/potato"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/berries"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/carrot"
-      }
+      "type": "forge:false"
     }
-  ],
-  "result": {
-    "item": "farmersdelight:stuffed_pumpkin_block",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
-  },
-  "container": {
-    "item": "tfc:pumpkin"
-  },
-  "experience": 2.0,
-  "cookingtime": 1600
+  ]
 }

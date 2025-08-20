@@ -1,0 +1,26 @@
+{
+  "ingredient": [
+    {
+      "item": "farmersdelight:ham"
+    },
+    {
+      "item": "farmersdelight:cod_slice"
+    },
+    {
+      "item": "farmersdelight:salmon_slice"
+    },
+    {
+      "item": "farmersdelight:mutton_chops"
+    },
+    {
+      "item": "farmersdelight:minced_beef"
+    },
+    {
+      "item": "farmersdelight:chicken_cuts"
+    },
+    {
+      "item": "farmersdelight:bacon"
+    }
+  ],
+  "heat_capacity": 1.2
+}

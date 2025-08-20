@@ -1,0 +1,13 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:pumpkin_soup"
+  },
+  "hunger": 6,
+  "water": 10,
+  "saturation": 2,
+  "decay_modifier": 1.25,
+  "vegetables": 1.0,
+  "dairy": 1.5,
+  "protein": 1.4,
+  "fruit": 0.8
+}

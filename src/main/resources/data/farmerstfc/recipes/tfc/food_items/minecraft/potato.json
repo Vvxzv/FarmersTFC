@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "minecraft:potato"
+  },
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 0.666,
+  "vegetables": 1
+}

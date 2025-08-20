@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:dog_food"
+  },
+  "category": "vegetable",
+  "hunger": 1,
+  "saturation": 0,
+  "decay_modifier": 1
+}

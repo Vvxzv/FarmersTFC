@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:salmon_roll"
+  },
+  "category": "cooked_meat",
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 2.25,
+  "protein": 1.6,
+  "grain": 0.8
+}

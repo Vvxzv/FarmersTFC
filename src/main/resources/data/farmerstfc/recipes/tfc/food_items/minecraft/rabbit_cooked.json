@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "minecraft:cooked_rabbit"
+  },
+  "hunger": 7,
+  "saturation": 2,
+  "decay_modifier": 2,
+  "protein": 1.5
+}

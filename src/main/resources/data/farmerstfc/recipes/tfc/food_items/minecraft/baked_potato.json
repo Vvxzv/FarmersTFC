@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "minecraft:baked_potato"
+  },
+  "hunger": 6,
+  "saturation": 1,
+  "decay_modifier": 0.8,
+  "vegetables": 1.5
+}

@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:chicken_soup"
+  },
+  "category": "cooked_meat",
+  "hunger": 5,
+  "water": 10,
+  "saturation": 2,
+  "decay_modifier": 1.0,
+  "vegetables": 3.5,
+  "protein": 2
+}

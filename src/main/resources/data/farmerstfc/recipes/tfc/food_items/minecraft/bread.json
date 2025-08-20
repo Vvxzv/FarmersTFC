@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "minecraft:bread"
+  },
+  "hunger": 4,
+  "saturation": 1,
+  "decay_modifier": 1.5,
+  "grain": 1.5
+}
