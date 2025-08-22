@@ -8,6 +8,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -26,9 +27,13 @@ public class AnimalInteractionHandler {
     @SubscribeEvent
     public static void onPlayerInteractEntity(PlayerInteractEvent.EntityInteract event){
         Player player = event.getEntity();
-        LivingEntity target = (LivingEntity) event.getTarget(); // 获取被右键的实体
+        Entity entity = event.getTarget(); // 获取被右键的实体
         InteractionHand hand = event.getHand();
-        ItemStack stack = player.getItemInHand(hand); // 获取玩家手中的物品
+        ItemStack stack = player.getItemInHand(hand);
+
+        if (!(entity instanceof LivingEntity target)) {
+            return; // 若目标不是生物实体，直接返回，不干扰默认交互
+        }
 
         // 1. 处理狗粮给狗添加效果
         if (stack.getItem() instanceof DogFoodItem && target instanceof Dog dog) {
