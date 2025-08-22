@@ -23,6 +23,7 @@ public class item {
     public static final RegistryObject<Item> APPLE_PIE;
     public static final RegistryObject<Item> SWEET_BERRY_CHEESECAKE;
     public static final RegistryObject<Item> CHOCOLATE_PIE;
+    public static final RegistryObject<Item> RICH_SOIL_FARMLAND;
 
     public static Item.Properties basicItem() {
         return new Item.Properties();
@@ -41,5 +42,6 @@ public class item {
         APPLE_PIE = ITEMS.register("apple_pie", () -> new BlockItem(block.APPLE_PIE.get(), basicItem()));
         SWEET_BERRY_CHEESECAKE = ITEMS.register("sweet_berry_cheesecake", () -> new BlockItem(block.SWEET_BERRY_CHEESECAKE.get(), basicItem()));
         CHOCOLATE_PIE = ITEMS.register("chocolate_pie", () -> new BlockItem(block.CHOCOLATE_PIE.get(), basicItem()));
+        RICH_SOIL_FARMLAND = ITEMS.register("rich_soil_farmland", () -> new BlockItem(block.RICH_SOIL_FARMLAND.get(), basicItem()));
     }
 }

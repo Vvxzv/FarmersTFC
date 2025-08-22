@@ -50,6 +50,9 @@
     "farmersdelight:cod_roll",
     "farmersdelight:kelp_roll",
     "farmersdelight:kelp_roll_slice",
-    "farmersdelight:cooked_rice"
+    "farmersdelight:cooked_rice",
+    "farmersdelight:dog_food",
+    "farmersdelight:horse_feed",
+    "#farmerstfc:food_block"
   ]
 }

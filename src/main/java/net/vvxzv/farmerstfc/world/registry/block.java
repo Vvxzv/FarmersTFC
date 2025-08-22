@@ -1,8 +1,10 @@
 package net.vvxzv.farmerstfc.world.registry;
 
 import net.dries007.tfc.common.blockentities.DecayingBlockEntity;
+import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.soil.FarmlandBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -15,8 +17,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vvxzv.farmerstfc.world.block.decay.*;
 import net.vvxzv.farmerstfc.farmersTFC;
-import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.block.SkilletBlock;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 public class block {
@@ -32,6 +34,7 @@ public class block {
     public static final RegistryObject<Block> APPLE_PIE;
     public static final RegistryObject<Block> SWEET_BERRY_CHEESECAKE;
     public static final RegistryObject<Block> CHOCOLATE_PIE;
+    public static final RegistryObject<Block> RICH_SOIL_FARMLAND;
 
     static {
         BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, farmersTFC.MOD_ID);
@@ -46,5 +49,6 @@ public class block {
         APPLE_PIE = BLOCKS.register("apple_pie", () -> new DecayingPieBlock(ExtendedProperties.of(MapColor.COLOR_ORANGE).mapColor(MapColor.COLOR_GREEN).strength(1.0F).sound(SoundType.WOOD).blockEntity(blockEntity.DECAYING).serverTicks(DecayingBlockEntity::serverTick).instrument(NoteBlockInstrument.DIDGERIDOO).pushReaction(PushReaction.DESTROY), ModItems.APPLE_PIE_SLICE, block.APPLE_PIE));
         SWEET_BERRY_CHEESECAKE = BLOCKS.register("sweet_berry_cheesecake", () -> new DecayingPieBlock(ExtendedProperties.of(MapColor.COLOR_ORANGE).mapColor(MapColor.COLOR_GREEN).strength(1.0F).sound(SoundType.WOOD).blockEntity(blockEntity.DECAYING).serverTicks(DecayingBlockEntity::serverTick).instrument(NoteBlockInstrument.DIDGERIDOO).pushReaction(PushReaction.DESTROY), ModItems.SWEET_BERRY_CHEESECAKE_SLICE, block.SWEET_BERRY_CHEESECAKE));
         CHOCOLATE_PIE = BLOCKS.register("chocolate_pie", () -> new DecayingPieBlock(ExtendedProperties.of(MapColor.COLOR_ORANGE).mapColor(MapColor.COLOR_GREEN).strength(1.0F).sound(SoundType.WOOD).blockEntity(blockEntity.DECAYING).serverTicks(DecayingBlockEntity::serverTick).instrument(NoteBlockInstrument.DIDGERIDOO).pushReaction(PushReaction.DESTROY), ModItems.CHOCOLATE_PIE_SLICE, block.CHOCOLATE_PIE));
+        RICH_SOIL_FARMLAND = BLOCKS.register("rich_soil_farmland",() -> new FarmlandBlock(ExtendedProperties.of(MapColor.DIRT).strength(1.3F).sound(SoundType.GRAVEL).isViewBlocking(TFCBlocks::always).isSuffocating(TFCBlocks::always).blockEntity(TFCBlockEntities.FARMLAND), ModBlocks.RICH_SOIL));
     }
 }

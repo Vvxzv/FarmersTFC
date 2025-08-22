@@ -1,0 +1,105 @@
+package net.vvxzv.farmerstfc.world.feed;
+
+import com.google.common.collect.Lists;
+import net.dries007.tfc.common.entities.livestock.horse.TFCHorse;
+import net.dries007.tfc.common.entities.livestock.pet.Dog;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.vvxzv.farmerstfc.farmersTFC;
+import vectorwing.farmersdelight.common.item.DogFoodItem;
+import vectorwing.farmersdelight.common.item.HorseFeedItem;
+import vectorwing.farmersdelight.common.registry.ModParticleTypes;
+import vectorwing.farmersdelight.common.utility.MathUtils;
+
+@Mod.EventBusSubscriber(modid = farmersTFC.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+public class AnimalInteractionHandler {
+
+    @SubscribeEvent
+    public static void onPlayerInteractEntity(PlayerInteractEvent.EntityInteract event){
+        Player player = event.getEntity();
+        LivingEntity target = (LivingEntity) event.getTarget(); // 获取被右键的实体
+        InteractionHand hand = event.getHand();
+        ItemStack stack = player.getItemInHand(hand); // 获取玩家手中的物品
+
+        // 1. 处理狗粮给狗添加效果
+        if (stack.getItem() instanceof DogFoodItem && target instanceof Dog dog) {
+            handleDogFoodInteraction(player, dog, stack);
+            event.setCancellationResult(InteractionResult.SUCCESS);
+            event.setCanceled(true); // 取消默认交互，避免重复处理
+        }
+
+        // 2. 处理马饲料给马添加效果
+        if (stack.getItem() instanceof HorseFeedItem && target instanceof TFCHorse horse) {
+            handleHorseFeedInteraction(player, horse, stack);
+            event.setCancellationResult(InteractionResult.SUCCESS);
+            event.setCanceled(true);
+        }
+    }
+
+    private static void handleDogFoodInteraction(Player player, Dog dog, ItemStack stack) {
+        if (!dog.isAlive()) return;
+
+        // 恢复生命值
+        dog.setHealth(dog.getMaxHealth());
+
+        // 添加效果（这里示例添加速度和力量效果，可根据需要修改）
+        dog.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 0));
+        dog.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6000, 0));
+        dog.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0));
+
+        // 播放音效
+        dog.level().playSound(null, dog.blockPosition(),
+                net.minecraft.sounds.SoundEvents.GENERIC_EAT,
+                net.minecraft.sounds.SoundSource.PLAYERS, 0.8F, 0.8F);
+
+        // 生成粒子效果
+        spawnHearts(dog);
+
+        // 消耗物品（创造模式不消耗）
+        if (!player.isCreative()) {
+            stack.shrink(1);
+        }
+    }
+
+    private static void handleHorseFeedInteraction(Player player, TFCHorse horse, ItemStack stack) {
+        if (!horse.isAlive()) return;
+
+        // 恢复生命值
+        horse.setHealth(horse.getMaxHealth());
+
+        // 添加效果（示例：抗性提升和速度）
+        horse.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 1));
+        horse.addEffect(new MobEffectInstance(MobEffects.JUMP, 6000, 0));
+
+        // 播放音效
+        horse.level().playSound(null, horse.blockPosition(),
+                net.minecraft.sounds.SoundEvents.HORSE_EAT,
+                net.minecraft.sounds.SoundSource.PLAYERS, 0.8F, 0.9F);
+
+        // 生成粒子效果
+        spawnHearts(horse);
+
+        // 消耗物品
+        if (!player.isCreative()) {
+            stack.shrink(1);
+        }
+    }
+
+    private static void spawnHearts(LivingEntity entity) {
+        for(int i = 0; i < 5; ++i) {
+            double xSpeed = MathUtils.RAND.nextGaussian() * 0.02;
+            double ySpeed = MathUtils.RAND.nextGaussian() * 0.02;
+            double zSpeed = MathUtils.RAND.nextGaussian() * 0.02;
+            entity.level().addParticle((ParticleOptions) ModParticleTypes.STAR.get(), entity.getRandomX((double)1.0F), entity.getRandomY() + (double)0.5F, entity.getRandomZ((double)1.0F), xSpeed, ySpeed, zSpeed);
+        }
+    }
+}
