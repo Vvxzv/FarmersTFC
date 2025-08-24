@@ -7,13 +7,19 @@
   ],
   "key": {
     "a": {
-      "item": "firmalife:food/cocoa_powder"
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "firmalife:food/cocoa_powder"
+      }
     },
     "x": {
       "item": "minecraft:sugar"
     },
     "O": {
-      "item": "farmersdelight:pie_crust"
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "farmersdelight:pie_crust"
+      }
     }
   },
   "result": {

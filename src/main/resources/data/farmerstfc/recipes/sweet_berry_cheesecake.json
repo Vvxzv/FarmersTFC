@@ -7,13 +7,19 @@
   ],
   "key": {
     "a": {
-      "tag": "forge:fruits/berries/red"
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "forge:fruits/berries/red"
+      }
     },
     "x": {
       "item": "minecraft:sugar"
     },
     "O": {
-      "item": "farmersdelight:pie_crust"
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "farmersdelight:pie_crust"
+      }
     }
   },
   "result": {

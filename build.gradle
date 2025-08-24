@@ -186,6 +186,10 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:patchouli-306770:6164575")
     //tfc
     implementation fg.deobf("curse.maven:terrafirmacraft-302973:6739107")
+    //firmalife
+    runtimeOnly fg.deobf("curse.maven:firmalife-453394:6817407")
+    //afc
+    runtimeOnly fg.deobf("curse.maven:arborfirmacraft-877545:6814891")
     // JEI
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jeiVersion}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jeiVersion}"))
