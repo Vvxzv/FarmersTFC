@@ -18,8 +18,8 @@
       "max_temperature" : 26,
       "min_rainfall" : 70,
       "max_rainfall" : 310,
-      "min_forest" : "edge",
-      "max_forest" : "normal"
+      "min_forest":"edge",
+      "max_forest":"normal"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
     "replace":false,
     "values":[
-        "farmersdelight:red_mushroom_colony",
-        "farmersdelight:brown_mushroom_colony"
+        "farmerstfc:red_mushroom_bunch",
+        "farmerstfc:brown_mushroom_bunch"
     ]
 }
