@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "farmerstfc:block/brown_mushroom_bunch"
+    "layer0": "farmersdelight:block/brown_mushroom_colony_stage3"
   }
 }

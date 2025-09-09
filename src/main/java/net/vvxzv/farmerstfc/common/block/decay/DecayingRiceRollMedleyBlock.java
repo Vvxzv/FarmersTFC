@@ -1,4 +1,4 @@
-package net.vvxzv.farmerstfc.world.block.decay;
+package net.vvxzv.farmerstfc.common.block.decay;
 
 import net.dries007.tfc.common.blockentities.DecayingBlockEntity;
 import net.dries007.tfc.common.blocks.ExtendedProperties;

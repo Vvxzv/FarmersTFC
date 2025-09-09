@@ -1,4 +1,4 @@
-package net.vvxzv.farmerstfc.world.block.decay;
+package net.vvxzv.farmerstfc.common.block.decay;
 
 import net.dries007.tfc.common.blockentities.DecayingBlockEntity;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
@@ -8,10 +8,8 @@ import net.dries007.tfc.common.capabilities.food.IFood;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -32,6 +30,7 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.vvxzv.farmerstfc.common.registry.itemTagKey;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 
 import java.util.function.Supplier;
@@ -42,11 +41,6 @@ public class DecayingFeastBlock extends DecayingBlock {
     public final Supplier<Item> servingItem;
     public final boolean hasLeftovers;
     protected static final VoxelShape[] SHAPES;
-
-    private static final TagKey<Item> FOOD_BLOCK = TagKey.create(
-            net.minecraft.core.registries.Registries.ITEM,
-            new ResourceLocation("farmerstfc", "food_block")
-    );
 
     public DecayingFeastBlock(ExtendedProperties properties, Supplier<Item> servingItem, boolean hasLeftovers, Supplier<? extends Block> rotted) {
         super(properties, rotted);
@@ -156,7 +150,7 @@ public class DecayingFeastBlock extends DecayingBlock {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingBlockEntity decaying) {
             if (!Helpers.isBlock(state, newState.getBlock())) {
-                if(decaying.getStack().is(FOOD_BLOCK) && state.getValue(SERVINGS) < 4){
+                if(decaying.getStack().is(itemTagKey.FOOD_BLOCK) && state.getValue(SERVINGS) < 4){
                     Helpers.spawnItem(level, pos, ItemStack.EMPTY);
                 }
                 else Helpers.spawnItem(level, pos, decaying.getStack());

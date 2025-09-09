@@ -1,4 +1,4 @@
-package net.vvxzv.farmerstfc.compact.jei;
+package net.vvxzv.farmerstfc.compat.jei;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -10,10 +10,9 @@ import net.dries007.tfc.client.ClientHelpers;
 import net.dries007.tfc.common.recipes.HeatingRecipe;
 import net.dries007.tfc.common.recipes.TFCRecipeTypes;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.vvxzv.farmerstfc.farmersTFC;
+import net.vvxzv.farmerstfc.common.registry.itemTagKey;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
 import java.util.Arrays;
@@ -25,11 +24,6 @@ import java.util.stream.Collectors;
 public class SkilletJEIPlugin implements IModPlugin {
     public static final RecipeType<HeatingRecipe> SKILLET_HEATING =
             new RecipeType<>(new ResourceLocation(farmersTFC.MOD_ID, "skillet_heating"), HeatingRecipe.class);
-
-    private static final TagKey<Item> CANT_COOK_TAG = TagKey.create(
-            net.minecraft.core.registries.Registries.ITEM,
-            new ResourceLocation("farmerstfc", "cant_cook")
-    );
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -56,7 +50,7 @@ public class SkilletJEIPlugin implements IModPlugin {
                     return recipe.getIngredient().getItems().length > 0 &&
                             recipe.getTemperature() < 201 &&
                             Arrays.stream(recipe.getIngredient().getItems())
-                                    .noneMatch(stack -> stack.is(CANT_COOK_TAG));
+                                    .noneMatch(stack -> stack.is(itemTagKey.CANT_COOK));
                 })
                 .collect(Collectors.toList());
 

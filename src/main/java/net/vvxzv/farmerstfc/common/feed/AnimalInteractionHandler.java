@@ -1,6 +1,5 @@
-package net.vvxzv.farmerstfc.world.feed;
+package net.vvxzv.farmerstfc.common.feed;
 
-import com.google.common.collect.Lists;
 import net.dries007.tfc.common.entities.livestock.horse.TFCHorse;
 import net.dries007.tfc.common.entities.livestock.pet.Dog;
 import net.minecraft.core.particles.ParticleOptions;
@@ -27,7 +26,7 @@ public class AnimalInteractionHandler {
     @SubscribeEvent
     public static void onPlayerInteractEntity(PlayerInteractEvent.EntityInteract event){
         Player player = event.getEntity();
-        Entity entity = event.getTarget(); // 获取被右键的实体
+        Entity entity = event.getTarget();
         InteractionHand hand = event.getHand();
         ItemStack stack = player.getItemInHand(hand);
 

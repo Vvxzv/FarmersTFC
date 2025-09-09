@@ -1,7 +1,7 @@
 package net.vvxzv.farmerstfc.mixin;
 
 import net.dries007.tfc.common.blockentities.FarmlandBlockEntity;
-import net.vvxzv.farmerstfc.world.registry.block;
+import net.vvxzv.farmerstfc.common.registry.block;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;

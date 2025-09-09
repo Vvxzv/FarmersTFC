@@ -1,4 +1,4 @@
-package net.vvxzv.farmerstfc.compact.jei;
+package net.vvxzv.farmerstfc.compat.jei;
 
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
