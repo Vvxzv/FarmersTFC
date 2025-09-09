@@ -32,7 +32,7 @@ Mod Traits
 6. Fertilization on Rich Soil Farmland will result in nutrient addition.
 7. Dog Food and Horse Feed can be used on corresponding animal.
 
-### Added KubeJS compat (Decaying block registry)
+### Added KubeJS compat (Decaying block registry. Incomplete function)
 ```JavaScript
 StartupEvents.registry('block', event => {
     //.setRottenBlock(ResourceLocation)  If the block rots, it will become other block, otherwise it is the block itself
