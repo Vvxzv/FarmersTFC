@@ -12,8 +12,8 @@
 ### 添加了kubejs的兼容（注册带腐烂特性的方块，未完全完成的功能）
 ```JavaScript
 StartupEvents.registry('block', event => {
-    //.setRottenBlock(ResourceLocation)  If the block rots, it will become other block, otherwise it is the block itself
-    //.noDrops() Remove the KJS drops, otherwise two items will be dropped.
+    //.setRottenBlock(ResourceLocation)  如果方块腐烂了就会变成这个方块，否则就是它本身
+    //.noDrops() 移除KJS自带的掉落物，否则会掉落两份掉落物
     
     event.create('example_decaying_block', 'farmerstfc:decaying_block') 
     .setRottenBlock('minecraft:dirt')   
@@ -35,8 +35,8 @@ Mod Traits
 ### Added KubeJS compat (Decaying block registry)
 ```JavaScript
 StartupEvents.registry('block', event => {
-    //.setRottenBlock(ResourceLocation)  The Block will change to it if block rotten.
-    //.noDrops() 移除kjs自带的掉落物，否则会掉落两份掉落物
+    //.setRottenBlock(ResourceLocation)  If the block rots, it will become other block, otherwise it is the block itself
+    //.noDrops() Remove the KJS drops, otherwise two items will be dropped.
     
     event.create('example_decaying_block', 'farmerstfc:decaying_block') 
     .setRottenBlock('minecraft:dirt')   
