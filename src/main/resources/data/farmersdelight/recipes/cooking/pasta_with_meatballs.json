@@ -25,11 +25,11 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:pasta_with_meatballs",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:pasta_with_meatballs"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 1.0,
   "cookingtime": 2400
 }

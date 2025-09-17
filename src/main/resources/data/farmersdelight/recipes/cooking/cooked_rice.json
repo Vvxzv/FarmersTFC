@@ -13,11 +13,11 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:cooked_rice",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:cooked_rice"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 0.35,
   "cookingtime": 100
 }

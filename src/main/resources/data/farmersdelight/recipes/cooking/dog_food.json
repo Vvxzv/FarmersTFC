@@ -8,22 +8,16 @@
     {
       "item": "minecraft:bone_meal"
     },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": [
-        {
-          "tag": "farmersdelight:wolf_prey"
-        },
-        {
-          "tag": "tfc:foods/raw_meats"
-        }
-      ]
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:grain/rice"
+    [
+      {
+        "tag": "farmersdelight:wolf_prey"
+      },
+      {
+        "tag": "tfc:foods/raw_meats"
       }
+    ],
+    {
+      "tag": "forge:grain/rice"
     }
   ],
   "result": {

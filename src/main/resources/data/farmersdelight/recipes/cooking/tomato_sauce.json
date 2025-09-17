@@ -19,11 +19,11 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:tomato_sauce",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
-    },
+    "item": "farmersdelight:tomato_sauce"
+  },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 0.35,
   "cookingtime": 100
 }

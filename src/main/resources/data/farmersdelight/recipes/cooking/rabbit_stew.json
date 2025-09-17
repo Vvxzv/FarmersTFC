@@ -49,9 +49,9 @@
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "item": "minecraft:rabbit_stew",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
-  }
+    "item": "minecraft:rabbit_stew"
+  },
+  "modifiers": [
+    "tfc:copy_food"
+  ]
 }

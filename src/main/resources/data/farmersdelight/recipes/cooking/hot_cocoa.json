@@ -15,15 +15,18 @@
       "item": "minecraft:sugar"
     },
     {
-      "tag": "forge:seeds/cocoa"
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "forge:seeds/cocoa"
+      }
     }
   ],
   "result": {
-    "item": "farmersdelight:hot_cocoa",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:hot_cocoa"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 1.0,
   "cookingtime": 200
 }

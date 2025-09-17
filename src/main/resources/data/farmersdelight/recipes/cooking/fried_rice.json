@@ -12,7 +12,10 @@
       "tag": "forge:dusts/salt"
     },
     {
-      "tag": "forge:eggs"
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "forge:eggs"
+      }
     },
     {
       "type": "tfc:not_rotten",
@@ -28,11 +31,11 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:fried_rice",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:fried_rice"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 1.0,
   "cookingtime": 1600
 }

@@ -34,11 +34,11 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:pumpkin_soup",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:pumpkin_soup"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 1.0,
   "cookingtime": 2400
 }

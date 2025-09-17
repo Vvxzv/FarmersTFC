@@ -3,22 +3,12 @@
   "category": "misc",
   "group": "fd_cabinet",
   "key": {
-    "D": [
-      {
-        "item": "minecraft:cherry_trapdoor"
-      },
-      {
-        "item": "afc:wood/planks/fig_trapdoor"
-      }
-    ],
-    "_": [
-      {
-        "item": "minecraft:cherry_slab"
-      },
-      {
-        "item": "afc:wood/planks/fig_slab"
-      }
-    ]
+    "D": {
+      "item": "minecraft:cherry_trapdoor"
+    },
+    "_": {
+      "item": "minecraft:cherry_slab"
+    }
   },
   "pattern": [
     "___",

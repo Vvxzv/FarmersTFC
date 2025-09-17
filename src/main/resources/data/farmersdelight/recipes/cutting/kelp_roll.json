@@ -14,10 +14,10 @@
   "result": [
     {
       "item": "farmersdelight:kelp_roll_slice",
-      "count": 3,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "count": 3
     }
+  ],
+  "modifiers": [
+    "tfc:copy_food"
   ]
 }

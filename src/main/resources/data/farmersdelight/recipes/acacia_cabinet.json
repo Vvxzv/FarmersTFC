@@ -24,9 +24,6 @@
   ]
   },
   "result": {
-    "item": "farmersdelight:acacia_cabinet",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:acacia_cabinet"
   }
 }

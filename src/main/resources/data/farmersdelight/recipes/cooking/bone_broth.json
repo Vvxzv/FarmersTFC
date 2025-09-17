@@ -22,11 +22,11 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:bone_broth",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:bone_broth"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 0.35,
   "cookingtime": 1600
 }

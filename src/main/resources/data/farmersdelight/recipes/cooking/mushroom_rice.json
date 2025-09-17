@@ -28,11 +28,11 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:mushroom_rice",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:mushroom_rice"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 1.0,
   "cookingtime": 1600
 }

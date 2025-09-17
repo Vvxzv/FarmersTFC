@@ -14,10 +14,7 @@
   "result": [
     {
       "item": "farmersdelight:chicken_cuts",
-      "count": 2,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "count": 2
     },
     {
       "item": "minecraft:bone_meal"
@@ -25,5 +22,8 @@
     {
       "item": "minecraft:bone"
     }
+  ],
+  "modifiers": [
+    "tfc:copy_food"
   ]
 }

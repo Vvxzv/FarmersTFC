@@ -21,9 +21,9 @@
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "item": "minecraft:mushroom_stew",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
-  }
+    "item": "minecraft:mushroom_stew"
+  },
+  "modifiers": [
+    "tfc:copy_food"
+  ]
 }

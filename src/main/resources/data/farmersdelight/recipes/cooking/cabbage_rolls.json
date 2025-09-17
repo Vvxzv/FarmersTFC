@@ -27,10 +27,10 @@
     ],
     "result": {
       "item": "farmersdelight:cabbage_rolls",
-      "count": 1,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
-    }
+      "count": 1
+    },
+    "modifiers": [
+      "tfc:copy_food"
+    ]
   }
 }

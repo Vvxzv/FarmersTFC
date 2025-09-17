@@ -14,13 +14,13 @@
   "result": [
     {
       "item": "farmersdelight:cooked_cod_slice",
-      "count": 2,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "count": 2
     },
     {
       "item": "minecraft:bone_meal"
     }
+  ],
+  "modifiers": [
+    "tfc:copy_food"
   ]
 }

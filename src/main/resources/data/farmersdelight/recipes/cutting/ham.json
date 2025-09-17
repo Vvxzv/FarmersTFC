@@ -14,13 +14,13 @@
   "result": [
     {
       "item": "tfc:food/pork",
-      "count": 2,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "count": 2
     },
     {
       "item": "minecraft:bone"
     }
+  ],
+  "modifiers": [
+    "tfc:copy_food"
   ]
 }

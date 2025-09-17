@@ -31,11 +31,11 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:vegetable_soup",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:vegetable_soup"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 1.0,
   "cookingtime": 1600
 }

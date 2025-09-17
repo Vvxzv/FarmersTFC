@@ -14,10 +14,10 @@
   "result": [
     {
       "item": "farmersdelight:cooked_mutton_chops",
-      "count": 2,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "count": 2
     }
+  ],
+  "modifiers": [
+    "tfc:copy_food"
   ]
 }

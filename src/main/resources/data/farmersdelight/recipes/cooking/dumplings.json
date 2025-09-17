@@ -13,7 +13,8 @@
       "ingredient": {
         "tag": "forge:grain/rice"
       }
-    },{
+    },
+    {
       "tag": "forge:dusts/salt"
     },
     {
@@ -37,11 +38,11 @@
   ],
   "result": {
     "item": "farmersdelight:dumplings",
-    "count": 4,
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "count": 4
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 1.0,
   "cookingtime": 1600
 }

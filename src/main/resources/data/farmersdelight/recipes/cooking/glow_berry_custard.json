@@ -18,18 +18,21 @@
       }
     },
     {
-      "tag": "forge:eggs"
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "forge:eggs"
+      }
     },
     {
       "item": "minecraft:sugar"
     }
   ],
   "result": {
-    "item": "farmersdelight:glow_berry_custard",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:glow_berry_custard"
   },
+  "modifiers": [
+    "tfc:copy_food"
+  ],
   "experience": 1.0,
   "cookingtime": 200
 }
