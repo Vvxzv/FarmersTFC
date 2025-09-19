@@ -87,24 +87,20 @@ TFCEvents.data(event => {
 ```
 5. 最后写吃蛋糕 ```/kubejs/server_scripts/eatFoodBlock.js```
 ``` JavaScript
-const $DecayingBlockEntity = Java.loadClass('net.dries007.tfc.common.blockentities.DecayingBlockEntity')
-const $DecayingBlockBuilder$DecayingBlockJS = Java.loadClass('net.vvxzv.farmerstfc.compat.kubejs.blocks.DecayingBlockBuilder$DecayingBlockJS')
-
 BlockEvents.rightClicked(event => {
     const { block, player, level, hand, server } = event
-
     if(hand.name() != 'MAIN_HAND') return
-
     if(block.id != 'kubejs:example_decaying_block') return
+    if(player.shiftKeyDown) return
 
     const blockEntity = block.getEntity()
 
-    if (blockEntity instanceof $DecayingBlockEntity && !level.isClientSide()){
-        if(!blockEntity.isRotten()){
-            const curEat = block.blockState.getValue($DecayingBlockBuilder$DecayingBlockJS.EAT)
+    if (blockEntity instanceof DecayingBlockEntity && !level.isClientSide()){
+        if(!blockEntity.isRotten() && (player.foodLevel < 20 || player.isCreative())){
+            const curEat = block.blockState.getValue(DecayingBlockJS.EAT)
 
             const newEat = `${curEat - 1}`.split('.')[0]
-
+            
             server.runCommandSilent(`execute in ${block.dimension} run setblock ${block.pos.x} ${block.pos.y} ${block.pos.z} kubejs:example_decaying_block[eat=${newEat}, dropself=false]`)
 
             if(curEat <= 1){
@@ -209,24 +205,20 @@ TFCEvents.data(event => {
 ```
 5. Eat cake ```/kubejs/server_scripts/eatFoodBlock.js```
 ``` JavaScript
-const $DecayingBlockEntity = Java.loadClass('net.dries007.tfc.common.blockentities.DecayingBlockEntity')
-const $DecayingBlockBuilder$DecayingBlockJS = Java.loadClass('net.vvxzv.farmerstfc.compat.kubejs.blocks.DecayingBlockBuilder$DecayingBlockJS')
-
 BlockEvents.rightClicked(event => {
     const { block, player, level, hand, server } = event
-
     if(hand.name() != 'MAIN_HAND') return
-
     if(block.id != 'kubejs:example_decaying_block') return
+    if(player.shiftKeyDown) return
 
     const blockEntity = block.getEntity()
 
-    if (blockEntity instanceof $DecayingBlockEntity && !level.isClientSide()){
-        if(!blockEntity.isRotten()){
-            const curEat = block.blockState.getValue($DecayingBlockBuilder$DecayingBlockJS.EAT)
+    if (blockEntity instanceof DecayingBlockEntity && !level.isClientSide()){
+        if(!blockEntity.isRotten() && (player.foodLevel < 20 || player.isCreative())){
+            const curEat = block.blockState.getValue(DecayingBlockJS.EAT)
 
             const newEat = `${curEat - 1}`.split('.')[0]
-
+            
             server.runCommandSilent(`execute in ${block.dimension} run setblock ${block.pos.x} ${block.pos.y} ${block.pos.z} kubejs:example_decaying_block[eat=${newEat}, dropself=false]`)
 
             if(curEat <= 1){
