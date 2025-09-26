@@ -8,7 +8,7 @@
 5. 添加了带保质期的食物方块代替农夫乐事的食物方块；
 6. 肥料使用在沃土上会有额外的肥力加成；
 7. 狗粮和马饲料可以用在对应的生物上。
-8. 农夫乐事的炉灶是热源。
+8. 农夫乐事的炉灶是群峦热源。
 
 ### 添加了kubejs的兼容（注册带腐烂特性的方块）
 ``` JavaScript
@@ -127,7 +127,7 @@ BlockEvents.rightClicked(event => {
 5. Added decaying food block replace food block of Farmer's Delight.
 6. Fertilization on Rich Soil Farmland will result in nutrient addition.
 7. Dog Food and Horse Feed can be used on corresponding animal.
-8. Farmer's Delight Stove is a heat source.
+8. Farmer's Delight Stove is a tfc heat source.
 
 ### Added KubeJS compat (Decaying block registry)
 ```JavaScript
