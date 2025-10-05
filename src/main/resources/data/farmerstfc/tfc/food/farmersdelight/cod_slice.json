@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:cod_slice"
+  },
+  "category": "meat",
+  "hunger": 1,
+  "saturation": 0,
+  "decay_modifier": 3,
+  "protein": 0.6
+}

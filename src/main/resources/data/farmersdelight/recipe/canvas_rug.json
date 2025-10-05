@@ -1,0 +1,28 @@
+{
+  "type": "tfc:advanced_shapeless_crafting",
+  "ingredients": [
+    {
+      "item": "farmersdelight:canvas"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ],
+  "primary_ingredient": {
+    "tag": "c:tools/knife"
+  },
+  "remainder": {
+    "modifiers": [
+      {
+        "type": "tfc:damage_crafting_remainder"
+      }
+    ]
+  },
+  "result": {
+    "stack": {
+      "count": 2,
+      "id": "farmersdelight:canvas_rug"
+    },
+    "modifiers": []
+  }
+}

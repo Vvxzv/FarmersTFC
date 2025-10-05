@@ -1,0 +1,92 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/dough"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/cabbage"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/onion"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        { 
+          "type": "tfc:and",
+          "children": [
+            {
+              "tag": "c:foods/raw_chicken"
+            },
+            {
+              "type": "tfc:not_rotten"
+            }
+          ]
+        },
+        { 
+          "type": "tfc:and",
+          "children": [
+            {
+              "tag": "c:foods/raw_pork"
+            },
+            {
+              "type": "tfc:not_rotten"
+            }
+          ]
+        },
+        { 
+          "type": "tfc:and",
+          "children": [
+            {
+              "tag": "c:foods/raw_beef"
+            },
+            {
+              "type": "tfc:not_rotten"
+            }
+          ]
+        },
+        { 
+          "type": "tfc:and",
+          "children": [
+            {
+              "item": "minecraft:brown_mushroom"
+            },
+            {
+              "type": "tfc:not_rotten"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "farmersdelight:dumplings"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:hay_block"
+      },
+      {
+        "item": "farmersdelight:rice_bale"
+      },
+      {
+        "item": "tfc:thatch"
+      }
+    ],
+    {
+      "tag": "c:foods/apple"
+    },
+    {
+      "tag": "c:foods/apple"
+    },
+    {
+      "item": "minecraft:golden_carrot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:horse_feed"
+  }
+}

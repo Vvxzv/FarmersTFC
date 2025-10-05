@@ -1,0 +1,25 @@
+{
+  "type": "tfc:heating",
+  "ingredient": { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "item": "farmersdelight:chicken_cuts"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+  "result_item": {
+    "stack": {
+      "id": "farmersdelight:cooked_chicken_cuts"
+    },
+    "modifiers": [
+      {
+        "type": "tfc:copy_food"
+      }
+    ]
+  },
+  "temperature": 200.0
+}

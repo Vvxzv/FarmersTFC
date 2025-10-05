@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/dried_kelp"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    "R": {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/cooked_rice"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    "X": {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/carrot"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  },
+  "pattern": [
+    "RXR",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:kelp_roll"
+  }
+}

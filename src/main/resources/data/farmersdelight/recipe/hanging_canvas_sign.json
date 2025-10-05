@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "farmersdelight:canvas"
+    },
+    "X": {
+      "tag": "c:chains"
+    },
+    "w": {
+      "tag": "tfc:lumber"
+    }
+  },
+  "pattern": [
+    "X X",
+    "w#w",
+    "w#w"
+  ],
+  "result": {
+    "count": 3,
+    "id": "farmersdelight:hanging_canvas_sign"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/cooked_rice"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:eggs"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/carrot"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/onion"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:fried_rice"
+  }
+}

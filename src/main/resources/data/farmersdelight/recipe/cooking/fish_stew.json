@@ -1,0 +1,44 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/safe_raw_fish"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "item": "farmersdelight:tomato_sauce"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/onion"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:fish_stew"
+  }
+}

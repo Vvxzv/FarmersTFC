@@ -1,0 +1,43 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "type": "tfc:fluid_content",
+      "fluid": {
+        "amount": 100,
+        "tag": "c:milk"
+      }
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:crops/cocoa_bean"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:crops/cocoa_bean"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:hot_cocoa"
+  }
+}

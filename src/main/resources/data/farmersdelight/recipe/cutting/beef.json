@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/raw_beef"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "farmersdelight:minced_beef"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

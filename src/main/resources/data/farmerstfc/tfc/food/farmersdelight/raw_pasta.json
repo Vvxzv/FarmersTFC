@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:raw_pasta"
+  },
+  "category": "grain",
+  "hunger": 2,
+  "saturation": 0,
+  "decay_modifier": 3,
+  "grain": 0.5
+}

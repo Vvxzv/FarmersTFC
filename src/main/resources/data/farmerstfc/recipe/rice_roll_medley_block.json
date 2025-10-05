@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+            "item": "farmersdelight:kelp_roll_slice"
+        },
+        {
+            "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+            "item": "farmersdelight:kelp_roll_slice"
+        },
+        {
+            "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+            "item": "farmersdelight:kelp_roll_slice"
+        },
+        {
+            "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+            "item": "farmersdelight:salmon_roll"
+        },
+        {
+            "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+            "item": "farmersdelight:salmon_roll"
+        },
+        {
+            "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+            "item": "farmersdelight:salmon_roll"
+        },
+        {
+            "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+            "item": "farmersdelight:cod_roll"
+        },
+        {
+            "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+            "item": "farmersdelight:cod_roll"
+        },
+        {
+            "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "result": {
+    "id": "farmerstfc:rice_roll_medley_block"
+  }
+}

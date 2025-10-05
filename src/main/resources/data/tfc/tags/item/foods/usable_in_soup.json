@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "farmersdelight:cabbage",
+    "farmersdelight:cabbage_leaf",
+    "farmersdelight:tomato",
+    "farmersdelight:onion",
+    "farmersdelight:minced_beef",
+    "farmersdelight:chicken_cuts",
+    "farmersdelight:bacon",
+    "farmersdelight:mutton_chops",
+    "farmersdelight:ham",
+    "farmersdelight:cod_slice",
+    "farmersdelight:salmon_slice",
+    "farmersdelight:beef_patty",
+    "farmersdelight:cooked_chicken_cuts",
+    "farmersdelight:cooked_bacon",
+    "farmersdelight:cooked_mutton_chops",
+    "farmersdelight:smoked_ham",
+    "farmersdelight:cooked_cod_slice",
+    "farmersdelight:cooked_salmon_slice"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "item": "farmersdelight:pumpkin_slice"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/leafy_green"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/raw_pork"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:fluid_content",
+      "fluid": {
+        "amount": 100,
+        "tag": "c:milk"
+      }
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:pumpkin_soup"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "minecraft:stick"
+    },
+    "i": {
+      "item": "minecraft:ice"
+    },
+    "m": {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/melon_slice"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  },
+  "pattern": [
+    " mm",
+    "imm",
+    "-i "
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:melon_popsicle"
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:jungle_slab",
+        "tfc:wood/planks/palm_slab"
+    ]
+}

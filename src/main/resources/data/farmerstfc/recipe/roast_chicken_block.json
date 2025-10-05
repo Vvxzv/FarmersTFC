@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/onion"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:eggs"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/bread"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/carrot"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "farmerstfc:full_chicken"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/baked_potato"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/carrot"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/baked_potato"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "result": {
+    "id": "farmerstfc:roast_chicken_block"
+  }
+}

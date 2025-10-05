@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "type": "tfc:fluid_content",
+      "fluid": {
+        "amount": 100,
+        "tag": "c:milk"
+      }
+    },
+    "d": {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/dough"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    "s": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "sMs",
+    " d "
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:pie_crust"
+  }
+}

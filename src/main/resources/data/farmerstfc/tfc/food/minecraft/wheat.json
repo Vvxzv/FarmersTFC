@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "minecraft:wheat"
+  },
+  "hunger": 4,
+  "saturation": 0,
+  "decay_modifier": 0.666
+}

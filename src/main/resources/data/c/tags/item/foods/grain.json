@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "farmersdelight:rice",
+        "tfc:food/rice_grain",
+        "tfc:food/rye_grain",
+        "tfc:food/oat_grain",
+        "tfc:food/maize_grain",
+        "tfc:food/barley_grain",
+        "tfc:food/wheat_grain"
+    ]
+}

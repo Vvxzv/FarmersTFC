@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/dough"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 1,
+        "id": "farmersdelight:raw_pasta"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

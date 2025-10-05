@@ -1,0 +1,103 @@
+{
+  "type": "tfc:advanced_shapeless_crafting",
+  "ingredients": [
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/apple"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/melon_slice"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/melon_slice"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/berry"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/berry"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "item": "farmersdelight:pumpkin_slice"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "primary_ingredient": {
+      "item": "minecraft:bowl"
+  },
+  "remainder": {
+    "modifiers": []
+  },
+  "result": {
+    "stack": {
+      "id": "farmersdelight:fruit_salad"
+    },
+    "modifiers": [
+      {
+        "type":"tfc:meal",
+        "food":{
+          "hunger":4,
+          "water":10,
+          "saturation":2,
+          "decay_modifier":4
+        },
+        "portions":[
+          {
+            "nutrient_modifier":1,
+            "water_modifier":1,
+            "saturation_modifier":1
+          }
+        ]
+      }
+    ]
+  }
+}

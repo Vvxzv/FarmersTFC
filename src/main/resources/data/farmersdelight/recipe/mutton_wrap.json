@@ -1,0 +1,77 @@
+{
+  "type": "tfc:advanced_shapeless_crafting",
+  "ingredients": [
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/bread"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/cooked_mutton"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/leafy_green"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/onion"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "primary_ingredient": {
+    "tag": "c:foods/onion"
+  },
+  "remainder": {
+    "modifiers": []
+  },
+  "result": {
+    "stack": {
+      "id": "farmersdelight:mutton_wrap"
+    },
+    "modifiers": [
+      {
+        "type":"tfc:meal",
+        "food":{
+          "hunger":5,
+          "saturation":2,
+          "decay_modifier":1.5
+        },
+        "portions":[
+          {
+            "nutrient_modifier":1,
+            "water_modifier":1,
+            "saturation_modifier":1
+          }
+        ]
+      }
+    ]
+  }
+}

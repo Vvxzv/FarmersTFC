@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "b",
+    "c"
+  ],
+  "key": {
+    "b":{
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/berry"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    "c":{
+      "type": "tfc:and",
+      "children": [
+        {
+          "item": "firmalife:food/chocolate_chip_cookie"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:sweet_berry_cookie"
+  }
+}

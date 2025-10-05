@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "item": "farmerstfc:sweet_berry_cheesecake"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "farmersdelight:sweet_berry_cheesecake_slice"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+} 

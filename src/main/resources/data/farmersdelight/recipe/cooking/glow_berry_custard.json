@@ -1,0 +1,42 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/berry"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:fluid_content",
+      "fluid": {
+        "amount": 100,
+        "tag": "c:milk"
+      }
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:eggs"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:glow_berry_custard"
+  }
+}

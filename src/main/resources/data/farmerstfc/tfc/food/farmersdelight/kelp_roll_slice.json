@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:kelp_roll_slice"
+  },
+  "category": "cooked_meat",
+  "hunger": 2,
+  "saturation": 1,
+  "decay_modifier": 2.25,
+  "vegetables": 0.8,
+  "grain": 0.8
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "b",
+    "c"
+  ],
+  "key": {
+    "b": {
+      "item":"firmalife:raw_honey"
+    },
+    "c": {
+      "type": "tfc:and",
+      "children": [
+        {
+          "item": "firmalife:food/chocolate_chip_cookie"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  },
+  "result": {
+    "id": "farmersdelight:honey_cookie"
+  }
+}

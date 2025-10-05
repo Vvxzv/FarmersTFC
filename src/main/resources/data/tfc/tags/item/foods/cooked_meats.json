@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "farmersdelight:beef_patty",
+    "farmersdelight:cooked_chicken_cuts",
+    "farmersdelight:cooked_bacon",
+    "farmersdelight:cooked_mutton_chops",
+    "farmersdelight:smoked_ham",
+    "farmersdelight:cooked_cod_slice",
+    "farmersdelight:cooked_salmon_slice"
+  ]
+}

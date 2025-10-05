@@ -1,0 +1,13 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:honey_glazed_ham"
+  },
+  "category": "vegetable",
+  "hunger": 12,
+  "saturation": 6,
+  "decay_modifier": 1.0,
+  "vegetables": 3.2,
+  "protein": 2.4,
+  "dairy": 0.8,
+  "grain": 1.6
+}

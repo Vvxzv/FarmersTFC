@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "farmerstfc:rice_roll_medley_block"
+  },
+  "category": "vegetable",
+  "hunger": 8,
+  "saturation": 2,
+  "decay_modifier": 1.5,
+  "vegetables": 2,
+  "protein": 3,
+  "grain": 2
+}

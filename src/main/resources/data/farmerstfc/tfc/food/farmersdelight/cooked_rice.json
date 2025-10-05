@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:cooked_rice"
+  },
+  "category": "grain",
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 1.5,
+  "grain": 1.2
+}

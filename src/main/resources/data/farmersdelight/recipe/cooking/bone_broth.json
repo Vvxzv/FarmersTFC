@@ -1,0 +1,36 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:bones"
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:mushrooms"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    { 
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/raw_meat"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:bone_broth"
+  }
+}

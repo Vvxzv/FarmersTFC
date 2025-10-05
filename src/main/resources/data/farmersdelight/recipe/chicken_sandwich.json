@@ -1,0 +1,84 @@
+{
+  "type": "tfc:advanced_shapeless_crafting",
+  "ingredients": [
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/bread"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/cooked_chicken"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/leafy_green"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/carrot"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ],
+  "primary_ingredient": {
+    "tag": "c:tools/knife"
+  },
+  "remainder": {
+    "modifiers": [
+      {
+        "type": "tfc:damage_crafting_remainder"
+      }
+    ]
+  },
+  "result": {
+    "stack": {
+      "id": "farmersdelight:chicken_sandwich"
+    },
+    "modifiers": [
+      {
+        "type":"tfc:meal",
+        "food":{
+          "hunger":5,
+          "saturation":2,
+          "decay_modifier":1.5
+        },
+        "portions":[
+          {
+            "nutrient_modifier":1,
+            "water_modifier":1,
+            "saturation_modifier":1
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:sweet_berry_cookie"
+  },
+  "hunger": 2,
+  "saturation": 1,
+  "decay_modifier": 1.25,
+  "grain": 1,
+  "fruit": 1,
+  "dairy": 0.2
+}

@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:rice"
+  },
+  "hunger": 2,
+  "saturation": 0.5,
+  "decay_modifier": 0.25
+}

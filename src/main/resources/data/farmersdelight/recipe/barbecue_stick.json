@@ -1,0 +1,70 @@
+{
+  "type": "tfc:advanced_shapeless_crafting",
+  "ingredients": [
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/tomato"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/onion"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "type": "tfc:and",
+      "children": [
+        {
+          "tag": "c:foods/cooked_meat"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "primary_ingredient": {
+    "item": "minecraft:stick"
+  },
+  "remainder": {
+    "modifiers": []
+  },
+  "result": {
+    "stack": {
+      "id": "farmersdelight:barbecue_stick"
+    },
+    "modifiers": [
+      {
+        "type": "tfc:meal",
+        "food": {
+          "hunger": 6,
+          "water":10,
+          "saturation": 3,
+          "decay_modifier": 2
+        },
+        "portions": [
+          {
+            "nutrient_modifier": 1,
+            "water_modifier": 1,
+            "saturation_modifier": 1
+          }
+        ]
+      }
+    ]
+  }
+}

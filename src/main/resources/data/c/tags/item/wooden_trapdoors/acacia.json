@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:acacia_trapdoor",
+        "tfc:wood/trapdoor/acacia"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+        "a": {
+            "tag": "minecraft:buttons"
+        },
+        "b": {
+            "item": "tfc:silica_glass_bottle"
+        }
+    },
+    "pattern": [
+        "a",
+        "b"
+    ],
+    "result": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+    }
+}
