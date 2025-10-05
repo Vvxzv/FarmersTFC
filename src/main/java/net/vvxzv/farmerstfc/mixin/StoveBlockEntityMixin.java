@@ -31,11 +31,5 @@ public class StoveBlockEntityMixin extends SyncedBlockEntity {
                 above.getCapability(HeatCapability.BLOCK_CAPABILITY).ifPresent((cap) -> cap.setTemperatureIfWarmer(temperature));
             }
         }
-        else {
-            BlockEntity above = level.getBlockEntity(pos.above());
-            if (above != null) {
-                above.getCapability(HeatCapability.BLOCK_CAPABILITY).ifPresent((cap) -> cap.setTemperatureIfWarmer(0.0f));
-            }
-        }
     }
 }

@@ -1,9 +1,0 @@
-{
-  "ingredient": {
-    "item": "minecraft:cookie"
-  },
-  "hunger": 2,
-  "saturation": 1,
-  "decay_modifier": 1.25,
-  "grain": 1
-}

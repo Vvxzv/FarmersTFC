@@ -10,6 +10,12 @@
     {
       "type": "tfc:not_rotten",
       "ingredient": {
+        "tag": "forge:cooked_bacon"
+      }
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
         "tag": "forge:cooked_eggs"
       }
     },
