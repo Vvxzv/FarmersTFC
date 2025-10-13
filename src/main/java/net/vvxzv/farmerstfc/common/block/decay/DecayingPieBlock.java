@@ -104,7 +104,7 @@ public class DecayingPieBlock extends FDecayingBlock {
             ItemStack sliceStack = this.getPieSliceItem();
             FoodProperties sliceFood = sliceStack.getItem().getFoodProperties(sliceStack, playerIn);
             if (sliceFood != null) {
-                playerIn.getFoodData().eat(sliceFood);
+                IPlayerInfo.get(playerIn).eat(sliceStack);
 
                 for(FoodProperties.PossibleEffect effect : sliceFood.effects()) {
                     if (!level.isClientSide && effect != null && level.random.nextFloat() < effect.probability()) {
