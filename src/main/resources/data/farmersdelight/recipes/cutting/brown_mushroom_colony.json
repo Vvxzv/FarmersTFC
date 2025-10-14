@@ -18,8 +18,5 @@
       "item": "minecraft:brown_mushroom",
       "count": 3
     }
-  ],
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

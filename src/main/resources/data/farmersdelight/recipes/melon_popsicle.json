@@ -20,9 +20,6 @@
     }
   },
   "result": {
-    "item": "farmersdelight:melon_popsicle",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:melon_popsicle"
   }
 }

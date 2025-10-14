@@ -1,15 +1,7 @@
 {
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "farmersdelight:minced_beef"
+  "conditions": [
+    {
+      "type": "forge:false"
     }
-  },
-  "result": "farmersdelight:beef_patty",
-  "modifiers": [
-    "tfc:copy_food"
-  ],
-  "experience": 0.35,
-  "cookingtime": 200
+  ]
 }

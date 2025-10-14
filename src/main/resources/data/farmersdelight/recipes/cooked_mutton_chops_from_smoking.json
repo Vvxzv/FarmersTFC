@@ -1,16 +1,7 @@
 {
-  "type": "minecraft:smoking",
-  "category": "food",
-  "cookingtime": 100,
-  "experience": 0.35,
-  "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "farmersdelight:mutton_chops"
+  "conditions": [
+    {
+      "type": "forge:false"
     }
-  },
-  "result": "farmersdelight:cooked_mutton_chops",
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

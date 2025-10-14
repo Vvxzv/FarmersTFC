@@ -51,9 +51,6 @@
     }
   ],
   "result": {
-    "item": "farmerstfc:honey_glazed_ham_block",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmerstfc:honey_glazed_ham_block"
   }
 }

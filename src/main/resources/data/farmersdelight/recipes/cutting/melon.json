@@ -16,8 +16,5 @@
       "item": "tfc:food/melon_slice",
       "count": 6
     }
-  ],
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

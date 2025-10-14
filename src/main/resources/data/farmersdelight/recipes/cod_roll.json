@@ -23,8 +23,5 @@
   "result": {
     "item": "farmersdelight:cod_roll",
     "count": 2
-  },
-  "modifiers": [
-    "tfc:copy_food"
-  ]
+  }
 }

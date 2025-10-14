@@ -3,9 +3,6 @@
   "recipe_book_tab": "misc",
   "ingredients": [
     {
-      "tag": "forge:dusts/salt"
-    },
-    {
       "type": "tfc:not_rotten",
       "ingredient": {
         "tag": "forge:grain/rice"
@@ -15,9 +12,6 @@
   "result": {
     "item": "farmersdelight:cooked_rice"
   },
-  "modifiers": [
-    "tfc:copy_food"
-  ],
   "experience": 0.35,
   "cookingtime": 100
 }

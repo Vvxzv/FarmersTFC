@@ -24,9 +24,6 @@
   "result": {
     "item": "farmersdelight:hot_cocoa"
   },
-  "modifiers": [
-    "tfc:copy_food"
-  ],
   "experience": 1.0,
   "cookingtime": 200
 }

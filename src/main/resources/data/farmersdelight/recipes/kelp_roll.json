@@ -38,10 +38,7 @@
       }
     ],
     "result": {
-      "item": "farmersdelight:kelp_roll",
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "item": "farmersdelight:kelp_roll"
     }
   }
 }

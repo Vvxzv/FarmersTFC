@@ -33,9 +33,6 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:melon_juice",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:melon_juice"
   }
 }

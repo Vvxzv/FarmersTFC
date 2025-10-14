@@ -51,9 +51,6 @@
     }
   ],
   "result": {
-    "item": "farmerstfc:shepherds_pie_block",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmerstfc:shepherds_pie_block"
   }
 }

@@ -21,8 +21,5 @@
       "item": "farmersdelight:minced_beef",
       "count": 2
     }
-  ],
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

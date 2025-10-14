@@ -22,9 +22,6 @@
     }
   },
   "result": {
-    "item": "farmersdelight:pie_crust",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:pie_crust"
   }
 }

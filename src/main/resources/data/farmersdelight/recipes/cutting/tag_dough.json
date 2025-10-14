@@ -16,8 +16,5 @@
       "item": "farmersdelight:raw_pasta",
       "count": 1
     }
-  ],
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

@@ -54,9 +54,6 @@
     }
   ],
   "result": {
-    "item": "farmerstfc:rice_roll_medley_block",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmerstfc:rice_roll_medley_block"
   }
 }

@@ -9,9 +9,6 @@
       }
     },
     {
-      "tag": "forge:dusts/salt"
-    },
-    {
       "type": "tfc:not_rotten",
       "ingredient": {
         "tag": "forge:vegetables/tomato"
@@ -25,10 +22,7 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:fish_stew",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:fish_stew"
   },
   "experience": 1.0,
   "cookingtime": 1600

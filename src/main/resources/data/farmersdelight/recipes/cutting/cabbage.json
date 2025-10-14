@@ -19,10 +19,7 @@
   "result": [
     {
       "item": "farmersdelight:cabbage_leaf",
-      "count": 2,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "count": 2
     }
   ]
 }

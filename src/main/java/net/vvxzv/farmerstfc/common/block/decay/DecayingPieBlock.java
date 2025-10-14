@@ -167,10 +167,9 @@ public class DecayingPieBlock extends DecayingBlock {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingBlockEntity decaying) {
             if (!Helpers.isBlock(state, newState.getBlock())) {
-                if(decaying.getStack().is(itemTagKey.FOOD_BLOCK) && state.getValue(BITES) > 0){
-                    Helpers.spawnItem(level, pos, ItemStack.EMPTY);
+                if(state.getValue(BITES) == 0){
+                    Helpers.spawnItem(level, pos, decaying.getStack());
                 }
-                else Helpers.spawnItem(level, pos, decaying.getStack());
             }
         }
     }

@@ -23,9 +23,6 @@
     }
   },
   "result": {
-    "item": "farmerstfc:sweet_berry_cheesecake",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmerstfc:sweet_berry_cheesecake"
   }
 }

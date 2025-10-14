@@ -1,15 +1,7 @@
 {
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "farmersdelight:salmon_slice"
+  "conditions": [
+    {
+      "type": "forge:false"
     }
-  },
-  "result": "farmersdelight:cooked_salmon_slice",
-  "modifiers": [
-    "tfc:copy_food"
-  ],
-  "experience": 0.35,
-  "cookingtime": 200
+  ]
 }

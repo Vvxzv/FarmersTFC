@@ -19,8 +19,5 @@
     {
       "item": "minecraft:bone"
     }
-  ],
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

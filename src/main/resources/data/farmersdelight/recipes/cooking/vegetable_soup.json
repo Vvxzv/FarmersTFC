@@ -9,9 +9,6 @@
       }
     },
     {
-      "tag": "forge:dusts/salt"
-    },
-    {
       "type": "tfc:not_rotten",
       "ingredient": {
         "tag": "forge:vegetables/beetroot"
@@ -33,9 +30,6 @@
   "result": {
     "item": "farmersdelight:vegetable_soup"
   },
-  "modifiers": [
-    "tfc:copy_food"
-  ],
   "experience": 1.0,
   "cookingtime": 1600
 }

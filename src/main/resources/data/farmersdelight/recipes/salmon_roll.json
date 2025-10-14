@@ -13,9 +13,6 @@
   ],
   "result": {
     "item": "farmersdelight:salmon_roll",
-    "count": 2,
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "count": 2
   }
 }

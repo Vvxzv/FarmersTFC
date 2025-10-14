@@ -24,8 +24,5 @@
     {
       "item": "minecraft:bone_meal"
     }
-  ],
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

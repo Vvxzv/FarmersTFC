@@ -23,9 +23,6 @@
     }
   },
   "result": {
-    "item": "farmerstfc:apple_pie",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmerstfc:apple_pie"
   }
 }

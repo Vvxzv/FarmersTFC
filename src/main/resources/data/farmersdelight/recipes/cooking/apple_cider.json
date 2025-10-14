@@ -19,10 +19,7 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:apple_cider",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:apple_cider"
   },
   "experience": 1.0,
   "cookingtime": 200

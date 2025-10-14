@@ -16,9 +16,6 @@
     }
   },
   "result": {
-    "item": "farmersdelight:honey_cookie",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:honey_cookie"
   }
 }

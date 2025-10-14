@@ -22,9 +22,6 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:nether_salad",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:nether_salad"
   }
 }

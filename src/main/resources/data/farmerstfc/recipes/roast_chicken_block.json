@@ -51,9 +51,6 @@
     }
   ],
   "result": {
-    "item": "farmerstfc:roast_chicken_block",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmerstfc:roast_chicken_block"
   }
 }

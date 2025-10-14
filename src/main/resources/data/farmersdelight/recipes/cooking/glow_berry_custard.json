@@ -30,9 +30,6 @@
   "result": {
     "item": "farmersdelight:glow_berry_custard"
   },
-  "modifiers": [
-    "tfc:copy_food"
-  ],
   "experience": 1.0,
   "cookingtime": 200
 }

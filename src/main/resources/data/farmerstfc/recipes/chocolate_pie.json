@@ -24,8 +24,5 @@
   },
   "result": {
     "item": "farmerstfc:chocolate_pie"
-  },
-  "modifiers": [
-    "tfc:copy_food"
-  ]
+  }
 }

@@ -1,36 +1,23 @@
 {
-  "type": "tfc:damage_inputs_shapeless_crafting",
-  "recipe": {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "item": "farmersdelight:cabbage_leaf"
-        }
-      },
-      {
-        "tag": "tfc:knives"
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:vegetables/carrot"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "item": "farmersdelight:cabbage_leaf"
-        }
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "forge:crops/cabbage"
       }
-    ],
-    "result": {
-      "item": "farmersdelight:cabbage_rolls",
-      "count": 1
     },
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "farmersdelight:cabbage_roll_ingredients"
+      }
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "farmersdelight:cabbage_rolls"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "farmersdelight:iron_knife"
+  },
+  "second_input": {
+    "item": "tfc:powder/diamond"
+  },
+  "tier": 5,
+  "result": {
+    "item": "farmersdelight:diamond_knife"
+  }
+}

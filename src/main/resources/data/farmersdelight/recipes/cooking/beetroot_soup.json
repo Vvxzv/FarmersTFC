@@ -1,17 +1,15 @@
 {
   "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
   "ingredients": [
     {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "tag": "forge:vegetables/tomato"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/onion"
+        "tag": "forge:vegetables/beetroot"
       }
     },
     {
@@ -23,13 +21,12 @@
     {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "tag": "forge:vegetables/carrot"
+        "tag": "forge:vegetables/beetroot"
       }
     }
   ],
+  "recipe_book_tab": "meals",
   "result": {
-    "item": "farmersdelight:ratatouille"
-  },
-  "experience": 1.0,
-  "cookingtime": 1600
+    "item": "minecraft:beetroot_soup"
+  }
 }

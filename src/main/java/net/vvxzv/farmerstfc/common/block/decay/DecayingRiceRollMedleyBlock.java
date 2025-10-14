@@ -65,10 +65,9 @@ public class DecayingRiceRollMedleyBlock extends DecayingFeastBlock{
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingBlockEntity decaying) {
             if (!Helpers.isBlock(state, newState.getBlock())) {
-                if(state.getValue(ROLL_SERVINGS) < 8){
-                    Helpers.spawnItem(level, pos, ItemStack.EMPTY);
+                if(state.getValue(ROLL_SERVINGS) == 8){
+                    Helpers.spawnItem(level, pos, decaying.getStack());
                 }
-                else Helpers.spawnItem(level, pos, decaying.getStack());
             }
         }
     }

@@ -24,9 +24,6 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:stuffed_potato",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:stuffed_potato"
   }
 }

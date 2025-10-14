@@ -9,12 +9,9 @@
       }
     },
     {
-      "tag": "forge:dusts/salt"
-    },
-    {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "tag": "forge:vegetables/potato"
+        "tag": "forge:salad_ingredients"
       }
     },
     {
@@ -26,16 +23,13 @@
     {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "tag": "forge:vegetables/cabbage"
+        "tag": "forge:vegetables"
       }
     }
   ],
   "result": {
     "item": "farmersdelight:chicken_soup"
   },
-  "modifiers": [
-    "tfc:copy_food"
-  ],
   "experience": 1.0,
   "cookingtime": 2400
 }

@@ -9,9 +9,6 @@
       }
     },
     {
-      "tag": "forge:dusts/salt"
-    },
-    {
       "type": "tfc:not_rotten",
       "ingredient": {
         "tag": "forge:pasta"
@@ -27,9 +24,6 @@
   "result": {
     "item": "farmersdelight:pasta_with_meatballs"
   },
-  "modifiers": [
-    "tfc:copy_food"
-  ],
   "experience": 1.0,
   "cookingtime": 2400
 }

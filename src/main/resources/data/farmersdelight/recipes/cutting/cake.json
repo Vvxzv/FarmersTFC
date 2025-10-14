@@ -13,8 +13,5 @@
       "item": "farmersdelight:cake_slice",
       "count": 7
     }
-  ],
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

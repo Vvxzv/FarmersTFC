@@ -1,16 +1,7 @@
 {
-  "type": "minecraft:smoking",
-  "category": "food",
-  "cookingtime": 200,
-  "experience": 0.35,
-  "ingredient": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "farmersdelight:ham"
+  "conditions": [
+    {
+      "type": "forge:false"
     }
-  },
-  "result": "farmersdelight:smoked_ham",
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

@@ -25,10 +25,14 @@ public class StoveBlockEntityMixin extends SyncedBlockEntity {
     private static void cookingTick(Level level, BlockPos pos, BlockState state, StoveBlockEntity stove, CallbackInfo ci){
         boolean isStoveLit = (Boolean)state.getValue(StoveBlock.LIT);
         if(isStoveLit){
-            float temperature = HeatCapability.targetDeviceTemp(450F, 0, false);
             BlockEntity above = level.getBlockEntity(pos.above());
             if (above != null) {
-                above.getCapability(HeatCapability.BLOCK_CAPABILITY).ifPresent((cap) -> cap.setTemperatureIfWarmer(temperature));
+                above.getCapability(HeatCapability.BLOCK_CAPABILITY).ifPresent((cap) -> {
+                    float blockTemperature = cap.getTemperature();
+                    if(blockTemperature < 450){
+                        cap.setTemperatureIfWarmer(blockTemperature + 2);
+                    }
+                });
             }
         }
     }

@@ -30,9 +30,6 @@
     }
   ],
   "result": {
-    "item": "farmersdelight:roasted_mutton_chops",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmersdelight:roasted_mutton_chops"
   }
 }

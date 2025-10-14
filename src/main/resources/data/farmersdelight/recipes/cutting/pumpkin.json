@@ -16,8 +16,5 @@
       "item": "farmersdelight:pumpkin_slice",
       "count": 4
     }
-  ],
-  "modifiers": [
-    "tfc:copy_food"
   ]
 }

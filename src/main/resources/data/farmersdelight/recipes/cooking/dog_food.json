@@ -8,14 +8,9 @@
     {
       "item": "minecraft:bone_meal"
     },
-    [
-      {
-        "tag": "farmersdelight:wolf_prey"
-      },
-      {
-        "tag": "tfc:foods/raw_meats"
-      }
-    ],
+    {
+      "tag": "tfc:foods/raw_meats"
+    },
     {
       "tag": "forge:grain/rice"
     }

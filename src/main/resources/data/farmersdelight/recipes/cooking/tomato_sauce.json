@@ -13,17 +13,11 @@
       "ingredient": {
         "tag": "forge:vegetables/garlic"
       }
-    },
-    {
-      "tag": "forge:dusts/salt"
     }
   ],
   "result": {
     "item": "farmersdelight:tomato_sauce"
   },
-  "modifiers": [
-    "tfc:copy_food"
-  ],
   "experience": 0.35,
   "cookingtime": 100
 }
