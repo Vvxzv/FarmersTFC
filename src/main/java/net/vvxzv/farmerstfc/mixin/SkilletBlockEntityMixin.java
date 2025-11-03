@@ -10,6 +10,7 @@ import net.minecraft.world.item.crafting.CampfireCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.vvxzv.farmerstfc.Config;
 import net.vvxzv.farmerstfc.common.registry.itemTagKey;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,6 +23,10 @@ import java.util.Optional;
 
 @Mixin(SkilletBlockEntity.class)
 public abstract class SkilletBlockEntityMixin extends SyncedBlockEntity {
+    private static float skilletCookTemperature(){
+        return (float) Config.skilletCookTemperature + 1;
+    }
+
     public SkilletBlockEntityMixin(BlockEntityType<?> tileEntityTypeIn, BlockPos pos, BlockState state) {
         super(tileEntityTypeIn, pos, state);
     }
@@ -46,7 +51,7 @@ public abstract class SkilletBlockEntityMixin extends SyncedBlockEntity {
 
         if (heatingRecipe.isPresent()) {
             HeatingRecipe recipe = heatingRecipe.get();
-            if (recipe.getTemperature() < 201) {
+            if (recipe.getTemperature() < skilletCookTemperature()) {
                 CampfireCookingRecipe fakeCampfireRecipe = new CampfireCookingRecipe(
                         recipe.getId(),
                         "",
