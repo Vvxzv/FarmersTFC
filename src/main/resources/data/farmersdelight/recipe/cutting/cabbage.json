@@ -5,7 +5,7 @@
       "type": "tfc:and",
       "children": [
         {
-          "tag": "c:foods/cabbage"
+          "tag": "farmerstfc:foods/cabbage"
         },
         {
           "type": "tfc:not_rotten"

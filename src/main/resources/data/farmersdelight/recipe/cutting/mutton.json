@@ -5,7 +5,7 @@
       "type": "tfc:and",
       "children": [
         {
-          "tag": "c:foods/mutton"
+          "tag": "farmerstfc:foods/raw_mutton"
         },
         {
           "type": "tfc:not_rotten"

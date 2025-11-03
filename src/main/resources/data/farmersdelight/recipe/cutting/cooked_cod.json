@@ -5,7 +5,7 @@
       "type": "tfc:and",
       "children": [
         {
-          "tag": "c:foods/cook_cod"
+          "tag": "farmerstfc:foods/cooked_cod"
         },
         {
           "type": "tfc:not_rotten"

@@ -5,7 +5,7 @@
       "type": "tfc:and",
       "children": [
         {
-          "tag": "c:foods/cooked_salmon"
+          "tag": "farmerstfc:foods/cooked_salmon"
         },
         {
           "type": "tfc:not_rotten"

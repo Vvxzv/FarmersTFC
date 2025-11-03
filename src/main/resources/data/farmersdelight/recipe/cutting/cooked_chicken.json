@@ -5,7 +5,7 @@
       "type": "tfc:and",
       "children": [
         {
-          "tag": "c:foods/cooked_chicken"
+          "tag": "farmerstfc:foods/cooked_chicken"
         },
         {
           "type": "tfc:not_rotten"
