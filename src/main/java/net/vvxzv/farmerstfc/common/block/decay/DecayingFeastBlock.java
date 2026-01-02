@@ -59,7 +59,7 @@ public class DecayingFeastBlock extends FDecayingBlock {
         return new ItemStack(servingItem.get());
     }
 
-    private ItemStack setCreationDate(LevelAccessor level, BlockPos pos, ItemStack stack) {
+    private ItemStack copyCreationDate(LevelAccessor level, BlockPos pos, ItemStack stack) {
         IFood stackIFood = FoodCapability.get(stack);
         if(level.getBlockEntity(pos) instanceof FDecayingBlockEntity decaying) {
             IFood decayingIFood = FoodCapability.get(decaying.getStack());
@@ -94,7 +94,7 @@ public class DecayingFeastBlock extends FDecayingBlock {
             level.destroyBlock(pos, true);
             return InteractionResult.SUCCESS;
         } else {
-            ItemStack serving = this.setCreationDate(level, pos, this.getServingItem(state));
+            ItemStack serving = this.copyCreationDate(level, pos, this.getServingItem(state));
             ItemStack heldStack = player.getItemInHand(hand);
             if (servings > 0) {
                 if (!serving.hasCraftingRemainingItem() || ItemStack.isSameItem(heldStack, serving.getCraftingRemainingItem())) {

@@ -54,7 +54,7 @@ public class DecayingPieBlock extends FDecayingBlock {
         return new ItemStack(pieSlice.get());
     }
 
-    private ItemStack setCreationDate(LevelAccessor level, BlockPos pos, ItemStack stack) {
+    private ItemStack copyCreationDate(LevelAccessor level, BlockPos pos, ItemStack stack) {
         IFood stackIFood = FoodCapability.get(stack);
         if(level.getBlockEntity(pos) instanceof FDecayingBlockEntity decaying) {
             IFood decayingIFood = FoodCapability.get(decaying.getStack());
@@ -133,14 +133,14 @@ public class DecayingPieBlock extends FDecayingBlock {
 
     protected InteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player) {
         int bites = state.getValue(BITES);
-        if (bites < getMaxBites() - 1) {
+        if (bites < this.getMaxBites() - 1) {
             level.setBlock(pos, state.setValue(BITES, bites + 1), 3);
         } else {
             level.removeBlock(pos, false);
         }
 
         Direction direction = player.getDirection().getOpposite();
-        ItemStack pieSlice = setCreationDate(level, pos, getPieSliceItem());
+        ItemStack pieSlice = copyCreationDate(level, pos, this.getPieSliceItem());
         ItemUtils.spawnItemEntity(level, pieSlice, (double)pos.getX() + (double)0.5F, (double)pos.getY() + 0.3, (double)pos.getZ() + (double)0.5F, (double)direction.getStepX() * 0.15F, 0.05F, (double)direction.getStepZ() * 0.15F);
         level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
         return InteractionResult.SUCCESS;

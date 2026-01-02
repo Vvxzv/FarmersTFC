@@ -43,11 +43,8 @@
     ]
   },
   "container": {
-    "type": "tfc:not_rotten",
-    "ingredient": {
-      "item": "tfc:pumpkin"
-    }
+    "item": "tfc:pumpkin"
   },
   "experience": 2.0,
-  "cookingtime": 20
+  "cookingtime": 1600
 }
