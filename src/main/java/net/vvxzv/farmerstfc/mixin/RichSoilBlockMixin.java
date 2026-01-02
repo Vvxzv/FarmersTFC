@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
-import net.vvxzv.farmerstfc.common.registry.block;
+import net.vvxzv.farmerstfc.common.registry.FBlock;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -25,6 +25,6 @@ public class RichSoilBlockMixin extends Block {
             cancellable = true
     )
     public void getToolModifiedState(BlockState state, UseOnContext context, ItemAbility toolAction, boolean simulate, CallbackInfoReturnable<BlockState> cir) {
-        cir.setReturnValue(toolAction.equals(ItemAbilities.HOE_TILL) && context.getLevel().getBlockState(context.getClickedPos().above()).isAir() ? ((Block) block.RICH_SOIL_FARMLAND.get()).defaultBlockState() : null);
+        cir.setReturnValue(toolAction.equals(ItemAbilities.HOE_TILL) && context.getLevel().getBlockState(context.getClickedPos().above()).isAir() ? FBlock.RICH_SOIL_FARMLAND.get().defaultBlockState() : null);
     }
 }

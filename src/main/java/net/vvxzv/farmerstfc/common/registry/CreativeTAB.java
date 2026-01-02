@@ -17,20 +17,20 @@ public class CreativeTAB {
     static {
         FARMERSTFC = CREATIVE_MODE_TAB.register("farmerstfc", () -> CreativeModeTab.builder()
                 .title(Component.translatable("itemGroup.farmerstfc"))
-                .icon(() -> new ItemStack(block.ROAST_CHICKEN_BLOCK.get()))
+                .icon(() -> new ItemStack(FBlock.ROAST_CHICKEN_BLOCK.get()))
                 .displayItems((parameters, output) -> {
-                    output.accept(block.BROWN_MUSHROOM_BUNCH.get());
-                    output.accept(block.RED_MUSHROOM_BUNCH.get());
-                    output.accept(block.RICH_SOIL_FARMLAND.get());
-                    output.accept(block.PAN.get());
-                    output.accept(block.ROAST_CHICKEN_BLOCK.get());
-                    output.accept(block.STUFFED_PUMPKIN_BLOCK.get());
-                    output.accept(block.HONEY_GLAZED_HAM_BLOCK.get());
-                    output.accept(block.SHEPHERDS_PIE_BLOCK.get());
-                    output.accept(block.RICE_ROLL_MEDLEY_BLOCK.get());
-                    output.accept(block.APPLE_PIE.get());
-                    output.accept(block.SWEET_BERRY_CHEESECAKE.get());
-                    output.accept(block.CHOCOLATE_PIE.get());
+                    output.accept(FBlock.BROWN_MUSHROOM_BUNCH.get());
+                    output.accept(FBlock.RED_MUSHROOM_BUNCH.get());
+                    output.accept(FBlock.RICH_SOIL_FARMLAND.get());
+                    output.accept(FBlock.PAN.get());
+                    output.accept(FBlock.ROAST_CHICKEN_BLOCK.get());
+                    output.accept(FBlock.STUFFED_PUMPKIN_BLOCK.get());
+                    output.accept(FBlock.HONEY_GLAZED_HAM_BLOCK.get());
+                    output.accept(FBlock.SHEPHERDS_PIE_BLOCK.get());
+                    output.accept(FBlock.RICE_ROLL_MEDLEY_BLOCK.get());
+                    output.accept(FBlock.APPLE_PIE.get());
+                    output.accept(FBlock.SWEET_BERRY_CHEESECAKE.get());
+                    output.accept(FBlock.CHOCOLATE_PIE.get());
                 })
                 .build()
         );

@@ -29,9 +29,9 @@ public class StoveBlockEntityMixin extends SyncedBlockEntity {
 
     @Inject(method = "cookingTick", at = @At("HEAD"), remap = false)
     private static void cookingTick(Level level, BlockPos pos, BlockState state, StoveBlockEntity stove, CallbackInfo ci){
-        boolean isStoveLit = (Boolean)state.getValue(StoveBlock.LIT);
+        boolean isStoveLit = state.getValue(StoveBlock.LIT);
         if(isStoveLit){
-            IHeatConsumer heat = (IHeatConsumer)level.getCapability(BlockCapabilities.HEAT, pos.above(), Direction.DOWN);
+            IHeatConsumer heat = level.getCapability(BlockCapabilities.HEAT, pos.above(), Direction.DOWN);
             float blockTemperature;
             if(heat != null) blockTemperature = heat.getTemperature();
             else blockTemperature = 0;

@@ -2,7 +2,6 @@ package net.vvxzv.farmerstfc.compat.kubejs.blocks;
 
 import dev.latvian.mods.kubejs.block.BlockBuilder;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.crop.DecayingBlock;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,7 +25,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.vvxzv.farmerstfc.common.block.decay.FDecayingBlock;
 import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
-import net.vvxzv.farmerstfc.common.registry.blockEntities;
+import net.vvxzv.farmerstfc.common.registry.FBlockEntity;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -88,7 +87,7 @@ public class DecayingBlockBuilder extends BlockBuilder {
                 .mapColor(MapColor.COLOR_GREEN)
                 .strength(1.0F)
                 .sound(SoundType.WOOD)
-                .blockEntity(blockEntities.DECAYING)
+                .blockEntity(FBlockEntity.DECAYING)
                 .serverTicks(FDecayingBlockEntity::serverTick)
                 .instrument(NoteBlockInstrument.DIDGERIDOO)
                 .pushReaction(PushReaction.DESTROY);

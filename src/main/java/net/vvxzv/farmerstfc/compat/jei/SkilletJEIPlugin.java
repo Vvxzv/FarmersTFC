@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.vvxzv.farmerstfc.FarmersTFC;
-import net.vvxzv.farmerstfc.common.registry.itemTagKey;
+import net.vvxzv.farmerstfc.common.registry.FItemTag;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
 import java.util.Arrays;
@@ -47,13 +47,10 @@ public class SkilletJEIPlugin implements IModPlugin {
                 .getAllRecipesFor(TFCRecipeTypes.HEATING.get())
                 .stream()
                 .map(RecipeHolder::value)
-                .filter(recipe -> {
-                    return recipe.getIngredient().getItems().length > 0 &&
-                            recipe.getTemperature() < 201 &&
-                            Arrays.stream(recipe.getIngredient().getItems()).noneMatch(stack -> {
-                                return stack.is(itemTagKey.CANT_COOK);
-                            });
-                })
+                .filter(recipe -> recipe.getIngredient().getItems().length > 0 &&
+                        recipe.getTemperature() < 201 &&
+                        Arrays.stream(recipe.getIngredient().getItems()).noneMatch(stack -> stack.is(FItemTag.CANT_COOK))
+                )
                 .collect(Collectors.toList()).reversed();
 
         registration.addRecipes(SKILLET_HEATING, recipes);

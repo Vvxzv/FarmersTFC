@@ -20,6 +20,7 @@ import vectorwing.farmersdelight.common.item.HorseFeedItem;
 import vectorwing.farmersdelight.common.registry.ModParticleTypes;
 import vectorwing.farmersdelight.common.utility.MathUtils;
 
+@SuppressWarnings("removal")
 @EventBusSubscriber(modid = FarmersTFC.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class AnimalInteractionHandler {
     @SubscribeEvent
@@ -102,7 +103,7 @@ public class AnimalInteractionHandler {
             double xSpeed = MathUtils.RAND.nextGaussian() * 0.02;
             double ySpeed = MathUtils.RAND.nextGaussian() * 0.02;
             double zSpeed = MathUtils.RAND.nextGaussian() * 0.02;
-            entity.level().addParticle((ParticleOptions) ModParticleTypes.STAR.get(), entity.getRandomX((double)1.0F), entity.getRandomY() + (double)0.5F, entity.getRandomZ((double)1.0F), xSpeed, ySpeed, zSpeed);
+            entity.level().addParticle(ModParticleTypes.STAR.get(), entity.getRandomX(1.0F), entity.getRandomY() + 0.5F, entity.getRandomZ(1.0F), xSpeed, ySpeed, zSpeed);
         }
     }
 }

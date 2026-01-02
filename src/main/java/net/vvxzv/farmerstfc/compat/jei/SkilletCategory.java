@@ -54,7 +54,7 @@ public class SkilletCategory extends BaseRecipeCategory<HeatingRecipe> {
     public void draw(HeatingRecipe recipe, IRecipeSlotsView recipeSlots, GuiGraphics graphics, double mouseX, double mouseY) {
         this.fire.draw(graphics, 54, 16);
         this.fireAnimated.draw(graphics, 54, 16);
-        MutableComponent color = ((TemperatureDisplayStyle)TFCConfig.CLIENT.heatTooltipStyle.get()).formatColored(recipe.getTemperature());
+        MutableComponent color = TFCConfig.CLIENT.heatTooltipStyle.get().formatColored(recipe.getTemperature());
         if (color != null) {
             Minecraft mc = Minecraft.getInstance();
             Font font = mc.font;

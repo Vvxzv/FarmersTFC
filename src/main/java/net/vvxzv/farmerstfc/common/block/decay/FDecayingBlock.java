@@ -29,6 +29,7 @@ public class FDecayingBlock extends DecayingBlock {
         return false;
     }
 
+    @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity entity, ItemStack stack) {
         super.setPlacedBy(level, pos, state, entity, stack);
         BlockEntity blockEntity = level.getBlockEntity(pos);
@@ -37,6 +38,7 @@ public class FDecayingBlock extends DecayingBlock {
         }
     }
 
+    @Override
     public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof FDecayingBlockEntity decaying) {
@@ -48,6 +50,7 @@ public class FDecayingBlock extends DecayingBlock {
         return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
     }
 
+    @Override
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof FDecayingBlockEntity decaying) {

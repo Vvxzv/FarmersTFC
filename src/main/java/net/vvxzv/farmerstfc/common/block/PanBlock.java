@@ -23,60 +23,59 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
 public class PanBlock extends Block {
-    public static final DirectionProperty FACING;
-    public static final BooleanProperty SUPPORT;
-    public static final BooleanProperty WATERLOGGED;
-    protected static final VoxelShape SHAPE;
-    protected static final VoxelShape SHAPE_WITH_TRAY;
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final BooleanProperty SUPPORT = BooleanProperty.create("support");
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    protected static final VoxelShape SHAPE = Block.box(1.0F, 0.0F, 1.0F, 15.0F, 4.0F, 15.0F);
+    protected static final VoxelShape SHAPE_WITH_TRAY = Shapes.or(SHAPE, Block.box(0.0F, -1.0F, 0.0F, 16.0F, 0.0F, 16.0F));
 
     public PanBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState((BlockState)((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)).setValue(SUPPORT, false)).setValue(WATERLOGGED, false));
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(SUPPORT, false).setValue(WATERLOGGED, false));
     }
 
+    @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
     }
 
+    @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
 
+    @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return ((Boolean)state.getValue(SUPPORT)).equals(true) ? SHAPE_WITH_TRAY : SHAPE;
+        return state.getValue(SUPPORT).equals(true) ? SHAPE_WITH_TRAY : SHAPE;
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         Level level = context.getLevel();
         FluidState fluid = level.getFluidState(context.getClickedPos());
-        return (BlockState)((BlockState)((BlockState)this.defaultBlockState().setValue(FACING, context.getHorizontalDirection())).setValue(WATERLOGGED, fluid.getType() == Fluids.WATER)).setValue(SUPPORT, this.getTrayState(context.getLevel(), context.getClickedPos()));
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection()).setValue(WATERLOGGED, fluid.getType() == Fluids.WATER).setValue(SUPPORT, this.getTrayState(context.getLevel(), context.getClickedPos()));
     }
 
+    @Override
     public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
-        if ((Boolean)state.getValue(WATERLOGGED)) {
+        if (state.getValue(WATERLOGGED)) {
             level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
 
-        return facing.getAxis().equals(Direction.Axis.Y) ? (BlockState)state.setValue(SUPPORT, this.getTrayState(level, currentPos)) : state;
+        return facing.getAxis().equals(Direction.Axis.Y) ? state.setValue(SUPPORT, this.getTrayState(level, currentPos)) : state;
     }
 
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{FACING, SUPPORT, WATERLOGGED});
+        builder.add(FACING, SUPPORT, WATERLOGGED);
     }
 
+    @Override
     public FluidState getFluidState(BlockState state) {
-        return (Boolean)state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
     private boolean getTrayState(LevelAccessor world, BlockPos pos) {
         return world.getBlockState(pos.below()).is(ModTags.TRAY_HEAT_SOURCES);
-    }
-
-    static {
-        FACING = BlockStateProperties.HORIZONTAL_FACING;
-        SUPPORT = BooleanProperty.create("support");
-        WATERLOGGED = BlockStateProperties.WATERLOGGED;
-        SHAPE = Block.box((double)1.0F, (double)0.0F, (double)1.0F, (double)15.0F, (double)4.0F, (double)15.0F);
-        SHAPE_WITH_TRAY = Shapes.or(SHAPE, Block.box((double)0.0F, (double)-1.0F, (double)0.0F, (double)16.0F, (double)0.0F, (double)16.0F));
     }
 }

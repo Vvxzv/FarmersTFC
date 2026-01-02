@@ -1,8 +1,11 @@
 package net.vvxzv.farmerstfc.common.block.decay;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
+import net.dries007.tfc.common.component.food.FoodCapability;
+import net.dries007.tfc.common.component.food.IFood;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -14,18 +17,21 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import java.util.function.Supplier;
 
 public class DecayingShepherdsPieBlock extends DecayingFeastBlock{
-    protected static final VoxelShape PLATE_SHAPE = Block.box((double)1.0F, (double)0.0F, (double)1.0F, (double)15.0F, (double)2.0F, (double)15.0F);
-    protected static final VoxelShape PIE_SHAPE;
+    protected static final VoxelShape PLATE_SHAPE = Block.box(1.0F, 0.0F, 1.0F, 15.0F, 2.0F, 15.0F);
+    protected static final VoxelShape PIE_SHAPE = Shapes.joinUnoptimized(PLATE_SHAPE, Block.box(2.0F, 2.0F, 2.0F, 14.0F, 8.0F, 14.0F), BooleanOp.OR);
 
     public DecayingShepherdsPieBlock(ExtendedProperties properties, Supplier<Item> servingItem, boolean hasLeftovers, Supplier<? extends Block> rotted) {
         super(properties, servingItem, hasLeftovers, rotted);
     }
 
+    @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return (Integer)state.getValue(SERVINGS) == 0 ? PLATE_SHAPE : PIE_SHAPE;
+        return state.getValue(SERVINGS) == 0 ? PLATE_SHAPE : PIE_SHAPE;
     }
 
-    static {
-        PIE_SHAPE = Shapes.joinUnoptimized(PLATE_SHAPE, Block.box((double)2.0F, (double)2.0F, (double)2.0F, (double)14.0F, (double)8.0F, (double)14.0F), BooleanOp.OR);
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        IFood food = FoodCapability.get(context.getItemInHand());
+        return food != null && food.isRotten() ? this.getRottedBlock().defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()) : this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 }

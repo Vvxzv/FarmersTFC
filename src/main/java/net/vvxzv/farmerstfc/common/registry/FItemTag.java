@@ -5,7 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
-public class itemTagKey {
+public class FItemTag {
     public static final TagKey<Item> CANT_COOK;
 
     static {

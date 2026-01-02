@@ -27,8 +27,8 @@ import java.util.function.Supplier;
 
 public class DecayingRiceRollMedleyBlock extends DecayingFeastBlock{
     public static final IntegerProperty ROLL_SERVINGS = IntegerProperty.create("servings", 0, 8);
-    protected static final VoxelShape PLATE_SHAPE = Block.box((double)1.0F, (double)0.0F, (double)1.0F, (double)15.0F, (double)2.0F, (double)15.0F);
-    protected static final VoxelShape FOOD_SHAPE;
+    protected static final VoxelShape PLATE_SHAPE = Block.box(1.0F, 0.0F, 1.0F, 15.0F, 2.0F, 15.0F);
+    protected static final VoxelShape FOOD_SHAPE = Shapes.joinUnoptimized(PLATE_SHAPE, Block.box(2.0F, 2.0F, 2.0F, 14.0F, 4.0F, 14.0F), BooleanOp.OR);
     public final List<Supplier<Item>> riceRollServings;
 
     public DecayingRiceRollMedleyBlock(ExtendedProperties properties, Supplier<? extends Block> rotted) {
@@ -45,19 +45,17 @@ public class DecayingRiceRollMedleyBlock extends DecayingFeastBlock{
     }
 
     public ItemStack getServingItem(BlockState state) {
-        return new ItemStack((ItemLike)((Supplier)this.riceRollServings.get((Integer)state.getValue(this.getServingsProperty()) - 1)).get());
+        return new ItemStack((this.riceRollServings.get(state.getValue(this.getServingsProperty()) - 1)).get());
     }
 
+    @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return (Integer)state.getValue(this.getServingsProperty()) == 0 ? PLATE_SHAPE : FOOD_SHAPE;
+        return state.getValue(this.getServingsProperty()) == 0 ? PLATE_SHAPE : FOOD_SHAPE;
     }
 
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{FACING, ROLL_SERVINGS});
-    }
-
-    static {
-        FOOD_SHAPE = Shapes.joinUnoptimized(PLATE_SHAPE, Block.box((double)2.0F, (double)2.0F, (double)2.0F, (double)14.0F, (double)4.0F, (double)14.0F), BooleanOp.OR);
+        builder.add(FACING, ROLL_SERVINGS);
     }
 
     @Override

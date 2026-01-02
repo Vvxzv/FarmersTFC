@@ -15,9 +15,9 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.vvxzv.farmerstfc.common.registry.CreativeTAB;
-import net.vvxzv.farmerstfc.common.registry.block;
-import net.vvxzv.farmerstfc.common.registry.blockEntities;
-import net.vvxzv.farmerstfc.common.registry.item;
+import net.vvxzv.farmerstfc.common.registry.FBlock;
+import net.vvxzv.farmerstfc.common.registry.FBlockEntity;
+import net.vvxzv.farmerstfc.common.registry.FItem;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -40,10 +40,10 @@ public class FarmersTFC {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        block.BLOCKS.register(modEventBus);
-        item.ITEMS.register(modEventBus);
+        FBlock.BLOCKS.register(modEventBus);
+        FItem.ITEMS.register(modEventBus);
         CreativeTAB.CREATIVE_MODE_TAB.register(modEventBus);
-        blockEntities.BLOCK_ENTITIES.register(modEventBus);
+        FBlockEntity.BLOCK_ENTITIES.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -67,6 +67,7 @@ public class FarmersTFC {
         LOGGER.info("HELLO from server starting");
     }
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @SuppressWarnings("removal")
     @EventBusSubscriber(modid = MODID,  bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent

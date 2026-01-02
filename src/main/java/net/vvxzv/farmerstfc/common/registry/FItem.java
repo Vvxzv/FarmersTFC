@@ -3,7 +3,7 @@ package net.vvxzv.farmerstfc.common.registry;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.vvxzv.farmerstfc.FarmersTFC;
 
-public class item {
+public class FItem {
     public static final DeferredRegister.Items ITEMS;
 
     static {

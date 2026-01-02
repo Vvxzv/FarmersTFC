@@ -4,6 +4,7 @@
   "package" : "net.vvxzv.farmerstfc.mixin",
   "compatibilityLevel" : "JAVA_21",
   "mixins" : [
+    "BlockItemMixin",
     "RichSoilBlockMixin",
     "SkilletBlockEntityMixin",
     "StoveBlockEntityMixin"

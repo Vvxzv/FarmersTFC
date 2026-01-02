@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "farmersdelight:block/sweet_berry_cheesecake_slice3",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "farmersdelight:block/sweet_berry_cheesecake_slice3"
+    },
+    "facing=south": {
+      "model": "farmersdelight:block/sweet_berry_cheesecake_slice3",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "farmersdelight:block/sweet_berry_cheesecake_slice3",
+      "y": 270
+    }
+  }
+}

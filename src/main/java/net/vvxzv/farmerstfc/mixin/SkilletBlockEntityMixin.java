@@ -8,7 +8,7 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.vvxzv.farmerstfc.Config;
-import net.vvxzv.farmerstfc.common.registry.itemTagKey;
+import net.vvxzv.farmerstfc.common.registry.FItemTag;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -38,7 +38,7 @@ public class SkilletBlockEntityMixin extends SyncedBlockEntity {
             return;
         }
 
-        if (stack.is(itemTagKey.CANT_COOK)) {
+        if (stack.is(FItemTag.CANT_COOK)) {
             return;
         }
 
