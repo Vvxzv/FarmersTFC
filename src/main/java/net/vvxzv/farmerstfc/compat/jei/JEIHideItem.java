@@ -5,7 +5,7 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.runtime.IJeiRuntime;
 import net.minecraft.resources.ResourceLocation;
 import net.vvxzv.farmerstfc.common.utils.JEIUtil;
-import net.vvxzv.farmerstfc.farmersTFC;
+import net.vvxzv.farmerstfc.FarmersTFC;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 import java.util.List;
@@ -13,8 +13,9 @@ import java.util.List;
 @JeiPlugin
 public class JEIHideItem implements IModPlugin {
     @Override
+    @SuppressWarnings("removal")
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(farmersTFC.MOD_ID, "hide_item");
+        return new ResourceLocation(FarmersTFC.MOD_ID, "hide_item");
     }
 
     @Override

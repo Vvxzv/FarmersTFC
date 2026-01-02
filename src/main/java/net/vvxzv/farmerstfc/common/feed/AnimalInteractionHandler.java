@@ -2,7 +2,6 @@ package net.vvxzv.farmerstfc.common.feed;
 
 import net.dries007.tfc.common.entities.livestock.horse.TFCHorse;
 import net.dries007.tfc.common.entities.livestock.pet.Dog;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -14,13 +13,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.vvxzv.farmerstfc.farmersTFC;
+import net.vvxzv.farmerstfc.FarmersTFC;
 import vectorwing.farmersdelight.common.item.DogFoodItem;
 import vectorwing.farmersdelight.common.item.HorseFeedItem;
 import vectorwing.farmersdelight.common.registry.ModParticleTypes;
 import vectorwing.farmersdelight.common.utility.MathUtils;
 
-@Mod.EventBusSubscriber(modid = farmersTFC.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = FarmersTFC.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class AnimalInteractionHandler {
 
     @SubscribeEvent
@@ -103,7 +102,7 @@ public class AnimalInteractionHandler {
             double xSpeed = MathUtils.RAND.nextGaussian() * 0.02;
             double ySpeed = MathUtils.RAND.nextGaussian() * 0.02;
             double zSpeed = MathUtils.RAND.nextGaussian() * 0.02;
-            entity.level().addParticle((ParticleOptions) ModParticleTypes.STAR.get(), entity.getRandomX((double)1.0F), entity.getRandomY() + (double)0.5F, entity.getRandomZ((double)1.0F), xSpeed, ySpeed, zSpeed);
+            entity.level().addParticle(ModParticleTypes.STAR.get(), entity.getRandomX(1.0F), entity.getRandomY() + (double)0.5F, entity.getRandomZ(1.0F), xSpeed, ySpeed, zSpeed);
         }
     }
 }

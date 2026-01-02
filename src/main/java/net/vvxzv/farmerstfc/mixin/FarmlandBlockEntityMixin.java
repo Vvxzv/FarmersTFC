@@ -2,7 +2,7 @@ package net.vvxzv.farmerstfc.mixin;
 
 import net.dries007.tfc.common.blockentities.FarmlandBlockEntity;
 import net.vvxzv.farmerstfc.Config;
-import net.vvxzv.farmerstfc.common.registry.block;
+import net.vvxzv.farmerstfc.common.registry.FBlock;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
@@ -27,7 +27,7 @@ public abstract class FarmlandBlockEntityMixin {
     )
     private float modifyNitrogenValue(float originalValue) {
         FarmlandBlockEntity self = (FarmlandBlockEntity) (Object) this;
-        if (self.getBlockState().getBlock() == block.RICH_SOIL_FARMLAND.get()) {
+        if (self.getBlockState().getBlock() == FBlock.RICH_SOIL_FARMLAND.get()) {
             // 计算原始肥料贡献值 = 新值 - 旧值
             float oldValue = self.getNutrient(FarmlandBlockEntity.NutrientType.NITROGEN);
             float fertilizerContribution = originalValue - oldValue;
@@ -51,7 +51,7 @@ public abstract class FarmlandBlockEntityMixin {
     )
     private float modifyPhosphorusValue(float originalValue) {
         FarmlandBlockEntity self = (FarmlandBlockEntity) (Object) this;
-        if (self.getBlockState().getBlock() == block.RICH_SOIL_FARMLAND.get()) {
+        if (self.getBlockState().getBlock() == FBlock.RICH_SOIL_FARMLAND.get()) {
             float oldValue = self.getNutrient(FarmlandBlockEntity.NutrientType.PHOSPHOROUS);
             float fertilizerContribution = originalValue - oldValue;
             return oldValue + fertilizerContribution * getfertilizerTimesValue();
@@ -72,7 +72,7 @@ public abstract class FarmlandBlockEntityMixin {
     )
     private float modifyPotassiumValue(float originalValue) {
         FarmlandBlockEntity self = (FarmlandBlockEntity) (Object) this;
-        if (self.getBlockState().getBlock() == block.RICH_SOIL_FARMLAND.get()) {
+        if (self.getBlockState().getBlock() == FBlock.RICH_SOIL_FARMLAND.get()) {
             float oldValue = self.getNutrient(FarmlandBlockEntity.NutrientType.POTASSIUM);
             float fertilizerContribution = originalValue - oldValue;
             return oldValue + fertilizerContribution * getfertilizerTimesValue();

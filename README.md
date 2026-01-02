@@ -96,7 +96,7 @@ BlockEvents.rightClicked(event => {
 
     const blockEntity = block.getEntity()
 
-    if (blockEntity instanceof DecayingBlockEntity && !level.isClientSide()){
+    if (blockEntity instanceof FDecayingBlockEntity && !level.isClientSide()){
         if(!blockEntity.isRotten() && (player.foodLevel < 20 || player.isCreative())){
             const curEat = block.blockState.getValue(DecayingBlockJS.EAT)
 
@@ -215,7 +215,7 @@ BlockEvents.rightClicked(event => {
 
     const blockEntity = block.getEntity()
 
-    if (blockEntity instanceof DecayingBlockEntity && !level.isClientSide()){
+    if (blockEntity instanceof FDecayingBlockEntity && !level.isClientSide()){
         if(!blockEntity.isRotten() && (player.foodLevel < 20 || player.isCreative())){
             const curEat = block.blockState.getValue(DecayingBlockJS.EAT)
 

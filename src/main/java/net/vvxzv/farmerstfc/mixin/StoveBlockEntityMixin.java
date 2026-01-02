@@ -2,7 +2,6 @@ package net.vvxzv.farmerstfc.mixin;
 
 import net.dries007.tfc.common.capabilities.heat.HeatCapability;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -28,7 +27,7 @@ public class StoveBlockEntityMixin extends SyncedBlockEntity {
 
     @Inject(method = "cookingTick", at = @At("HEAD"), remap = false)
     private static void cookingTick(Level level, BlockPos pos, BlockState state, StoveBlockEntity stove, CallbackInfo ci){
-        boolean isStoveLit = (Boolean)state.getValue(StoveBlock.LIT);
+        boolean isStoveLit = state.getValue(StoveBlock.LIT);
         if(isStoveLit){
             BlockEntity above = level.getBlockEntity(pos.above());
             if (above != null) {

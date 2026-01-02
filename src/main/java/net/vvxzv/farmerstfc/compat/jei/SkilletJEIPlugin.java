@@ -11,8 +11,8 @@ import net.dries007.tfc.common.recipes.HeatingRecipe;
 import net.dries007.tfc.common.recipes.TFCRecipeTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.vvxzv.farmerstfc.farmersTFC;
-import net.vvxzv.farmerstfc.common.registry.itemTagKey;
+import net.vvxzv.farmerstfc.FarmersTFC;
+import net.vvxzv.farmerstfc.common.registry.FItemTag;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
 import java.util.Arrays;
@@ -22,12 +22,14 @@ import java.util.stream.Collectors;
 
 @JeiPlugin
 public class SkilletJEIPlugin implements IModPlugin {
+    @SuppressWarnings("removal")
     public static final RecipeType<HeatingRecipe> SKILLET_HEATING =
-            new RecipeType<>(new ResourceLocation(farmersTFC.MOD_ID, "skillet_heating"), HeatingRecipe.class);
+            new RecipeType<>(new ResourceLocation(FarmersTFC.MOD_ID, "skillet_heating"), HeatingRecipe.class);
 
     @Override
+    @SuppressWarnings("removal")
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(farmersTFC.MOD_ID, "jei_skillet");
+        return new ResourceLocation(FarmersTFC.MOD_ID, "jei_skillet");
     }
 
     @Override
@@ -46,12 +48,11 @@ public class SkilletJEIPlugin implements IModPlugin {
                 .getRecipeManager()
                 .getAllRecipesFor(TFCRecipeTypes.HEATING.get())
                 .stream()
-                .filter(recipe -> {
-                    return recipe.getIngredient().getItems().length > 0 &&
-                            recipe.getTemperature() < 201 &&
-                            Arrays.stream(recipe.getIngredient().getItems())
-                                    .noneMatch(stack -> stack.is(itemTagKey.CANT_COOK));
-                })
+                .filter(recipe -> recipe.getIngredient().getItems().length > 0 &&
+                        recipe.getTemperature() < 201 &&
+                        Arrays.stream(recipe.getIngredient().getItems())
+                                .noneMatch(stack -> stack.is(FItemTag.CANT_COOK))
+                )
                 .collect(Collectors.toList());
 
         registration.addRecipes(SKILLET_HEATING, recipes);

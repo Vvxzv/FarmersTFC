@@ -5,7 +5,7 @@
   "category": "vegetable",
   "hunger": 8,
   "saturation": 2,
-  "decay_modifier": 1.5,
+  "decay_modifier": 2.25,
   "vegetables": 2,
   "protein": 3,
   "grain": 2

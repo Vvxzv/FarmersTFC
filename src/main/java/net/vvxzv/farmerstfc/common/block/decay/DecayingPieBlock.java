@@ -1,9 +1,9 @@
 package net.vvxzv.farmerstfc.common.block.decay;
 
 import com.mojang.datafixers.util.Pair;
-import net.dries007.tfc.common.blockentities.DecayingBlockEntity;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
-import net.dries007.tfc.common.blocks.crop.DecayingBlock;
+import net.dries007.tfc.common.capabilities.food.FoodCapability;
+import net.dries007.tfc.common.capabilities.food.IFood;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -26,54 +26,67 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.event.ForgeEventFactory;
-import net.vvxzv.farmerstfc.common.registry.itemTagKey;
+import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
 import vectorwing.farmersdelight.common.tag.ModTags;
 import vectorwing.farmersdelight.common.utility.ItemUtils;
 
 import java.util.function.Supplier;
 
-public class DecayingPieBlock extends DecayingBlock {
-    public static final DirectionProperty FACING;
-    public static final IntegerProperty BITES;
-    protected static final VoxelShape SHAPE;
+public class DecayingPieBlock extends FDecayingBlock {
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final IntegerProperty BITES = IntegerProperty.create("bites", 0, 3);
+    protected static final VoxelShape SHAPE = Block.box(2.0F, 0.0F, 2.0F, 14.0F, 4.0F, 14.0F);
+
     public final Supplier<Item> pieSlice;
 
     public DecayingPieBlock(ExtendedProperties properties, Supplier<Item> pieSlice, Supplier<? extends Block> rotted) {
         super(properties, rotted);
         this.pieSlice = pieSlice;
-        this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)).setValue(BITES, 0));
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(BITES, 0));
     }
 
     public ItemStack getPieSliceItem() {
-        return new ItemStack((ItemLike)this.pieSlice.get());
+        return new ItemStack(pieSlice.get());
+    }
+
+    private ItemStack setCreationDate(LevelAccessor level, BlockPos pos, ItemStack stack) {
+        IFood stackIFood = FoodCapability.get(stack);
+        if(level.getBlockEntity(pos) instanceof FDecayingBlockEntity decaying) {
+            IFood decayingIFood = FoodCapability.get(decaying.getStack());
+            stackIFood.setCreationDate(decayingIFood.getCreationDate());
+        }
+        return stack;
     }
 
     public int getMaxBites() {
         return 4;
     }
 
+    @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return (BlockState)this.defaultBlockState().setValue(FACING, context.getHorizontalDirection());
+        IFood food = FoodCapability.get(context.getItemInHand());
+        return food != null && food.isRotten() ? this.getRottedBlock().defaultBlockState().setValue(FACING, context.getHorizontalDirection()): this.defaultBlockState().setValue(FACING, context.getHorizontalDirection());
     }
 
+    @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack heldStack = player.getItemInHand(hand);
         if (level.isClientSide) {
             if (heldStack.is(ModTags.KNIVES)) {
-                return this.cutSlice(level, pos, state, player);
+                return cutSlice(level, pos, state, player);
             }
 
-            if (this.consumeBite(level, pos, state, player) == InteractionResult.SUCCESS) {
+            if (consumeBite(level, pos, state, player) == InteractionResult.SUCCESS) {
                 return InteractionResult.SUCCESS;
             }
 
@@ -82,90 +95,91 @@ public class DecayingPieBlock extends DecayingBlock {
             }
         }
 
-        return heldStack.is(ModTags.KNIVES) ? this.cutSlice(level, pos, state, player) : this.consumeBite(level, pos, state, player);
+        return heldStack.is(ModTags.KNIVES) ? cutSlice(level, pos, state, player) : consumeBite(level, pos, state, player);
     }
 
     protected InteractionResult consumeBite(Level level, BlockPos pos, BlockState state, Player playerIn) {
         BlockEntity bEntity = level.getBlockEntity(pos);
-        if(bEntity instanceof DecayingBlockEntity decay && decay.isRotten()){
+        if(bEntity instanceof FDecayingBlockEntity decay && decay.isRotten()){
             return InteractionResult.PASS;
         }
         if (!playerIn.canEat(false)) {
             return InteractionResult.PASS;
         } else {
-            ItemStack sliceStack = this.getPieSliceItem();
+            ItemStack sliceStack = getPieSliceItem();
             ItemStack sliceCopy = sliceStack.copy();
             FoodProperties sliceFood = sliceStack.getItem().getFoodProperties();
             playerIn.getFoodData().eat(sliceStack.getItem(), sliceStack);
             ForgeEventFactory.onItemUseFinish(playerIn, sliceCopy, 0, ItemStack.EMPTY);
-            if (this.getPieSliceItem().getItem().isEdible() && sliceFood != null) {
+            if (sliceStack.getItem().isEdible() && sliceFood != null) {
                 for(Pair<MobEffectInstance, Float> pair : sliceFood.getEffects()) {
-                    if (!level.isClientSide && pair.getFirst() != null && level.random.nextFloat() < (Float)pair.getSecond()) {
-                        playerIn.addEffect(new MobEffectInstance((MobEffectInstance)pair.getFirst()));
+                    if (!level.isClientSide && pair.getFirst() != null && level.random.nextFloat() < pair.getSecond()) {
+                        playerIn.addEffect(new MobEffectInstance(pair.getFirst()));
                     }
                 }
             }
 
-            int bites = (Integer)state.getValue(BITES);
-            if (bites < this.getMaxBites() - 1) {
-                level.setBlock(pos, (BlockState)state.setValue(BITES, bites + 1), 3);
+            int bites = state.getValue(BITES);
+            if (bites < getMaxBites() - 1) {
+                level.setBlock(pos, state.setValue(BITES, bites + 1), 3);
             } else {
                 level.removeBlock(pos, false);
             }
 
-            level.playSound((Player)null, pos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 0.8F, 0.8F);
+            level.playSound(null, pos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 0.8F, 0.8F);
             return InteractionResult.SUCCESS;
         }
     }
 
     protected InteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player) {
-        int bites = (Integer)state.getValue(BITES);
-        if (bites < this.getMaxBites() - 1) {
-            level.setBlock(pos, (BlockState)state.setValue(BITES, bites + 1), 3);
+        int bites = state.getValue(BITES);
+        if (bites < getMaxBites() - 1) {
+            level.setBlock(pos, state.setValue(BITES, bites + 1), 3);
         } else {
             level.removeBlock(pos, false);
         }
 
         Direction direction = player.getDirection().getOpposite();
-        ItemUtils.spawnItemEntity(level, this.getPieSliceItem(), (double)pos.getX() + (double)0.5F, (double)pos.getY() + 0.3, (double)pos.getZ() + (double)0.5F, (double)direction.getStepX() * 0.15, 0.05, (double)direction.getStepZ() * 0.15);
-        level.playSound((Player)null, pos, SoundEvents.WOOL_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
+        ItemStack pieSlice = setCreationDate(level, pos, getPieSliceItem());
+        ItemUtils.spawnItemEntity(level, pieSlice, (double)pos.getX() + (double)0.5F, (double)pos.getY() + 0.3, (double)pos.getZ() + (double)0.5F, (double)direction.getStepX() * 0.15F, 0.05F, (double)direction.getStepZ() * 0.15F);
+        level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
         return InteractionResult.SUCCESS;
     }
 
+    @Override
     public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
         return facing == Direction.DOWN && !stateIn.canSurvive(level, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(stateIn, facing, facingState, level, currentPos, facingPos);
     }
 
+    @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         return level.getBlockState(pos.below()).isSolid();
     }
 
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{FACING, BITES});
+        builder.add(FACING, BITES);
     }
 
+    @Override
     public int getAnalogOutputSignal(BlockState blockState, Level level, BlockPos pos) {
-        return this.getMaxBites() - (Integer)blockState.getValue(BITES);
+        return this.getMaxBites() - blockState.getValue(BITES);
     }
 
+    @Override
     public boolean hasAnalogOutputSignal(BlockState state) {
         return true;
     }
 
+    @Override
     public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
         return false;
-    }
-
-    static {
-        FACING = BlockStateProperties.HORIZONTAL_FACING;
-        BITES = IntegerProperty.create("bites", 0, 3);
-        SHAPE = Block.box((double)2.0F, (double)0.0F, (double)2.0F, (double)14.0F, (double)4.0F, (double)14.0F);
     }
 
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof DecayingBlockEntity decaying) {
+        if (entity instanceof FDecayingBlockEntity decaying) {
             if (!Helpers.isBlock(state, newState.getBlock())) {
                 if(state.getValue(BITES) == 0){
                     Helpers.spawnItem(level, pos, decaying.getStack());

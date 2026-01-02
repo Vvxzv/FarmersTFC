@@ -11,7 +11,7 @@ import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.vvxzv.farmerstfc.Config;
-import net.vvxzv.farmerstfc.common.registry.itemTagKey;
+import net.vvxzv.farmerstfc.common.registry.FItemTag;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -23,7 +23,7 @@ import java.util.Optional;
 
 @Mixin(SkilletBlockEntity.class)
 public abstract class SkilletBlockEntityMixin extends SyncedBlockEntity {
-    private static float skilletCookTemperature(){
+    private float skilletCookTemperature(){
         return (float) Config.skilletCookTemperature + 1;
     }
 
@@ -43,7 +43,7 @@ public abstract class SkilletBlockEntityMixin extends SyncedBlockEntity {
         }
 
         ItemStack inputStack = recipeWrapper.getItem(0);
-        if (inputStack.is(itemTagKey.CANT_COOK)) {
+        if (inputStack.is(FItemTag.CANT_COOK)) {
             return;
         }
         Optional<HeatingRecipe> heatingRecipe = this.level.getRecipeManager()
