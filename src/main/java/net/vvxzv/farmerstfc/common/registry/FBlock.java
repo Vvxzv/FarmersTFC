@@ -16,6 +16,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.vvxzv.farmerstfc.common.block.MushroomBunchBlock;
 import net.vvxzv.farmerstfc.common.block.PanBlock;
 import net.vvxzv.farmerstfc.common.block.RottenPieFoodBlock;
 import net.vvxzv.farmerstfc.common.block.RottenPlateFoodBlock;
@@ -44,9 +45,9 @@ public class FBlock {
         return ExtendedProperties.of(MapColor.COLOR_ORANGE).mapColor(MapColor.COLOR_GREEN).strength(1.0F).sound(SoundType.WOOD).blockEntity(FBlockEntity.DECAYING).serverTicks(FDecayingBlockEntity::serverTick).instrument(NoteBlockInstrument.DIDGERIDOO).pushReaction(PushReaction.DESTROY);
     }
 
-    public static final RegistryObject<Block> BROWN_MUSHROOM_BUNCH = registerBlock("brown_mushroom_bunch", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+    public static final RegistryObject<Block> BROWN_MUSHROOM_BUNCH = registerBlock("brown_mushroom_bunch", () -> new MushroomBunchBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
 
-    public static final RegistryObject<Block> RED_MUSHROOM_BUNCH = registerBlock("red_mushroom_bunch", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+    public static final RegistryObject<Block> RED_MUSHROOM_BUNCH = registerBlock("red_mushroom_bunch", () -> new MushroomBunchBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
 
     public static final RegistryObject<Block> PAN = registerBlock("pan", () -> new PanBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(0.5F, 6.0F).sound(SoundType.LANTERN)));
 
