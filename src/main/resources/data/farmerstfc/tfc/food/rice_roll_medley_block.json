@@ -8,5 +8,6 @@
   "decay_modifier": 2.25,
   "vegetables": 2,
   "protein": 3,
-  "grain": 2
+  "grain": 2,
+  "edible": false
 }

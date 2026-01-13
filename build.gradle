@@ -135,7 +135,10 @@ dependencies {
     runtimeOnly "curse.maven:patchouli-306770:6842247"
 
     // tfc
-    implementation "curse.maven:terrafirmacraft-302973:7035035"
+    implementation "curse.maven:terrafirmacraft-302973:7343990"
+
+    // firmalife
+    implementation "curse.maven:firmalife-453394:7442721"
 
     // farmers delight
     implementation "curse.maven:farmers-delight-398521:6917256"

@@ -81,7 +81,7 @@ side = "BOTH"
 [[dependencies."${mod_id}"]]
 modId = "tfc"
 type = "required"
-versionRange = "[4.0,)"
+versionRange = "[4.0.15,)"
 ordering = "AFTER"
 side = "BOTH"
 

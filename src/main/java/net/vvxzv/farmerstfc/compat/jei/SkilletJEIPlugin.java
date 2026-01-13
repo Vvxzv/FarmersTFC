@@ -22,8 +22,8 @@ import java.util.stream.Collectors;
 
 @JeiPlugin
 public class SkilletJEIPlugin implements IModPlugin {
-    public static final RecipeType<HeatingRecipe> SKILLET_HEATING =
-            new RecipeType<>(ResourceLocation.fromNamespaceAndPath(FarmersTFC.MODID, "skillet_heating"), HeatingRecipe.class);
+    public static final RecipeType<RecipeHolder<HeatingRecipe>> SKILLET_HEATING =
+            new RecipeType<>(ResourceLocation.fromNamespaceAndPath(FarmersTFC.MODID, "skillet_heating"), (Class<RecipeHolder<HeatingRecipe>>) (Class<?>) RecipeHolder.class);
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -42,16 +42,17 @@ public class SkilletJEIPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        List<HeatingRecipe> recipes = ClientHelpers.getLevelOrThrow()
+        List<RecipeHolder<HeatingRecipe>> recipes = ClientHelpers.getLevelOrThrow()
                 .getRecipeManager()
                 .getAllRecipesFor(TFCRecipeTypes.HEATING.get())
                 .stream()
-                .map(RecipeHolder::value)
-                .filter(recipe -> recipe.getIngredient().getItems().length > 0 &&
-                        recipe.getTemperature() < 201 &&
-                        Arrays.stream(recipe.getIngredient().getItems()).noneMatch(stack -> stack.is(FItemTag.CANT_COOK))
-                )
-                .collect(Collectors.toList()).reversed();
+                .filter(holder -> {
+                    HeatingRecipe recipe = holder.value();
+                    return recipe.getIngredient().getItems().length > 0 &&
+                            recipe.getTemperature() < 201 &&
+                            Arrays.stream(recipe.getIngredient().getItems()).noneMatch(stack -> stack.is(FItemTag.CANT_COOK));
+                })
+                .collect(Collectors.toList());
 
         registration.addRecipes(SKILLET_HEATING, recipes);
     }

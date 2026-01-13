@@ -7,5 +7,6 @@
       "item": "farmersdelight:red_mushroom_colony"
     }
   ],
-  "decay_modifier": 3.5
+  "decay_modifier": 3.5,
+  "edible": false
 }

@@ -19,6 +19,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.neoforged.neoforge.fluids.FluidStack;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
@@ -26,7 +27,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SkilletCategory extends BaseRecipeCategory<HeatingRecipe> {
-    public SkilletCategory(RecipeType<HeatingRecipe> type, IGuiHelper helper) {
+    public SkilletCategory(RecipeType<RecipeHolder<HeatingRecipe>> type, IGuiHelper helper) {
         super(type, helper, 120, 38, new ItemStack(ModBlocks.SKILLET.get()));
     }
 

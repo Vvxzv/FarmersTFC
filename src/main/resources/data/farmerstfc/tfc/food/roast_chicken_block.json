@@ -9,5 +9,6 @@
   "grain": 1.5,
   "protein": 3,
   "vegetables": 3.5,
-  "dairy": 0.3
+  "dairy": 0.3,
+  "edible": false
 }
