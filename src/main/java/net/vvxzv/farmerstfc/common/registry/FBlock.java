@@ -14,10 +14,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.vvxzv.farmerstfc.FarmersTFC;
-import net.vvxzv.farmerstfc.common.block.PanBlock;
-import net.vvxzv.farmerstfc.common.block.RichSoilFarmLand;
-import net.vvxzv.farmerstfc.common.block.RottenPieFoodBlock;
-import net.vvxzv.farmerstfc.common.block.RottenPlateFoodBlock;
+import net.vvxzv.farmerstfc.common.block.*;
 import net.vvxzv.farmerstfc.common.block.decay.*;
 import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
@@ -42,9 +39,9 @@ public class FBlock {
         return ExtendedProperties.of(MapColor.COLOR_ORANGE).mapColor(MapColor.COLOR_GREEN).strength(1.0F).sound(SoundType.WOOD).blockEntity(FBlockEntity.DECAYING).serverTicks(FDecayingBlockEntity::serverTick).instrument(NoteBlockInstrument.DIDGERIDOO).pushReaction(PushReaction.DESTROY);
     }
 
-    public static final DeferredBlock<Block> BROWN_MUSHROOM_BUNCH = registerBlock("brown_mushroom_bunch", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+    public static final DeferredBlock<Block> BROWN_MUSHROOM_BUNCH = registerBlock("brown_mushroom_bunch", () -> new MushroomBunchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
 
-    public static final DeferredBlock<Block> RED_MUSHROOM_BUNCH = registerBlock("red_mushroom_bunch", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+    public static final DeferredBlock<Block> RED_MUSHROOM_BUNCH = registerBlock("red_mushroom_bunch", () -> new MushroomBunchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS)));
 
     public static final DeferredBlock<Block> RICH_SOIL_FARMLAND = registerBlock("rich_soil_farmland",() -> new RichSoilFarmLand(ExtendedProperties.of(MapColor.DIRT).strength(1.3F).sound(SoundType.GRAVEL).isViewBlocking(TFCBlocks::always).isSuffocating(TFCBlocks::always).blockEntity(FBlockEntity.FARMLAND), ModBlocks.RICH_SOIL));
 
