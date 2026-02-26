@@ -22,7 +22,7 @@ import net.vvxzv.farmerstfc.common.block.RottenPieFoodBlock;
 import net.vvxzv.farmerstfc.common.block.RottenPlateFoodBlock;
 import net.vvxzv.farmerstfc.common.block.decay.*;
 import net.vvxzv.farmerstfc.FarmersTFC;
-import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
+import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
@@ -42,7 +42,7 @@ public class FBlock {
     }
 
     private static ExtendedProperties decayingBlockProperties(){
-        return ExtendedProperties.of(MapColor.COLOR_ORANGE).mapColor(MapColor.COLOR_GREEN).strength(1.0F).sound(SoundType.WOOD).blockEntity(FBlockEntity.DECAYING).serverTicks(FDecayingBlockEntity::serverTick).instrument(NoteBlockInstrument.DIDGERIDOO).pushReaction(PushReaction.DESTROY);
+        return ExtendedProperties.of(MapColor.COLOR_ORANGE).mapColor(MapColor.COLOR_GREEN).strength(1.0F).sound(SoundType.WOOD).blockEntity(FBlockEntity.DECAYING).serverTicks(DecayingFoodBlockEntity::serverTick).instrument(NoteBlockInstrument.DIDGERIDOO).pushReaction(PushReaction.DESTROY);
     }
 
     public static final RegistryObject<Block> BROWN_MUSHROOM_BUNCH = registerBlock("brown_mushroom_bunch", () -> new MushroomBunchBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));

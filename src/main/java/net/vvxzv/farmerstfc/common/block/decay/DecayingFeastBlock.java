@@ -27,12 +27,12 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
+import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 
 import java.util.function.Supplier;
 
-public class DecayingFeastBlock extends FDecayingBlock {
+public class DecayingFeastBlock extends DecayingFoodBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final IntegerProperty SERVINGS = IntegerProperty.create("servings", 0, 4);
     protected static final VoxelShape[] SHAPES = new VoxelShape[]{Block.box(2.0F, 0.0F, 2.0F, 14.0F, 1.0F, 14.0F), Block.box(2.0F, 0.0F, 2.0F, 14.0F, 3.0F, 14.0F), Block.box(2.0F, 0.0F, 2.0F, 14.0F, 6.0F, 14.0F), Block.box(2.0F, 0.0F, 2.0F, 14.0F, 8.0F, 14.0F), Block.box(2.0F, 0.0F, 2.0F, 14.0F, 10.0F, 14.0F)};
@@ -61,7 +61,7 @@ public class DecayingFeastBlock extends FDecayingBlock {
 
     private ItemStack copyCreationDate(LevelAccessor level, BlockPos pos, ItemStack stack) {
         IFood stackIFood = FoodCapability.get(stack);
-        if(level.getBlockEntity(pos) instanceof FDecayingBlockEntity decaying) {
+        if(level.getBlockEntity(pos) instanceof DecayingFoodBlockEntity decaying) {
             IFood decayingIFood = FoodCapability.get(decaying.getStack());
             stackIFood.setCreationDate(decayingIFood.getCreationDate());
         }
@@ -76,7 +76,7 @@ public class DecayingFeastBlock extends FDecayingBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof FDecayingBlockEntity decaying && decaying.isRotten()) {
+        if (entity instanceof DecayingFoodBlockEntity decaying && decaying.isRotten()) {
             return InteractionResult.PASS;
         }
 
@@ -85,7 +85,7 @@ public class DecayingFeastBlock extends FDecayingBlock {
 
     protected InteractionResult takeServing(LevelAccessor level, BlockPos pos, BlockState state, Player player, InteractionHand hand) {
         BlockEntity bEntity = level.getBlockEntity(pos);
-        if(bEntity instanceof FDecayingBlockEntity decay && decay.isRotten()){
+        if(bEntity instanceof DecayingFoodBlockEntity decay && decay.isRotten()){
             return InteractionResult.PASS;
         }
         int servings = state.getValue(getServingsProperty());
@@ -161,12 +161,16 @@ public class DecayingFeastBlock extends FDecayingBlock {
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof FDecayingBlockEntity decaying) {
+        if (entity instanceof DecayingFoodBlockEntity decaying) {
             if (!Helpers.isBlock(state, newState.getBlock())) {
                 if(state.getValue(SERVINGS) == 4){
                     Helpers.spawnItem(level, pos, decaying.getStack());
                 }
             }
+        }
+
+        if (state.hasBlockEntity() && (!state.is(newState.getBlock()) || !newState.hasBlockEntity())) {
+            level.removeBlockEntity(pos);
         }
     }
 }

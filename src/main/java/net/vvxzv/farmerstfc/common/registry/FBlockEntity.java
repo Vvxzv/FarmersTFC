@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.vvxzv.farmerstfc.FarmersTFC;
-import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
+import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
 import net.vvxzv.farmerstfc.compat.kubejs.blocks.DecayingBlockBuilder;
 
 import java.util.function.Supplier;
@@ -37,10 +37,10 @@ public class FBlockEntity {
         return Stream.concat(modBlocks, kubejsBlocks).toArray(Block[]::new);
     }
 
-    public static final RegistryObject<BlockEntityType<FDecayingBlockEntity>> DECAYING = BLOCK_ENTITIES.register(
+    public static final RegistryObject<BlockEntityType<DecayingFoodBlockEntity>> DECAYING = BLOCK_ENTITIES.register(
             "decaying",
             () -> BlockEntityType.Builder.of(
-                    FDecayingBlockEntity::new,
+                    DecayingFoodBlockEntity::new,
                     getFDecayingBlocks()
             ).build(null)
     );

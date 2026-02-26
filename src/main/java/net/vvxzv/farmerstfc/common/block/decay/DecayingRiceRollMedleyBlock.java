@@ -74,5 +74,9 @@ public class DecayingRiceRollMedleyBlock extends DecayingFeastBlock{
                 }
             }
         }
+
+        if (state.hasBlockEntity() && (!state.is(newState.getBlock()) || !newState.hasBlockEntity())) {
+            level.removeBlockEntity(pos);
+        }
     }
 }

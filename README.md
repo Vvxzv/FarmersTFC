@@ -89,27 +89,26 @@ TFCEvents.data(event => {
 5. 最后写吃蛋糕 ```/kubejs/server_scripts/eatFoodBlock.js```
 ``` JavaScript
 BlockEvents.rightClicked(event => {
-    const { block, player, level, hand, server } = event
+    const { block, player, level, hand } = event
     if(hand.name() != 'MAIN_HAND') return
     if(block.id != 'kubejs:example_decaying_block') return
     if(player.shiftKeyDown) return
 
     const blockEntity = block.getEntity()
 
-    if (blockEntity instanceof FDecayingBlockEntity && !level.isClientSide()){
+    if (blockEntity instanceof DecayingFoodBlockEntity && !level.isClientSide()){
         if(!blockEntity.isRotten() && (player.foodLevel < 20 || player.isCreative())){
-            const curEat = block.blockState.getValue(DecayingBlockJS.EAT)
-
-            const newEat = `${curEat - 1}`.split('.')[0]
-            
-            server.runCommandSilent(`execute in ${block.dimension} run setblock ${block.pos.x} ${block.pos.y} ${block.pos.z} kubejs:example_decaying_block[eat=${newEat}, dropself=false]`)
-
-            if(curEat <= 1){
+            let state = block.blockState
+            const curEat = state.getValue(DecayingBlockJS.EAT)
+            if(curEat > 1){
+                let newState = DecayingBlockJS.consume(state, '-1')
+                level.setBlockAndUpdate(block.pos, newState)
+            }
+            else {
                 block.set('minecraft:air')
             }
-            
             player.eat(level, 'minecraft:apple')
-            event.cancel()
+            event.success()
         }
     }
 })
@@ -208,27 +207,26 @@ TFCEvents.data(event => {
 5. Eat cake ```/kubejs/server_scripts/eatFoodBlock.js```
 ``` JavaScript
 BlockEvents.rightClicked(event => {
-    const { block, player, level, hand, server } = event
+    const { block, player, level, hand } = event
     if(hand.name() != 'MAIN_HAND') return
     if(block.id != 'kubejs:example_decaying_block') return
     if(player.shiftKeyDown) return
 
     const blockEntity = block.getEntity()
 
-    if (blockEntity instanceof FDecayingBlockEntity && !level.isClientSide()){
+    if (blockEntity instanceof DecayingFoodBlockEntity && !level.isClientSide()){
         if(!blockEntity.isRotten() && (player.foodLevel < 20 || player.isCreative())){
-            const curEat = block.blockState.getValue(DecayingBlockJS.EAT)
-
-            const newEat = `${curEat - 1}`.split('.')[0]
-            
-            server.runCommandSilent(`execute in ${block.dimension} run setblock ${block.pos.x} ${block.pos.y} ${block.pos.z} kubejs:example_decaying_block[eat=${newEat}, dropself=false]`)
-
-            if(curEat <= 1){
+            let state = block.blockState
+            const curEat = state.getValue(DecayingBlockJS.EAT)
+            if(curEat > 1){
+                let newState = DecayingBlockJS.consume(state, '-1')
+                level.setBlockAndUpdate(block.pos, newState)
+            }
+            else {
                 block.set('minecraft:air')
             }
-            
             player.eat(level, 'minecraft:apple')
-            event.cancel()
+            event.success()
         }
     }
 })

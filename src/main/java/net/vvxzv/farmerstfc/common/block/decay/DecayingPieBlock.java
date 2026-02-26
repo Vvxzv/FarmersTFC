@@ -31,13 +31,13 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.event.ForgeEventFactory;
-import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
+import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.tag.ModTags;
 import vectorwing.farmersdelight.common.utility.ItemUtils;
 
 import java.util.function.Supplier;
 
-public class DecayingPieBlock extends FDecayingBlock {
+public class DecayingPieBlock extends DecayingFoodBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final IntegerProperty BITES = IntegerProperty.create("bites", 0, 3);
     protected static final VoxelShape SHAPE = Block.box(2.0F, 0.0F, 2.0F, 14.0F, 4.0F, 14.0F);
@@ -56,7 +56,7 @@ public class DecayingPieBlock extends FDecayingBlock {
 
     private ItemStack copyCreationDate(LevelAccessor level, BlockPos pos, ItemStack stack) {
         IFood stackIFood = FoodCapability.get(stack);
-        if(level.getBlockEntity(pos) instanceof FDecayingBlockEntity decaying) {
+        if(level.getBlockEntity(pos) instanceof DecayingFoodBlockEntity decaying) {
             IFood decayingIFood = FoodCapability.get(decaying.getStack());
             stackIFood.setCreationDate(decayingIFood.getCreationDate());
         }
@@ -100,7 +100,7 @@ public class DecayingPieBlock extends FDecayingBlock {
 
     protected InteractionResult consumeBite(Level level, BlockPos pos, BlockState state, Player playerIn) {
         BlockEntity bEntity = level.getBlockEntity(pos);
-        if(bEntity instanceof FDecayingBlockEntity decay && decay.isRotten()){
+        if(bEntity instanceof DecayingFoodBlockEntity decay && decay.isRotten()){
             return InteractionResult.PASS;
         }
         if (!playerIn.canEat(false)) {
@@ -179,12 +179,16 @@ public class DecayingPieBlock extends FDecayingBlock {
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof FDecayingBlockEntity decaying) {
+        if (entity instanceof DecayingFoodBlockEntity decaying) {
             if (!Helpers.isBlock(state, newState.getBlock())) {
                 if(state.getValue(BITES) == 0){
                     Helpers.spawnItem(level, pos, decaying.getStack());
                 }
             }
+        }
+
+        if (state.hasBlockEntity() && (!state.is(newState.getBlock()) || !newState.hasBlockEntity())) {
+            level.removeBlockEntity(pos);
         }
     }
 
