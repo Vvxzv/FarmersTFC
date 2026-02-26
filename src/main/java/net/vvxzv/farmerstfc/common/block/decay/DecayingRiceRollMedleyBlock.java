@@ -6,19 +6,17 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
+import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 import java.util.Arrays;
@@ -61,12 +59,16 @@ public class DecayingRiceRollMedleyBlock extends DecayingFeastBlock{
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof FDecayingBlockEntity decaying) {
+        if (entity instanceof DecayingFoodBlockEntity decaying) {
             if (!Helpers.isBlock(state, newState.getBlock())) {
                 if(state.getValue(ROLL_SERVINGS) == 8){
                     Helpers.spawnItem(level, pos, decaying.getStack());
                 }
             }
+        }
+
+        if (state.hasBlockEntity() && !state.is(newState.getBlock())) {
+            level.removeBlockEntity(pos);
         }
     }
 }

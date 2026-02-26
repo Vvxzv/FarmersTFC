@@ -6,11 +6,9 @@ import net.dries007.tfc.common.component.food.IFood;
 import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -25,17 +23,16 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
+import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 
 import java.util.function.Supplier;
 
-public class DecayingFeastBlock extends FDecayingBlock {
+public class DecayingFeastBlock extends DecayingFoodBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final IntegerProperty SERVINGS = IntegerProperty.create("servings", 0, 4);
     protected static final VoxelShape[] SHAPES = new VoxelShape[]{Block.box(2.0F, 0.0F, 2.0F, 14.0F, 1.0F, 14.0F), Block.box(2.0F, 0.0F, 2.0F, 14.0F, 3.0F, 14.0F), Block.box(2.0F, 0.0F, 2.0F, 14.0F, 6.0F, 14.0F), Block.box(2.0F, 0.0F, 2.0F, 14.0F, 8.0F, 14.0F), Block.box(2.0F, 0.0F, 2.0F, 14.0F, 10.0F, 14.0F)};
@@ -63,7 +60,7 @@ public class DecayingFeastBlock extends FDecayingBlock {
     }
 
     private ItemStack copyCreationDate(LevelAccessor level, BlockPos pos, ItemStack stack) {
-        if(level.getBlockEntity(pos) instanceof FDecayingBlockEntity decaying) {
+        if(level.getBlockEntity(pos) instanceof DecayingFoodBlockEntity decaying) {
             IFood decayingIFood = FoodCapability.get(decaying.getStack());
             FoodCapability.setCreationDate(stack, decayingIFood.getCreationDate());
         }
@@ -78,7 +75,7 @@ public class DecayingFeastBlock extends FDecayingBlock {
     @Override
     public ItemInteractionResult useItemOn(ItemStack heldStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof FDecayingBlockEntity decaying && decaying.isRotten()) {
+        if (entity instanceof DecayingFoodBlockEntity decaying && decaying.isRotten()) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
 
@@ -87,7 +84,7 @@ public class DecayingFeastBlock extends FDecayingBlock {
 
     protected ItemInteractionResult takeServing(LevelAccessor level, BlockPos pos, BlockState state, Player player, InteractionHand hand) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof FDecayingBlockEntity decaying && decaying.isRotten()) {
+        if (entity instanceof DecayingFoodBlockEntity decaying && decaying.isRotten()) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
         int servings = state.getValue(this.getServingsProperty());
@@ -163,12 +160,16 @@ public class DecayingFeastBlock extends FDecayingBlock {
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         BlockEntity entity = level.getBlockEntity(pos);
-        if (entity instanceof FDecayingBlockEntity decaying) {
+        if (entity instanceof DecayingFoodBlockEntity decaying) {
             if (!Helpers.isBlock(state, newState.getBlock())) {
                 if(state.getValue(SERVINGS) == 4){
                     Helpers.spawnItem(level, pos, decaying.getStack());
                 }
             }
+        }
+
+        if (state.hasBlockEntity() && !state.is(newState.getBlock())) {
+            level.removeBlockEntity(pos);
         }
     }
 }

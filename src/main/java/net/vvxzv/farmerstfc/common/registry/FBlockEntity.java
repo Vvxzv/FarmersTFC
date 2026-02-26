@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.vvxzv.farmerstfc.FarmersTFC;
-import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
+import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
 import net.vvxzv.farmerstfc.common.blockEntity.RichSoilFarmlandBlockEntity;
 import net.vvxzv.farmerstfc.compat.kubejs.blocks.DecayingBlockBuilder;
 
@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 public class FBlockEntity {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES;
-    public static final Supplier<BlockEntityType<FDecayingBlockEntity>> DECAYING;
+    public static final Supplier<BlockEntityType<DecayingFoodBlockEntity>> DECAYING;
     public static final Supplier<BlockEntityType<RichSoilFarmlandBlockEntity>> FARMLAND;
 
     private static Block[] getFDecayingBlocks() {
@@ -46,7 +46,7 @@ public class FBlockEntity {
         DECAYING = BLOCK_ENTITIES.register(
                 "decaying",
                 () -> BlockEntityType.Builder.of(
-                        FDecayingBlockEntity::new,
+                        DecayingFoodBlockEntity::new,
                         getFDecayingBlocks()
                 ).build(null)
         );

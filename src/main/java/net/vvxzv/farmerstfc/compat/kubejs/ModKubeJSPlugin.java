@@ -4,7 +4,7 @@ import dev.latvian.mods.kubejs.plugin.KubeJSPlugin;
 import dev.latvian.mods.kubejs.registry.BuilderTypeRegistry;
 import dev.latvian.mods.kubejs.script.BindingRegistry;
 import net.minecraft.core.registries.Registries;
-import net.vvxzv.farmerstfc.common.blockEntity.FDecayingBlockEntity;
+import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
 import net.vvxzv.farmerstfc.compat.kubejs.blocks.DecayingBlockBuilder;
 
 public class ModKubeJSPlugin implements KubeJSPlugin {
@@ -15,7 +15,7 @@ public class ModKubeJSPlugin implements KubeJSPlugin {
     }
 
     public void registerBindings(BindingRegistry bindings) {
-        bindings.add("FDecayingBlockEntity", FDecayingBlockEntity.class);
+        bindings.add("DecayingFoodBlockEntity", DecayingFoodBlockEntity.class);
         bindings.add("DecayingBlockJS", DecayingBlockBuilder.DecayingBlockJS.class);
     }
 }
