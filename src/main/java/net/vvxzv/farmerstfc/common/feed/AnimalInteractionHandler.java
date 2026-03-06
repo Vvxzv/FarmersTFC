@@ -60,9 +60,14 @@ public class AnimalInteractionHandler {
         dog.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0));
 
         // 播放音效
-        dog.level().playSound(null, dog.blockPosition(),
+        dog.level().playSound(
+                null,
+                dog.blockPosition(),
                 net.minecraft.sounds.SoundEvents.GENERIC_EAT,
-                net.minecraft.sounds.SoundSource.PLAYERS, 0.8F, 0.8F);
+                net.minecraft.sounds.SoundSource.PLAYERS,
+                0.8F,
+                0.8F
+        );
 
         // 生成粒子效果
         spawnHearts(dog);
@@ -84,9 +89,14 @@ public class AnimalInteractionHandler {
         horse.addEffect(new MobEffectInstance(MobEffects.JUMP, 6000, 0));
 
         // 播放音效
-        horse.level().playSound(null, horse.blockPosition(),
+        horse.level().playSound(
+                null,
+                horse.blockPosition(),
                 net.minecraft.sounds.SoundEvents.HORSE_EAT,
-                net.minecraft.sounds.SoundSource.PLAYERS, 0.8F, 0.9F);
+                net.minecraft.sounds.SoundSource.PLAYERS,
+                0.8F,
+                0.9F
+        );
 
         // 生成粒子效果
         spawnHearts(horse);

@@ -1,6 +1,7 @@
 package net.vvxzv.farmerstfc;
 
 import com.mojang.logging.LogUtils;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -8,9 +9,9 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vvxzv.farmerstfc.common.registry.FBlock;
 import net.vvxzv.farmerstfc.common.registry.FBlockEntity;
-import net.vvxzv.farmerstfc.common.registry.FCreativeTAB;
 import net.vvxzv.farmerstfc.common.registry.FItem;
 import org.slf4j.Logger;
+import vectorwing.farmersdelight.common.registry.ModCreativeTabs;
 
 
 @Mod(FarmersTFC.MOD_ID)
@@ -25,9 +26,16 @@ public class FarmersTFC {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         FBlock.BLOCKS.register(modEventBus);
         FItem.ITEMS.register(modEventBus);
-        FCreativeTAB.CREATIVE_MODE_TAB.register(modEventBus);
         FBlockEntity.BLOCK_ENTITIES.register(modEventBus);
 
+        modEventBus.addListener(this::addCreativeTab);
+
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    private void addCreativeTab(BuildCreativeModeTabContentsEvent event){
+        if(event.getTabKey() == ModCreativeTabs.TAB_FARMERS_DELIGHT.getKey()){
+            event.accept(FBlock.PAN.get());
+        }
     }
 }
