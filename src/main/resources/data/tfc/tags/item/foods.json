@@ -29,9 +29,6 @@
     "farmersdelight:sweet_berry_cheesecake",
     "farmersdelight:chocolate_pie",
     "farmersdelight:cake_slice",
-    "farmersdelight:apple_pie_slice",
-    "farmersdelight:sweet_berry_cheesecake_slice",
-    "farmersdelight:chocolate_pie_slice",
     "farmersdelight:sweet_berry_cookie",
     "farmersdelight:honey_cookie",
     "farmersdelight:fruit_salad",
@@ -51,8 +48,6 @@
     "farmersdelight:kelp_roll",
     "farmersdelight:kelp_roll_slice",
     "farmersdelight:cooked_rice",
-    "farmersdelight:dog_food",
-    "farmersdelight:horse_feed",
     "#farmerstfc:food_block"
   ]
 }

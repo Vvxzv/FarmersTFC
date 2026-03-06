@@ -91,3 +91,10 @@ type = "required"
 versionRange = "[1.2.9,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "oneenoughitem"
+type = "required"
+versionRange = "[1.,)"
+ordering = "AFTER"
+side = "BOTH"
