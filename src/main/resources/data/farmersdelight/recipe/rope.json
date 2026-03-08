@@ -1,14 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "farmersdelight:straw"
+      "tag": "c:straw"
     },
     {
-      "item": "farmersdelight:straw"
+      "tag": "c:straw"
     },
     {
-      "item": "farmersdelight:straw"
+      "tag": "c:straw"
     }
   ],
   "result": {
