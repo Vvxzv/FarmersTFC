@@ -37,10 +37,7 @@
     }
   ],
   "result": {
-    "item": "farmerstfc:stuffed_pumpkin_block",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "farmerstfc:stuffed_pumpkin_block"
   },
   "container": {
     "item": "tfc:pumpkin"

@@ -14,10 +14,7 @@
   "result": [
     {
       "item": "tfc:food/pumpkin_chunks",
-      "count": 6,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "count": 6
     }
   ]
 }

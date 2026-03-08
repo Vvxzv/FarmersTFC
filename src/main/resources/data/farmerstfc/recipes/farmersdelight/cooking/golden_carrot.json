@@ -13,10 +13,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:golden_carrot",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
+    "item": "minecraft:golden_carrot"
   },
   "experience": 2.0,
   "cookingtime": 1800

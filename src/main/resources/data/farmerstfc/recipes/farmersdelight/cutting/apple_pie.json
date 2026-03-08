@@ -14,10 +14,7 @@
   "result": [
     {
       "item": "farmersdelight:apple_pie_slice",
-      "count": 4,
-      "modifiers": [
-        "tfc:copy_food"
-      ]
+      "count": 4
     }
   ]
 }
