@@ -80,17 +80,20 @@ StartupEvents.registry('block', event => {
 // 你需要安装KubeJS TFC https://www.curseforge.com/minecraft/mc-mods/kubejs-tfc
 
 TFCEvents.data(event => {
-    event.foodItem('kubejs:example_decaying_block', food => {
-        food.hunger(6)
-        food.saturation(2)
-        food.decayModifier(22)
-        food.water(5)
-        food.grain(1)
-        food.fruit(1)
-        food.vegetables(1)
-        food.protein(1)
-        food.dairy(1)
-    })
+    event.food({
+        ingredient: {
+            item: "kubejs:example_decaying_block"
+        },
+        food: {
+            decay_modifier: 22.0,
+            hunger: 6,
+            water: 5,
+            saturation:2.0,
+            intoxication:0,
+            nutrients: [1, 1, 1, 1, 1]
+        },
+        edible: false,
+    }, "kubejs:example_decaying_block")
 })
 ```
 5. 最后写吃蛋糕 ```/kubejs/server_scripts/eatFoodBlock.js```
@@ -224,17 +227,20 @@ StartupEvents.registry('block', event => {
 // Need install KubeJS TFC https://www.curseforge.com/minecraft/mc-mods/kubejs-tfc
 
 TFCEvents.data(event => {
-    event.foodItem('kubejs:example_decaying_block', food => {
-        food.hunger(6)
-        food.saturation(2)
-        food.decayModifier(22)
-        food.water(5)
-        food.grain(1)
-        food.fruit(1)
-        food.vegetables(1)
-        food.protein(1)
-        food.dairy(1)
-    })
+    event.food({
+        ingredient: {
+            item: "kubejs:example_decaying_block"
+        },
+        food: {
+            decay_modifier: 22.0,
+            hunger: 6,
+            water: 5,
+            saturation:2.0,
+            intoxication:0,
+            nutrients: [1, 1, 1, 1, 1]
+        },
+        edible: false,
+    }, "kubejs:example_decaying_block")
 })
 ```
 5. Eat cake ```/kubejs/server_scripts/eatFoodBlock.js```
