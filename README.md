@@ -160,7 +160,7 @@ BlockEvents.rightClicked(event => {
 ### Added KubeJS compat (Decaying block registry)
 ```JavaScript
 StartupEvents.registry('block', event => {
-//.setRottenBlock(ResourceLocation)  If the block rots, it will become other block, otherwise it is the block itself.
+    //.setRottenBlock(ResourceLocation)  If the block rots, it will become other block, otherwise it is the block itself.
 
     //.eat(int) 1~15 a blockstate, can be used to create different models.
 
