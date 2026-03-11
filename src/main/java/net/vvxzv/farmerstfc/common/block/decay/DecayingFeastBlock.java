@@ -27,7 +27,7 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
+import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.utility.TextUtils;
 
 import java.util.function.Supplier;

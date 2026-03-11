@@ -22,7 +22,7 @@ import net.vvxzv.farmerstfc.common.block.RottenPieFoodBlock;
 import net.vvxzv.farmerstfc.common.block.RottenPlateFoodBlock;
 import net.vvxzv.farmerstfc.common.block.decay.*;
 import net.vvxzv.farmerstfc.FarmersTFC;
-import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
+import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 

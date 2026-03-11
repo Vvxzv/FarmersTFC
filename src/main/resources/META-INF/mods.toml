@@ -82,3 +82,10 @@ mandatory = true
 versionRange = "[1.,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "kubejs"
+mandatory = false
+versionRange = "[2001.6.5,)"
+ordering = "AFTER"
+side = "BOTH"

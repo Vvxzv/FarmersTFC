@@ -1,12 +1,7 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "farmersdelight:iron_knife"
-  },
-  "addition": {
-    "tag": "forge:ingots/gold"
-  },
-  "result": {
-    "item": "farmersdelight:golden_knife"
-  }
+	"conditions": [
+		{
+			"type": "forge:false"
+		}
+	]
 }

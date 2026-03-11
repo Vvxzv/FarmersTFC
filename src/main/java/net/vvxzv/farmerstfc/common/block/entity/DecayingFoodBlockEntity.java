@@ -1,7 +1,8 @@
-package net.vvxzv.farmerstfc.common.blockEntity;
+package net.vvxzv.farmerstfc.common.block.entity;
 
 import net.dries007.tfc.common.blockentities.DecayingBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -9,7 +10,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.vvxzv.farmerstfc.common.block.decay.DecayingFoodBlock;
 import net.vvxzv.farmerstfc.common.registry.FBlockEntity;
 
+@SuppressWarnings("unused")
 public class DecayingFoodBlockEntity extends DecayingBlockEntity {
+    private boolean dropSelf = true;
+
     public DecayingFoodBlockEntity(BlockPos pos, BlockState state) {
         super(FBlockEntity.DECAYING.get(), pos, state);
     }
@@ -23,5 +27,25 @@ public class DecayingFoodBlockEntity extends DecayingBlockEntity {
                 }
             }
         }
+    }
+
+    public void setDropSelf(boolean dropSelf){
+        this.dropSelf = dropSelf;
+    }
+
+    public boolean isDropSelf() {
+        return this.dropSelf;
+    }
+
+    @Override
+    public void loadAdditional(CompoundTag nbt) {
+        super.loadAdditional(nbt);
+        this.dropSelf = nbt.getBoolean("dropSelf");
+    }
+
+    @Override
+    public void saveAdditional(CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        nbt.putBoolean("dropSelf", this.dropSelf);
     }
 }
