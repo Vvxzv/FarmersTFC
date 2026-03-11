@@ -16,12 +16,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.vvxzv.farmerstfc.FarmersTFC;
 import net.vvxzv.farmerstfc.common.block.*;
 import net.vvxzv.farmerstfc.common.block.decay.*;
-import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
+import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("unused")
 public class FBlock {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FarmersTFC.MODID);
 

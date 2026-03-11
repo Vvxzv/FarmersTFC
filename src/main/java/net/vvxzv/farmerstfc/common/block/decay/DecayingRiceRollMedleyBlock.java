@@ -16,7 +16,7 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
+import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 import java.util.Arrays;

@@ -29,7 +29,9 @@ public class FarmersTFC {
 
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == ModCreativeTabs.TAB_FARMERS_DELIGHT.get()){
-            event.accept(FBlock.PAN.get());
+            FItem.ITEMS.getEntries().forEach(item -> {
+                event.accept(item.get());
+            });
         }
     }
 }

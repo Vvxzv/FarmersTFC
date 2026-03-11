@@ -1,4 +1,4 @@
-package net.vvxzv.farmerstfc.common.util;
+package net.vvxzv.farmerstfc.common.utils;
 
 import net.minecraft.core.Direction;
 

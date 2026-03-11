@@ -23,8 +23,7 @@ neoForge {
         minecraftVersion = project.parchment_minecraft_version
     }
 
-    // This line is optional. Access Transformers are automatically detected
-    // accessTransformers.add('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformers.from 'src/main/resources/META-INF/accesstransformer.cfg'
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -148,8 +147,10 @@ dependencies {
     runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
 
     //KubeJS
-    implementation "curse.maven:kubejs-238086:5701155"
-    implementation "curse.maven:rhino-416294:6184623"
+    implementation "curse.maven:kubejs-238086:7278501"
+    implementation "curse.maven:rhino-416294:7104526"
+
+    implementation "curse.maven:probejs-585406:7105159"
 
     //jade
     implementation "curse.maven:jade-324717:6853386"
@@ -158,7 +159,6 @@ dependencies {
     implementation "curse.maven:one-enough-item-1312660:7471735"
     implementation "curse.maven:oelib-1319210:7471719"
     implementation "curse.maven:architectury-api-419699:5786327"
-
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

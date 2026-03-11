@@ -2,7 +2,6 @@ package net.vvxzv.farmerstfc.common.block.decay;
 
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.crop.DecayingBlock;
-import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
-import net.vvxzv.farmerstfc.common.blockEntity.DecayingFoodBlockEntity;
+import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;

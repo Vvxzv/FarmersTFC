@@ -1,4 +1,4 @@
-package net.vvxzv.farmerstfc.common.blockEntity;
+package net.vvxzv.farmerstfc.common.block.entity;
 
 import net.dries007.tfc.common.blockentities.FarmlandBlockEntity;
 import net.dries007.tfc.util.data.Fertilizer;

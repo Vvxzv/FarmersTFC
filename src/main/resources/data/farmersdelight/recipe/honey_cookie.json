@@ -6,7 +6,15 @@
   ],
   "key": {
     "b": {
-      "item":"firmalife:raw_honey"
+      "type": "tfc:and",
+      "children": [
+        {
+          "item":"firmalife:food/raw_honey"
+        },
+        {
+          "type": "tfc:not_rotten"
+        }
+      ]
     },
     "c": {
       "type": "tfc:and",
