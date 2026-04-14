@@ -1,46 +1,42 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "farmersdelight:cod_slice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "farmersdelight:cod_slice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/cooked_rice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "result": {
-    "count": 2,
-    "id": "farmersdelight:cod_roll"
-  },
-  "modifiers": [
-    "tfc:copy_food"
-  ]
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "farmersdelight:cod_roll",
+		"count": 2
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:cod_slice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:cod_slice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/cooked_rice"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	]
 }

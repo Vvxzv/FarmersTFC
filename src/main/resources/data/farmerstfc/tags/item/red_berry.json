@@ -1,11 +1,11 @@
 {
-    "values": [
-        "minecraft:sweet_berries",
-        "tfc:food/raspberry",
-        "tfc:food/cranberry",
-        "tfc:food/cloudberry",
-        "tfc:food/bunchberry",
-        "tfc:food/wintergreen_berry",
-        "tfc:food/strawberry"
-    ]
+	"values": [
+		"minecraft:sweet_berries",
+		"tfc:food/bunchberry",
+		"tfc:food/cloudberry",
+		"tfc:food/cranberry",
+		"tfc:food/raspberry",
+		"tfc:food/strawberry",
+		"tfc:food/wintergreen_berry"
+	]
 }

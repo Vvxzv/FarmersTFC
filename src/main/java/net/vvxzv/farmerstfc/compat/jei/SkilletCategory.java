@@ -13,7 +13,6 @@ import net.dries007.tfc.common.recipes.HeatingRecipe;
 import net.dries007.tfc.compat.jei.JEIIntegration;
 import net.dries007.tfc.compat.jei.category.BaseRecipeCategory;
 import net.dries007.tfc.config.TFCConfig;
-import net.dries007.tfc.config.TemperatureDisplayStyle;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
@@ -21,6 +20,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.neoforged.neoforge.fluids.FluidStack;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
 import java.util.Arrays;
@@ -32,7 +32,7 @@ public class SkilletCategory extends BaseRecipeCategory<HeatingRecipe> {
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, HeatingRecipe recipe, IFocusGroup focuses) {
+    public void setRecipe(IRecipeLayoutBuilder builder, HeatingRecipe recipe, @NotNull IFocusGroup focuses) {
         IRecipeSlotBuilder inputSlot = builder.addSlot(RecipeIngredientRole.INPUT, 21, 17);
         IRecipeSlotBuilder outputSlot = builder.addSlot(RecipeIngredientRole.OUTPUT, 85, 17);
         inputSlot.addIngredients(recipe.getIngredient());
@@ -52,7 +52,7 @@ public class SkilletCategory extends BaseRecipeCategory<HeatingRecipe> {
     }
 
     @Override
-    public void draw(HeatingRecipe recipe, IRecipeSlotsView recipeSlots, GuiGraphics graphics, double mouseX, double mouseY) {
+    public void draw(HeatingRecipe recipe, @NotNull IRecipeSlotsView recipeSlots, @NotNull GuiGraphics graphics, double mouseX, double mouseY) {
         this.fire.draw(graphics, 54, 16);
         this.fireAnimated.draw(graphics, 54, 16);
         MutableComponent color = TFCConfig.CLIENT.heatTooltipStyle.get().formatColored(recipe.getTemperature());

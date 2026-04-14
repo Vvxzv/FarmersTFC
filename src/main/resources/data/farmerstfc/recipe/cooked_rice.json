@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "farmersdelight:cooked_rice",
+		"count": 1,
+		"components": {
+			"tfc:food": {
+				"creation_date": 276912000
+			}
+		}
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/cooked_rice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"item": "farmersdelight:salmon_slice"
+	},
+	"temperature": 200.0,
+	"result_item": {
+		"stack": {
+			"id": "farmersdelight:cooked_salmon_slice",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_food"
+			}
+		]
+	}
+}

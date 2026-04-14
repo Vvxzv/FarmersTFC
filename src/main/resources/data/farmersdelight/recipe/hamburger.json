@@ -1,88 +1,95 @@
 {
-  "type": "tfc:advanced_shapeless_crafting",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/bread"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "farmersdelight:beef_patty"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/leafy_green"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/tomato"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/onion"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "primary_ingredient": {
-    "tag": "c:foods/bread"
-  },
-  "remainder": {
-    "modifiers": []
-  },
-  "result": {
-    "stack": {
-      "id": "farmersdelight:hamburger"
-    },
-    "modifiers": [
-      {
-        "type":"tfc:meal",
-        "food":{
-          "hunger":6,
-          "saturation":2,
-          "decay_modifier":1.5
-        },
-        "portions":[
-          {
-            "nutrient_modifier":1,
-            "water_modifier":1,
-            "saturation_modifier":1
-          }
-        ]
-      }
-    ]
-  }
+	"type": "tfc:advanced_shapeless_crafting",
+	"result": {
+		"stack": {
+			"id": "farmersdelight:hamburger",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"food": {
+					"decay_modifier": 3.0,
+					"hunger": 4,
+					"saturation": 3.0
+				},
+				"portions": [
+					{
+						"nutrient_modifier": 0.9,
+						"water_modifier": 0.8
+					}
+				],
+				"type": "tfc:meal"
+			}
+		]
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/bread"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:beef_patty"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "farmerstfc:berry"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "tfc:usable_in_sandwich"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "tfc:usable_in_sandwich"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"tag": "c:tools/knife"
+		}
+	],
+	"primary_ingredient": {
+		"tag": "c:tools/knife"
+	},
+	"remainder": {
+		"modifiers": [
+			{
+				"type": "tfc:damage_crafting_remainder"
+			}
+		]
+	}
 }

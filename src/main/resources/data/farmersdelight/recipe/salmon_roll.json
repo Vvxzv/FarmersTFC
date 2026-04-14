@@ -1,43 +1,42 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "farmersdelight:salmon_slice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "farmersdelight:salmon_slice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/cooked_rice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "result": {
-    "count": 2,
-    "id": "farmersdelight:salmon_roll"
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "farmersdelight:salmon_roll",
+		"count": 2
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:salmon_slice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:salmon_slice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/cooked_rice"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	]
 }

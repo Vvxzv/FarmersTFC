@@ -1,19 +1,7 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "item": "minecraft:leather_horse_armor"
-    }
-  ],
-  "result": [
-    {
-      "item": {
-        "count": 1,
-        "id": "minecraft:leather"
-      }
-    }
-  ],
-  "tool": {
-    "tag": "c:tools/shear"
-  }
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:false"
+		}
+	]
 }

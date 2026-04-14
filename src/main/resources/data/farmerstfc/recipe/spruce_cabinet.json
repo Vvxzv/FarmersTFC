@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"id": "farmersdelight:spruce_cabinet",
+		"count": 1
+	},
+	"pattern": [
+		"aaa",
+		"b b",
+		"aaa"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:wood/lumber/spruce"
+		},
+		"b": {
+			"item": "tfc:wood/trapdoor/spruce"
+		}
+	}
+}

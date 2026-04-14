@@ -5,9 +5,13 @@
   "compatibilityLevel" : "JAVA_21",
   "mixins" : [
     "BlockItemMixin",
-    "RichSoilBlockMixin",
-    "SkilletBlockEntityMixin",
-    "StoveBlockEntityMixin"
+    "block.FeastBlockMixin",
+    "block.PieBlockMixin",
+    "block.RiceRollMedleyBlockMixin",
+    "block.RichSoilBlockMixin",
+    "block.TFCCakeBlockMixin",
+    "block.entity.SkilletBlockEntityMixin",
+    "block.entity.StoveBlockEntityMixin"
   ],
   "client" : [
   ],

@@ -25,7 +25,7 @@ displayName = "${mod_name}" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile= "../farmerstfc.png"
+logoFile="farmerstfc.png" #optional
 # A text field displayed in the mod UI
 #credits="" #optional
 # A text field displayed in the mod UI
@@ -40,9 +40,6 @@ config = "${mod_id}.mixins.json"
 
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
-#[[accessTransformers]]
-#file="accesstransformer.cfg"
-#
 #[[accessTransformers]]
 #file="META-INF/accesstransformer.cfg"
 
@@ -91,14 +88,7 @@ side = "BOTH"
 [[dependencies."${mod_id}"]]
 modId = "farmersdelight"
 type = "required"
-versionRange = "[1.2.9,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies."${mod_id}"]]
-modId = "oneenoughitem"
-type = "required"
-versionRange = "[1.,)"
+versionRange = "[1.2.11,)"
 ordering = "AFTER"
 side = "BOTH"
 

@@ -1,70 +1,66 @@
 {
-  "type": "tfc:advanced_shapeless_crafting",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/tomato"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/onion"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/cooked_meat"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "item": "minecraft:stick"
-    }
-  ],
-  "primary_ingredient": {
-    "item": "minecraft:stick"
-  },
-  "remainder": {
-    "modifiers": []
-  },
-  "result": {
-    "stack": {
-      "id": "farmersdelight:barbecue_stick"
-    },
-    "modifiers": [
-      {
-        "type": "tfc:meal",
-        "food": {
-          "hunger": 6,
-          "water":10,
-          "saturation": 3,
-          "decay_modifier": 2
-        },
-        "portions": [
-          {
-            "nutrient_modifier": 1,
-            "water_modifier": 1,
-            "saturation_modifier": 1
-          }
-        ]
-      }
-    ]
-  }
+	"type": "tfc:advanced_shapeless_crafting",
+	"result": {
+		"stack": {
+			"id": "farmersdelight:barbecue_stick",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"food": {
+					"decay_modifier": 3.0,
+					"hunger": 4,
+					"saturation": 3.0
+				},
+				"portions": [
+					{
+						"nutrient_modifier": 0.9,
+						"water_modifier": 0.8
+					}
+				],
+				"type": "tfc:meal"
+			}
+		]
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/tomato"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/onion"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/cooked_meat"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"tag": "c:rods/wooden"
+		}
+	],
+	"primary_ingredient": {
+		"tag": "c:rods/wooden"
+	}
 }

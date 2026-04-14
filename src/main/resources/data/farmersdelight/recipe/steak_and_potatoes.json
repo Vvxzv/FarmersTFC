@@ -1,57 +1,56 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/baked_potato"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/cooked_beef"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/onion"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }, 
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/cooked_rice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:steak_and_potatoes"
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "farmersdelight:steak_and_potatoes",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/baked_potato"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/cooked_beef"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/onion"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/cooked_rice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
 }

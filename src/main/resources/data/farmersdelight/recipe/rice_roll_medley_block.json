@@ -1,1 +1,100 @@
-{"neoforge:conditions":[{"type":"neoforge:false"}]}
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "farmersdelight:rice_roll_medley_block",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:kelp_roll_slice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:kelp_roll_slice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:kelp_roll_slice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:salmon_roll"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:salmon_roll"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:salmon_roll"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:cod_roll"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "minecraft:bowl"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:cod_roll"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	]
+}

@@ -2,7 +2,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'idea'
-    id 'net.neoforged.moddev' version '2.0.110'
+    id 'net.neoforged.moddev' version '2.0.141'
 }
 
 version = mod_version
@@ -23,6 +23,7 @@ neoForge {
         minecraftVersion = project.parchment_minecraft_version
     }
 
+    // This line is optional. Access Transformers are automatically detected
     accessTransformers.from 'src/main/resources/META-INF/accesstransformer.cfg'
 
     // Default run configurations.
@@ -91,6 +92,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     mavenLocal()
+    flatDir {
+        dirs 'libs'
+    }
     maven {
         url "https://cursemaven.com"
         content {
@@ -130,17 +134,19 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+    implementation "curse.maven:jei-swift-copy-1507432:7890649"
+
     // patchouli
     runtimeOnly "curse.maven:patchouli-306770:6842247"
 
     // tfc
-    implementation "curse.maven:terrafirmacraft-302973:7343990"
+    implementation "curse.maven:terrafirmacraft-302973:7875771"
 
     // firmalife
-    implementation "curse.maven:firmalife-453394:7442721"
+    implementation "curse.maven:firmalife-453394:7876126"
 
     // farmers delight
-    implementation "curse.maven:farmers-delight-398521:6917256"
+    implementation "curse.maven:farmers-delight-398521:7801529"
 
     //JEI
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
@@ -152,13 +158,12 @@ dependencies {
 
     implementation "curse.maven:probejs-585406:7105159"
 
+    implementation "curse.maven:javascriptjs-1238318:6855084"
+
+    //implementation "curse.maven:kubejs-tfc-841001:7453260"
+
     //jade
     implementation "curse.maven:jade-324717:6853386"
-
-    //oei
-    implementation "curse.maven:one-enough-item-1312660:7471735"
-    implementation "curse.maven:oelib-1319210:7471719"
-    implementation "curse.maven:architectury-api-419699:5786327"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

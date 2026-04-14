@@ -1,27 +1,27 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "farmerstfc:foods/raw_pork"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "result": [
-    {
-      "item": {
-        "count": 2,
-        "id": "farmersdelight:bacon"
-      }
-    }
-  ],
-  "tool": {
-    "tag": "c:tools/knife"
-  }
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/pork"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "farmersdelight:bacon",
+				"count": 2
+			}
+		}
+	],
+	"tool": {
+		"tag": "c:tools/knife"
+	}
 }

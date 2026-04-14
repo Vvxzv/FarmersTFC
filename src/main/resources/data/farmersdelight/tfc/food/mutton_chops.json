@@ -1,0 +1,8 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:mutton_chops"
+	},
+	"decay_modifier": 2,
+	"hunger": 2,
+	"protein": 1
+}

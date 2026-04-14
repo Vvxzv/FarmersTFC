@@ -1,0 +1,33 @@
+{
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:ham"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "tfc:food/pork",
+				"count": 2
+			}
+		},
+		{
+			"item": {
+				"id": "minecraft:bone",
+				"count": 1
+			}
+		}
+	],
+	"tool": {
+		"tag": "c:tools/knife"
+	}
+}

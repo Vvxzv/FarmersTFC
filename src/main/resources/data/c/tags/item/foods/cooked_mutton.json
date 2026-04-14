@@ -1,6 +1,5 @@
 {
-    "replace": false,
-    "values": [
-        "tfc:food/cooked_mutton"
-    ]
+	"values": [
+		"#farmerstfc:foods/cooked_mutton"
+	]
 }

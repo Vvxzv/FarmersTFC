@@ -1,47 +1,75 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/dried_kelp"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    "R": {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/cooked_rice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    "X": {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/carrot"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  },
-  "pattern": [
-    "RXR",
-    "###"
-  ],
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:kelp_roll"
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "farmersdelight:kelp_roll",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/cooked_rice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/cooked_rice"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/carrot"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/dried_kelp"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/dried_kelp"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/dried_kelp"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	]
 }

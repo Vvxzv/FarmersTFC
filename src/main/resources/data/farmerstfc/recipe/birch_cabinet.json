@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"id": "farmersdelight:birch_cabinet",
+		"count": 1
+	},
+	"pattern": [
+		"aaa",
+		"b b",
+		"aaa"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:wood/lumber/birch"
+		},
+		"b": {
+			"item": "tfc:wood/trapdoor/birch"
+		}
+	}
+}

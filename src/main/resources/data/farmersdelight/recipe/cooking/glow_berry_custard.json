@@ -1,42 +1,46 @@
 {
-  "type": "farmersdelight:cooking",
-  "experience": 1.0,
-  "ingredients": [
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/berry"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:fluid_content",
-      "fluid": {
-        "amount": 100,
-        "tag": "c:milk"
-      }
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:eggs"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "item": "minecraft:sugar"
-    }
-  ],
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:glow_berry_custard"
-  }
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "farmerstfc:berry"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"fluid": {
+				"fluid": "minecraft:milk",
+				"amount": 100
+			},
+			"type": "tfc:fluid_content"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "minecraft:egg"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "minecraft:sugar"
+		}
+	],
+	"result": {
+		"id": "farmersdelight:glow_berry_custard",
+		"count": 1
+	},
+	"container": {
+		"id": "minecraft:glass_bottle",
+		"count": 1
+	}
 }

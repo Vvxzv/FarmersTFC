@@ -1,0 +1,9 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:cooked_bacon"
+	},
+	"decay_modifier": 1.5,
+	"hunger": 2,
+	"saturation": 1,
+	"protein": 1.67
+}

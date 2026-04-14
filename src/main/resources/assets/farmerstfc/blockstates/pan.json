@@ -1,32 +1,17 @@
 {
   "variants": {
-    "facing=north,support=false": {
+    "facing=north": {
       "model": "farmerstfc:block/pan"
     },
-    "facing=south,support=false": {
+    "facing=south": {
       "model": "farmerstfc:block/pan",
       "y": 180
     },
-    "facing=west,support=false": {
+    "facing=west": {
       "model": "farmerstfc:block/pan",
       "y": 270
     },
-    "facing=east,support=false": {
-      "model": "farmerstfc:block/pan",
-      "y": 90
-    },
-    "facing=north,support=true": {
-      "model": "farmerstfc:block/pan"
-    },
-    "facing=south,support=true": {
-      "model": "farmerstfc:block/pan",
-      "y": 180
-    },
-    "facing=west,support=true": {
-      "model": "farmerstfc:block/pan",
-      "y": 270
-    },
-    "facing=east,support=true": {
+    "facing=east": {
       "model": "farmerstfc:block/pan",
       "y": 90
     }

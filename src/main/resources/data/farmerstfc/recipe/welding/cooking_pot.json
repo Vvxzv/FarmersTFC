@@ -1,0 +1,14 @@
+{
+	"type": "tfc:welding",
+	"result": {
+		"id": "farmersdelight:cooking_pot",
+		"count": 1
+	},
+	"first_input": {
+		"item": "tfc:ceramic/pot"
+	},
+	"second_input": {
+		"item": "tfc:metal/double_sheet/wrought_iron"
+	},
+	"tier": 3
+}

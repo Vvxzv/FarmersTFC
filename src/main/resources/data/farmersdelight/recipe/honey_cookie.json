@@ -1,34 +1,40 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "b",
-    "c"
-  ],
-  "key": {
-    "b": {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item":"firmalife:food/raw_honey"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    "c": {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "firmalife:food/chocolate_chip_cookie"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  },
-  "result": {
-    "id": "farmersdelight:honey_cookie"
-  }
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"b",
+		"c"
+	],
+	"key": {
+		"b": {
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "firmalife:food/raw_honey"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		"c": {
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "firmalife:food/chocolate_chip_cookie"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	},
+	"result": {
+		"id": "farmersdelight:honey_cookie"
+	},
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "firmalife"
+		}
+	]
 }

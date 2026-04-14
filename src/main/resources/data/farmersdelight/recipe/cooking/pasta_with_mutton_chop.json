@@ -1,44 +1,47 @@
 {
-  "type": "farmersdelight:cooking",
-  "experience": 1.0,
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/raw_mutton"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/pasta"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "farmersdelight:tomato_sauce"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "recipe_book_tab": "meals",
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:pasta_with_mutton_chop"
-  }
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/raw_mutton"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:raw_pasta"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:tomato_sauce"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": {
+		"id": "farmersdelight:pasta_with_mutton_chop",
+		"count": 1
+	},
+	"container": {
+		"id": "minecraft:bowl",
+		"count": 1
+	}
 }

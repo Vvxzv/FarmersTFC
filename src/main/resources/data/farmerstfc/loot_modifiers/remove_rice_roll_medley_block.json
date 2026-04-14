@@ -1,0 +1,12 @@
+{
+	"type": "farmerstfc:remove_items",
+	"conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "farmersdelight:blocks/rice_roll_medley_block"
+		}
+	],
+	"targets": [
+		"farmersdelight:rice_roll_medley_block"
+	]
+}

@@ -1,71 +1,73 @@
 {
-  "type": "farmersdelight:cooking",
-  "experience": 1.0,
-  "ingredients": [
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "minecraft:brown_mushroom"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "minecraft:red_mushroom"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/rice"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "neoforge:compound",
-      "children": [
-        { 
-          "type": "tfc:and",
-          "children": [
-            {
-              "tag": "c:foods/carrot"
-            },
-            {
-              "type": "tfc:not_rotten"
-            }
-          ]
-        },
-        { 
-          "type": "tfc:and",
-          "children": [
-            {
-              "tag": "c:foods/potato"
-            },
-            {
-              "type": "tfc:not_rotten"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "recipe_book_tab": "meals",
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:mushroom_rice"
-  }
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"fluid": {
+				"fluid": "minecraft:water",
+				"amount": 100
+			},
+			"type": "tfc:fluid_content"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/rice_grain"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "minecraft:brown_mushroom"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "minecraft:red_mushroom"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"children": [
+						{
+							"item": "tfc:food/carrot"
+						},
+						{
+							"item": "tfc:food/potato"
+						}
+					],
+					"type": "neoforge:compound"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": {
+		"id": "farmersdelight:mushroom_rice",
+		"count": 1
+	},
+	"container": {
+		"id": "minecraft:bowl",
+		"count": 1
+	}
 }

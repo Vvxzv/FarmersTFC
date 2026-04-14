@@ -1,0 +1,19 @@
+{
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"item": "tfc:melon"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "tfc:food/melon_slice",
+				"count": 6
+			}
+		}
+	],
+	"tool": {
+		"tag": "c:tools/knife"
+	}
+}

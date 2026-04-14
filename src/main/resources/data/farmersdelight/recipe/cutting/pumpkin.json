@@ -1,0 +1,27 @@
+{
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:pumpkin"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "farmersdelight:pumpkin_slice",
+				"count": 4
+			}
+		}
+	],
+	"tool": {
+		"tag": "c:tools/knife"
+	}
+}

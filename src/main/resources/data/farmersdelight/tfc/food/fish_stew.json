@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:fish_stew"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 2,
+	"water": 30,
+	"vegetables": 4,
+	"protein": 2
+}

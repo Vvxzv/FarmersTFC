@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:beef_stew"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 2,
+	"water": 30,
+	"vegetables": 2,
+	"protein": 2.5
+}

@@ -1,0 +1,8 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:bacon"
+	},
+	"decay_modifier": 2,
+	"hunger": 2,
+	"protein": 1
+}

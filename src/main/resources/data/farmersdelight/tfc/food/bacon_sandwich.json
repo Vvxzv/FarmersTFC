@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:bacon_sandwich"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 3,
+	"grain": 1,
+	"vegetables": 2.5,
+	"protein": 2.5
+}

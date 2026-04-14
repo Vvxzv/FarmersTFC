@@ -1,84 +1,53 @@
 {
-  "type": "tfc:advanced_shapeless_crafting",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/bread"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/cooked_bacon"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/leafy_green"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/tomato"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "tag": "c:tools/knife"
-    }
-  ],
-  "primary_ingredient": {
-    "tag": "c:tools/knife"
-  },
-  "remainder": {
-    "modifiers": [
-      {
-        "type": "tfc:damage_crafting_remainder"
-      }
-    ]
-  },
-  "result": {
-    "stack": {
-      "id": "farmersdelight:bacon_sandwich"
-    },
-    "modifiers": [
-      {
-        "type": "tfc:meal",
-        "food": {
-          "hunger": 5,
-          "saturation": 3,
-          "decay_modifier": 1.5
-        },
-        "portions": [
-          {
-            "nutrient_modifier": 1,
-            "water_modifier": 1,
-            "saturation_modifier": 1
-          }
-        ]
-      }
-    ]
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "farmersdelight:bacon_sandwich",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/bread"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:cooked_bacon"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/cabbage"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/tomato"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	]
 }

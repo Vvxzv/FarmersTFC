@@ -1,1 +1,39 @@
-{"neoforge:conditions":[{"type":"neoforge:false"}]}
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"id": "farmersdelight:apple_pie",
+		"count": 1
+	},
+	"pattern": [
+		"a",
+		"b",
+		"c"
+	],
+	"key": {
+		"a": {
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/red_apple"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		"b": {
+			"item": "minecraft:sugar"
+		},
+		"c": {
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:pie_crust"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	}
+}

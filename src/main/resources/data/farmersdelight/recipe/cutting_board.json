@@ -1,20 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "tag": "tfc:lumber"
-    },
-    "/": {
-      "tag": "c:rods/wooden"
-    }
-  },
-  "pattern": [
-    "/##",
-    "/##"
-  ],
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:cutting_board"
-  }
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"id": "farmersdelight:cutting_board",
+		"count": 1
+	},
+	"pattern": [
+		"abb",
+		"abb"
+	],
+	"key": {
+		"a": {
+			"tag": "c:rods/wooden"
+		},
+		"b": {
+			"tag": "tfc:lumber"
+		}
+	}
 }

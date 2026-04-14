@@ -1,7 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "minecraft:spruce_slab",
-        "tfc:wood/planks/spruce_slab"
-    ]
-}

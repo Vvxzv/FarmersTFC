@@ -1,0 +1,25 @@
+{
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/carrot"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "tfc:metal/ingot/gold"
+		}
+	],
+	"result": {
+		"id": "minecraft:golden_carrot",
+		"count": 1
+	},
+	"cookingtime": 1800
+}

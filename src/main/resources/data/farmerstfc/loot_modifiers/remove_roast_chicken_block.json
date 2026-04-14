@@ -1,0 +1,12 @@
+{
+	"type": "farmerstfc:remove_items",
+	"conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "farmersdelight:blocks/roast_chicken_block"
+		}
+	],
+	"targets": [
+		"farmersdelight:roast_chicken_block"
+	]
+}

@@ -1,8 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "minecraft:apple",
-        "tfc:food/red_apple",
-        "tfc:food/green_apple"
-    ]
-}

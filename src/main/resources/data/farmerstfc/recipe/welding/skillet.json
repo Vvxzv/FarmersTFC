@@ -1,0 +1,14 @@
+{
+	"type": "tfc:welding",
+	"result": {
+		"id": "farmersdelight:skillet",
+		"count": 1
+	},
+	"first_input": {
+		"item": "farmerstfc:pan"
+	},
+	"second_input": {
+		"item": "minecraft:brick"
+	},
+	"tier": 3
+}

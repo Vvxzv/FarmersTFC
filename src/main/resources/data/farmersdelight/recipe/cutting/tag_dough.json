@@ -1,27 +1,27 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/dough"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "result": [
-    {
-      "item": {
-        "count": 1,
-        "id": "farmersdelight:raw_pasta"
-      }
-    }
-  ],
-  "tool": {
-    "tag": "c:tools/knife"
-  }
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/dough"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "farmersdelight:raw_pasta",
+				"count": 1
+			}
+		}
+	],
+	"tool": {
+		"tag": "c:tools/knife"
+	}
 }

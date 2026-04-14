@@ -1,0 +1,18 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"item": "farmersdelight:bacon"
+	},
+	"temperature": 200.0,
+	"result_item": {
+		"stack": {
+			"id": "farmersdelight:cooked_bacon",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_food"
+			}
+		]
+	}
+}

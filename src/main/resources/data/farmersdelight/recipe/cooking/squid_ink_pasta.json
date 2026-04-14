@@ -1,47 +1,61 @@
 {
-  "type": "farmersdelight:cooking",
-  "experience": 1.0,
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/safe_raw_fish"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/pasta"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/tomato"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "item": "minecraft:ink_sac"
-    }
-  ],
-  "recipe_book_tab": "meals",
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:squid_ink_pasta"
-  }
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/raw_fish"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:raw_pasta"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/tomato"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "minecraft:ink_sac"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/calamari"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": {
+		"id": "farmersdelight:squid_ink_pasta",
+		"count": 1
+	},
+	"container": {
+		"id": "minecraft:bowl",
+		"count": 1
+	}
 }

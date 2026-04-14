@@ -7,13 +7,14 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.dries007.tfc.client.ClientHelpers;
+import net.dries007.tfc.common.component.food.FoodCapability;
 import net.dries007.tfc.common.recipes.HeatingRecipe;
 import net.dries007.tfc.common.recipes.TFCRecipeTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.vvxzv.farmerstfc.Config;
 import net.vvxzv.farmerstfc.FarmersTFC;
-import net.vvxzv.farmerstfc.common.registry.FItemTag;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
 import java.util.Arrays;
@@ -40,6 +41,10 @@ public class SkilletJEIPlugin implements IModPlugin {
         );
     }
 
+    private static float skilletTemperature() {
+        return (float) Config.heatingTemperature + 1;
+    }
+
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         List<RecipeHolder<HeatingRecipe>> recipes = ClientHelpers.getLevelOrThrow()
@@ -49,8 +54,8 @@ public class SkilletJEIPlugin implements IModPlugin {
                 .filter(holder -> {
                     HeatingRecipe recipe = holder.value();
                     return recipe.getIngredient().getItems().length > 0 &&
-                            recipe.getTemperature() < 201 &&
-                            Arrays.stream(recipe.getIngredient().getItems()).noneMatch(stack -> stack.is(FItemTag.CANT_COOK));
+                            recipe.getTemperature() < skilletTemperature() &&
+                            Arrays.stream(recipe.getIngredient().getItems()).allMatch(FoodCapability::has);
                 })
                 .collect(Collectors.toList());
 

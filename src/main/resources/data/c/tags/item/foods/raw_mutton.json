@@ -1,7 +1,5 @@
 {
-  "replace": false,
-  "values": [
-    "minecraft:mutton",
-    "tfc:food/mutton"
-  ]
+	"values": [
+		"#farmerstfc:foods/mutton"
+	]
 }

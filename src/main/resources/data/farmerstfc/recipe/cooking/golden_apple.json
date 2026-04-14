@@ -1,0 +1,37 @@
+{
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "farmerstfc:foods/apples"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "tfc:metal/ingot/gold"
+		},
+		{
+			"item": "tfc:metal/ingot/gold"
+		},
+		{
+			"item": "tfc:metal/ingot/gold"
+		},
+		{
+			"item": "tfc:metal/ingot/gold"
+		},
+		{
+			"item": "tfc:metal/ingot/gold"
+		}
+	],
+	"result": {
+		"id": "minecraft:golden_apple",
+		"count": 1
+	},
+	"cookingtime": 3600
+}

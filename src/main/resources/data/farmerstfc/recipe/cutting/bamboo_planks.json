@@ -1,0 +1,23 @@
+{
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"item": "minecraft:stripped_bamboo_block"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "minecraft:bamboo_planks",
+				"count": 2
+			}
+		}
+	],
+	"tool": {
+		"type": "farmersdelight:item_ability",
+		"action": "axe_dig"
+	},
+	"sound": {
+		"sound_id": "minecraft:item.axe.strip"
+	}
+}

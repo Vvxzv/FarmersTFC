@@ -1,36 +1,46 @@
 {
-  "type": "farmersdelight:cooking",
-  "experience": 1.0,
-  "ingredients": [
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/apple"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/apple"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "item": "minecraft:sugar"
-    }
-  ],
-  "recipe_book_tab": "drinks",
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:apple_cider"
-  }
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"fluid": {
+				"fluid": "minecraft:water",
+				"amount": 100
+			},
+			"type": "tfc:fluid_content"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "farmerstfc:foods/apples"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "farmerstfc:foods/apples"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "minecraft:sugar"
+		}
+	],
+	"result": {
+		"id": "farmersdelight:apple_cider",
+		"count": 1
+	},
+	"container": {
+		"id": "minecraft:glass_bottle",
+		"count": 1
+	}
 }

@@ -1,27 +1,27 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "item": "farmersdelight:red_mushroom_colony"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "result": [
-    {
-      "item": {
-        "count": 3,
-        "id": "minecraft:red_mushroom"
-      }
-    }
-  ],
-  "tool": {
-    "tag": "c:tools/knife"
-  }
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "farmersdelight:red_mushroom_colony"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "minecraft:red_mushroom",
+				"count": 3
+			}
+		}
+	],
+	"tool": {
+		"tag": "c:tools/knife"
+	}
 }

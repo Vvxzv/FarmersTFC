@@ -1,0 +1,29 @@
+{
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"item": "tfc:wood/wood/white_cedar"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "tfc:wood/stripped_wood/white_cedar",
+				"count": 1
+			}
+		},
+		{
+			"item": {
+				"id": "farmersdelight:tree_bark",
+				"count": 1
+			}
+		}
+	],
+	"tool": {
+		"type": "farmersdelight:item_ability",
+		"action": "axe_dig"
+	},
+	"sound": {
+		"sound_id": "minecraft:item.axe.strip"
+	}
+}

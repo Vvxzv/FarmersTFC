@@ -1,27 +1,27 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "farmerstfc:foods/raw_beef"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "result": [
-    {
-      "item": {
-        "count": 2,
-        "id": "farmersdelight:minced_beef"
-      }
-    }
-  ],
-  "tool": {
-    "tag": "c:tools/knife"
-  }
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/beef"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": [
+		{
+			"item": {
+				"id": "farmersdelight:minced_beef",
+				"count": 2
+			}
+		}
+	],
+	"tool": {
+		"tag": "c:tools/knife"
+	}
 }

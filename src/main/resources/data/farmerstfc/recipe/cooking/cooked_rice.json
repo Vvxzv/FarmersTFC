@@ -1,0 +1,73 @@
+{
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/rice_grain"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/rice_grain"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/rice_grain"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/rice_grain"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/rice_grain"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"fluid": {
+				"fluid": "minecraft:water",
+				"amount": 1000
+			},
+			"type": "tfc:fluid_content"
+		}
+	],
+	"result": {
+		"id": "tfc:food/cooked_rice",
+		"count": 5
+	},
+	"cookingtime": 400
+}

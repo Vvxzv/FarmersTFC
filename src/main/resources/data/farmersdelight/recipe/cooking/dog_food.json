@@ -1,22 +1,26 @@
 {
-  "type": "farmersdelight:cooking",
-  "experience": 1.0,
-  "ingredients": [
-    {
-      "item": "minecraft:rotten_flesh"
-    },
-    {
-      "item": "minecraft:bone_meal"
-    },
-    {
-      "tag": "c:foods/raw_meat"
-    },
-    {
-      "tag": "c:foods/grain"
-    }
-  ],
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:dog_food"
-  }
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"item": "minecraft:rotten_flesh"
+		},
+		{
+			"item": "minecraft:bone_meal"
+		},
+		{
+			"tag": "tfc:dog_food"
+		},
+		{
+			"tag": "c:foods/grain"
+		}
+	],
+	"result": {
+		"id": "farmersdelight:dog_food",
+		"count": 1
+	},
+	"container": {
+		"id": "minecraft:bowl",
+		"count": 1
+	}
 }

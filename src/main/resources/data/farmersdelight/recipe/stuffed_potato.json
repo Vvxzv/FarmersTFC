@@ -1,39 +1,38 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/baked_potato"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/cooked_beef"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:fluid_content",
-      "fluid": {
-        "amount": 100,
-        "tag": "c:milk"
-      }
-    }
-  ],
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:stuffed_potato"
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"id": "farmersdelight:stuffed_potato",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/baked_potato"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/cooked_beef"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"fluid": {
+				"fluid": "minecraft:milk",
+				"amount": 100
+			},
+			"type": "tfc:fluid_content"
+		}
+	]
 }

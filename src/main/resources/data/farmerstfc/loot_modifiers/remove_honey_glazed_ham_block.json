@@ -1,0 +1,12 @@
+{
+	"type": "farmerstfc:remove_items",
+	"conditions": [
+		{
+			"condition": "neoforge:loot_table_id",
+			"loot_table_id": "farmersdelight:blocks/honey_glazed_ham_block"
+		}
+	],
+	"targets": [
+		"farmersdelight:honey_glazed_ham_block"
+	]
+}

@@ -1,7 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "minecraft:mangrove_slab",
-        "tfc:wood/planks/mangrove_slab"
-    ]
-}

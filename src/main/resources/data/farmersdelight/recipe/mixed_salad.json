@@ -1,70 +1,90 @@
 {
-  "type": "tfc:advanced_shapeless_crafting",
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/leafy_green"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/tomato"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/beetroot"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    {
-      "item": "minecraft:bowl"
-    }
-  ],
-  "primary_ingredient": {
-    "item": "minecraft:bowl"
-  },
-  "remainder": {
-    "modifiers": []
-  },
-  "result": {
-    "stack": {
-      "id": "farmersdelight:mixed_salad"
-    },
-    "modifiers": [
-      {
-        "type":"tfc:meal",
-        "food":{
-          "hunger":4,
-          "water":3,
-          "saturation":2,
-          "decay_modifier":4
-        },
-        "portions":[
-          {
-            "nutrient_modifier":1,
-            "water_modifier":1,
-            "saturation_modifier":1
-          }
-        ]
-      }
-    ]
-  }
+	"type": "tfc:advanced_shapeless_crafting",
+	"result": {
+		"stack": {
+			"id": "farmersdelight:mixed_salad",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"food": {
+					"decay_modifier": 3.0,
+					"hunger": 4,
+					"saturation": 2.0
+				},
+				"portions": [
+					{
+						"nutrient_modifier": 0.9,
+						"water_modifier": 0.8
+					}
+				],
+				"type": "tfc:meal"
+			}
+		]
+	},
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"children": [
+						{
+							"tag": "c:foods/vegetable"
+						},
+						{
+							"tag": "c:foods/fruit"
+						}
+					],
+					"type": "neoforge:compound"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"children": [
+						{
+							"tag": "c:foods/vegetable"
+						},
+						{
+							"tag": "c:foods/fruit"
+						}
+					],
+					"type": "neoforge:compound"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"children": [
+						{
+							"tag": "c:foods/vegetable"
+						},
+						{
+							"tag": "c:foods/fruit"
+						}
+					],
+					"type": "neoforge:compound"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	],
+	"primary_ingredient": {
+		"item": "minecraft:bowl"
+	}
 }

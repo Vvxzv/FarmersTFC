@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:kelp_roll"
+	},
+	"decay_modifier": 3,
+	"hunger": 4,
+	"saturation": 3,
+	"grain": 2,
+	"vegetables": 2
+}

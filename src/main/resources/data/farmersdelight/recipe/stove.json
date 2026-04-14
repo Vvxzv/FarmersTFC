@@ -1,23 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "B": {
-      "item": "minecraft:bricks"
-    },
-    "C": {
-      "tag": "c:magma_block"
-    },
-    "i": {
-      "item": "tfc:wrought_iron_grill"
-    }
-  },
-  "pattern": [
-    "BiB",
-    "BCB"
-  ],
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:stove"
-  }
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"id": "farmersdelight:stove",
+		"count": 1
+	},
+	"pattern": [
+		"aba",
+		"aca"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:bricks"
+		},
+		"b": {
+			"item": "tfc:wrought_iron_grill"
+		},
+		"c": {
+			"tag": "farmerstfc:magma_block"
+		}
+	},
+	"_kubejs_changed_marker": {
+		"source": "server_scripts:gen/recipeGen.js",
+		"line": 8
+	}
 }

@@ -1,36 +1,47 @@
 {
-  "type": "farmersdelight:cooking",
-  "experience": 0.35,
-  "ingredients": [
-    {
-      "tag": "c:bones"
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:mushrooms"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/raw_meat"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "recipe_book_tab": "meals",
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:bone_broth"
-  }
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"fluid": {
+				"fluid": "minecraft:water",
+				"amount": 1000
+			},
+			"type": "tfc:fluid_content"
+		},
+		{
+			"item": "minecraft:bone"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:mushrooms"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/raw_meat"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": {
+		"id": "farmersdelight:bone_broth",
+		"count": 1
+	},
+	"cookingtime": 1200,
+	"container": {
+		"id": "minecraft:bowl",
+		"count": 1
+	}
 }

@@ -1,0 +1,19 @@
+{
+	"type": "tfc:heating",
+	"ingredient": {
+		"tag": "farmerstfc:foods/kelp"
+	},
+	"temperature": 200.0,
+	"result_item": {
+		"stack": {
+			"id": "tfc:food/dried_kelp",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"chance": 0.25,
+				"type": "tfc:chance"
+			}
+		]
+	}
+}

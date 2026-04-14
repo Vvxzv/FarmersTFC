@@ -1,55 +1,58 @@
 {
-  "type": "farmersdelight:cooking",
-  "experience": 1.0,
-  "ingredients": [
-    {
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/tomato"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/onion"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/beetroot"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    },
-    { 
-      "type": "tfc:and",
-      "children": [
-        {
-          "tag": "c:foods/vegetable"
-        },
-        {
-          "type": "tfc:not_rotten"
-        }
-      ]
-    }
-  ],
-  "recipe_book_tab": "meals",
-  "result": {
-    "count": 1,
-    "id": "farmersdelight:ratatouille"
-  }
+	"type": "farmersdelight:cooking",
+	"experience": 1,
+	"ingredients": [
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/tomato"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/onion"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:food/beet"
+				}
+			],
+			"type": "neoforge:intersection"
+		},
+		{
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"tag": "c:foods/vegetable"
+				}
+			],
+			"type": "neoforge:intersection"
+		}
+	],
+	"result": {
+		"id": "farmersdelight:ratatouille",
+		"count": 1
+	},
+	"container": {
+		"id": "minecraft:bowl",
+		"count": 1
+	}
 }
