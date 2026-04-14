@@ -1,7 +1,6 @@
 package net.vvxzv.farmerstfc.mixin;
 
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -21,6 +20,6 @@ public class HotCocoaItemMixin extends DrinkableItem {
 
     @ModifyArg(method = "<init>", at = @At(value = "INVOKE", target = "Lvectorwing/farmersdelight/common/item/DrinkableItem;<init>(Lnet/minecraft/world/item/Item$Properties;ZZ)V"))
     private static Properties hotCocoaInit(Properties properties){
-        return new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).food(HOT_COCOA);
+        return new Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).food(HOT_COCOA);
     }
 }

@@ -1,35 +1,38 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "misc",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/berries/glow"
-        }
-    },
-    {
-      "type": "tfc:fluid_item",
-      "fluid_ingredient": {
-        "ingredient": {
-          "tag": "tfc:milks"
-        },
-        "amount": 1000
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:eggs"
-      }
-    },
-    {
-      "item": "minecraft:sugar"
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:glow_berry_custard"
-  },
-  "experience": 1.0,
-  "cookingtime": 200
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:berry"
+			}
+		},
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"tag": "tfc:milks"
+				},
+				"amount": 100
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:egg"
+			}
+		},
+		{
+			"item": "minecraft:sugar"
+		}
+	],
+	"result": {
+		"item": "farmersdelight:glow_berry_custard",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:glass_bottle"
+	}
 }

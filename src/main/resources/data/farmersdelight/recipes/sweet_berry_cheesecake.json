@@ -1,7 +1,35 @@
 {
-  "conditions": [
-    {
-      "type": "forge:false"
-    }
-  ]
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "farmersdelight:sweet_berry_cheesecake",
+		"count": 1
+	},
+	"pattern": [
+		"a",
+		"b",
+		"c"
+	],
+	"key": {
+		"a": {
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"tag": "tfc:milks"
+				},
+				"amount": 100
+			}
+		},
+		"b": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:berry"
+			}
+		},
+		"c": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:pie_crust"
+			}
+		}
+	}
 }

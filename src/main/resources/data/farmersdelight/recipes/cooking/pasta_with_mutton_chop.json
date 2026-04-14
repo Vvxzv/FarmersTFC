@@ -1,29 +1,32 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "farmersdelight:mutton_chops"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:pasta"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/tomato"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:pasta_with_mutton_chop"
-  },
-  "experience": 1.0,
-  "cookingtime": 2400
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:raw_mutton"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:raw_pasta"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:tomato_sauce"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:pasta_with_mutton_chop",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

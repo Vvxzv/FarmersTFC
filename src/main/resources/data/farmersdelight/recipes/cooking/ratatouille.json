@@ -1,35 +1,38 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/tomato"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/onion"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/beetroot"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/carrot"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:ratatouille"
-  },
-  "experience": 1.0,
-  "cookingtime": 1600
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/tomato"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/onion"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/beet"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/vegetables"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:ratatouille",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

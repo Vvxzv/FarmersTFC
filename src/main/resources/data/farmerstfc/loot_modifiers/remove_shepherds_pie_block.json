@@ -1,0 +1,12 @@
+{
+	"type": "farmerstfc:remove_items",
+	"conditions": [
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "farmersdelight:blocks/shepherds_pie_block"
+		}
+	],
+	"targets": [
+		"farmersdelight:shepherds_pie_block"
+	]
+}

@@ -1,35 +1,38 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:grain/rice"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:eggs"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/carrot"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/onion"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:fried_rice"
-  },
-  "experience": 1.0,
-  "cookingtime": 1600
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/cooked_rice"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:egg"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/onion"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/carrot"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:fried_rice",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

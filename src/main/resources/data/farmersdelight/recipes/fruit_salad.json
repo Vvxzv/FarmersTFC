@@ -1,51 +1,67 @@
 {
-  "type": "tfc:advanced_shapeless_crafting",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/apple"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/melon_slice"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/berries"
-      }
-    },
-    {
-      "item": "minecraft:bowl"
-    }
-  ],
-  "result":{
-    "stack":{
-      "item":"farmersdelight:fruit_salad"
-    },
-    "modifiers":[
-      {
-        "type":"tfc:meal",
-        "food":{
-          "hunger":4,
-          "water":10,
-          "saturation":2,
-          "decay_modifier":4
-        },
-        "portions":[
-          {
-            "nutrient_modifier":1,
-            "water_modifier":1,
-            "saturation_modifier":1
-          }
-        ]
-      }
-    ]
-  },
-  "input_row":0,
-  "input_column":0
+	"type": "tfc:advanced_shapeless_crafting",
+	"result": {
+		"stack": {
+			"item": "farmersdelight:fruit_salad",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:meal",
+				"food": {
+					"hunger": 4,
+					"saturation": 3,
+					"decay_modifier": 3
+				},
+				"portions": [
+					{
+						"nutrient_modifier": 0.9,
+						"water_modifier": 0.8,
+						"saturation_modifier": 1
+					}
+				]
+			}
+		]
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
 }

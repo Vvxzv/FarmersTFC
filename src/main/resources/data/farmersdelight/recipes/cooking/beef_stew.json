@@ -1,29 +1,41 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "farmersdelight:beef_patty"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/carrot"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/potato"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:beef_stew"
-  },
-  "experience": 1.0,
-  "cookingtime": 1600
+	"type": "farmersdelight:cooking",
+	"cookingtime": 600,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"fluid": "minecraft:water"
+				},
+				"amount": 100
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:raw_beef"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/carrot"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/potato"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:beef_stew",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

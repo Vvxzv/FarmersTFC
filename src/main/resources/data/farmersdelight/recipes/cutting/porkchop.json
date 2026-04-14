@@ -1,25 +1,20 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": [
-        {
-          "item": "tfc:food/pork"
-        },
-        {
-          "item": "minecraft:porkchop"
-        }
-      ]
-    }
-  ],
-  "tool": {
-    "tag": "forge:tools/knives"
-  },
-  "result": [
-    {
-      "item": "farmersdelight:bacon",
-      "count": 2
-    }
-  ]
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:foods/pork"
+			}
+		}
+	],
+	"result": [
+		{
+			"item": "farmersdelight:bacon",
+			"count": 2
+		}
+	],
+	"tool": {
+		"tag": "forge:tools/knives"
+	}
 }

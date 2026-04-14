@@ -7,22 +7,20 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.vvxzv.farmerstfc.common.registry.BlockEntities;
+import net.vvxzv.farmerstfc.compat.kubejs.block.DecayingBlockJS;
+import net.vvxzv.farmerstfc.compat.kubejs.block.entity.DecayingBlockEntityJS;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
-import net.vvxzv.farmerstfc.common.registry.FBlockEntity;
-import net.vvxzv.farmerstfc.compat.kubejs.blocks.DecayingBlockJS;
-import org.jetbrains.annotations.NotNull;
-
 @SuppressWarnings("unused")
 public class DecayingBlockBuilder extends BlockBuilder {
-    private static final Consumer<LootBuilder> EMPTY = (loot) -> {
-    };
+    private static final Consumer<LootBuilder> EMPTY = (loot) -> {};
     private ResourceLocation rottenBlock = null;
     private boolean dropSelf = true;
     private int eat = 0;
@@ -60,7 +58,7 @@ public class DecayingBlockBuilder extends BlockBuilder {
                 .mapColor(MapColor.COLOR_GREEN)
                 .strength(1.0F)
                 .sound(SoundType.WOOD)
-                .blockEntity(FBlockEntity.DECAYING)
+                .blockEntity(BlockEntities.KUBEJS_DECAYING)
                 .instrument(NoteBlockInstrument.DIDGERIDOO)
                 .pushReaction(PushReaction.DESTROY);
 
@@ -69,7 +67,7 @@ public class DecayingBlockBuilder extends BlockBuilder {
 
         if (rottenBlock != null) {
             rottedBlockSupplier = () -> BuiltInRegistries.BLOCK.get(rottenBlock);
-            return DecayingBlockJS.create(properties.serverTicks(DecayingFoodBlockEntity::serverTick), rottedBlockSupplier, dropSelf, customShape, eat, hasFacing);
+            return DecayingBlockJS.create(properties.serverTicks(DecayingBlockEntityJS::serverTick), rottedBlockSupplier, dropSelf, customShape, eat, hasFacing);
         }
 
         return DecayingBlockJS.create(properties, selfBlockSupplier, dropSelf, customShape, eat, hasFacing);

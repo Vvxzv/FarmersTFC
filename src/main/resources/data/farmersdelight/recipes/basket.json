@@ -1,21 +1,22 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "b b",
-    "#c#"
-  ],
-  "key": {
-    "b": {
-      "item": "minecraft:bamboo"
-    },
-    "#": {
-      "item": "farmersdelight:canvas"
-    },
-    "c": {
-      "tag": "forge:chests"
-    }
-  },
-  "result": {
-    "item": "farmersdelight:basket"
-  }
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "farmersdelight:basket",
+		"count": 1
+	},
+	"pattern": [
+		"a a",
+		"bcb"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:bamboo"
+		},
+		"b": {
+			"item": "farmersdelight:canvas"
+		},
+		"c": {
+			"tag": "forge:chests"
+		}
+	}
 }

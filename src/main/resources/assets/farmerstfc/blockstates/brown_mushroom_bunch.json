@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "farmerstfc:block/brown_mushroom_bunch"
+      "model": "farmersdelight:block/brown_mushroom_colony_stage3"
     }
   }
 }

@@ -1,42 +1,35 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:dough"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:grain/rice"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "farmersdelight:beef_patty"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "farmersdelight:cabbage_leaf"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/onion"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:dumplings",
-    "count": 4
-  },
-  "experience": 1.0,
-  "cookingtime": 1600
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:dough"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/onion"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:salad_ingredients/cabbage"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/raw_meats"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:dumplings",
+		"count": 2
+	}
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "farmerstfc:block/rotten_stuffed_pumpkin_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "farmerstfc:block/rotten_stuffed_pumpkin_block"
+    },
+    "facing=south": {
+      "model": "farmerstfc:block/rotten_stuffed_pumpkin_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "farmerstfc:block/rotten_stuffed_pumpkin_block",
+      "y": 270
+    }
+  }
+}

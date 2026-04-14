@@ -181,19 +181,19 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     //farmer delight
-    implementation fg.deobf("curse.maven:farmers-delight-398521:6597298")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:7801523")
     //patchouli
     runtimeOnly fg.deobf("curse.maven:patchouli-306770:6164575")
     //tfc
-    implementation fg.deobf("curse.maven:terrafirmacraft-302973:6739107")
+    implementation fg.deobf("curse.maven:terrafirmacraft-302973:7730077")
     //firmalife
-    runtimeOnly fg.deobf("curse.maven:firmalife-453394:6817407")
+    implementation fg.deobf("curse.maven:firmalife-453394:7602336")
     //JEI
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jeiVersion}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jeiVersion}"))
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jeiVersion}"))
     //jade
-    runtimeOnly fg.deobf("curse.maven:jade-324717:6271651")
+    implementation fg.deobf("curse.maven:jade-324717:6271651")
     //kubejs
     implementation fg.deobf("curse.maven:kubejs-238086:5853326")
     implementation fg.deobf("curse.maven:architectury-api-419699:5137938")
@@ -208,10 +208,6 @@ dependencies {
     implementation fg.deobf("curse.maven:just-enough-characters-250702:7411324")
     //jei copy
     implementation fg.deobf("curse.maven:jei-copy-recipe-json-1375689:7364314")
-    //oei
-    implementation fg.deobf("curse.maven:one-enough-item-1312660:7268084")
-    implementation fg.deobf("curse.maven:oelib-1319210:7271154")
-    implementation fg.deobf("curse.maven:jupiter-1072905:7704590")
 
 }
 

@@ -1,32 +1,32 @@
 {
-  "type": "farmersdelight:cooking",
-  "container": {
-    "item": "minecraft:bowl"
-  },
-  "cookingtime": 200,
-  "experience": 1.0,
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/beetroot"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/beetroot"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/beetroot"
-      }
-    }
-  ],
-  "recipe_book_tab": "meals",
-  "result": {
-    "item": "minecraft:beetroot_soup"
-  }
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/beet"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/beet"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/beet"
+			}
+		}
+	],
+	"result": {
+		"item": "minecraft:beetroot_soup",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

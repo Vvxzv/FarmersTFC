@@ -25,7 +25,7 @@ displayName = "${mod_name}" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="farmerstfc.png" #optional
+#logoFile="farmerstfc.png" #optional
 # A text field displayed in the mod UI
 #credits="Thanks for this example mod goes to Java" #optional
 # A text field displayed in the mod UI
@@ -65,23 +65,16 @@ side = "BOTH"
 [[dependencies."${mod_id}"]]
 modId="tfc"
 mandatory=true
-versionRange="[3.2.16,)"
+versionRange="[3.2.21,)"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies."${mod_id}"]]
 modId="farmersdelight"
 mandatory=true
-versionRange="[1.2.8,)"
+versionRange="[1.2.11,)"
 ordering="AFTER"
 side="BOTH"
-
-[[dependencies."${mod_id}"]]
-modId = "oneenoughitem"
-mandatory = true
-versionRange = "[1.,)"
-ordering = "AFTER"
-side = "BOTH"
 
 [[dependencies."${mod_id}"]]
 modId = "kubejs"

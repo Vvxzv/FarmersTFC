@@ -1,0 +1,8 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:chicken_cuts"
+	},
+	"decay_modifier": 3,
+	"hunger": 2,
+	"protein": 1
+}

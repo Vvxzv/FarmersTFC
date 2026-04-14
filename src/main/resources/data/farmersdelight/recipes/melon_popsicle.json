@@ -1,25 +1,41 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " mm",
-    "imm",
-    "-i "
-  ],
-  "key": {
-    "m": {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/melon_slice"
-      }
-    },
-    "i": {
-      "tag": "forge:ice_source"
-    },
-    "-": {
-      "item": "minecraft:stick"
-    }
-  },
-  "result": {
-    "item": "farmersdelight:melon_popsicle"
-  }
+	"type": "tfc:advanced_shaped_crafting",
+	"result": {
+		"stack": {
+			"item": "farmersdelight:melon_popsicle",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_food"
+			}
+		]
+	},
+	"pattern": [
+		" aa",
+		"baa",
+		"cb "
+	],
+	"key": {
+		"a": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/melon_slice"
+			}
+		},
+		"b": {
+			"item": "firmalife:ice_shavings"
+		},
+		"c": {
+			"tag": "forge:rods/wooden"
+		}
+	},
+	"input_row": 0,
+	"input_column": 0,
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "firmalife"
+		}
+	]
 }

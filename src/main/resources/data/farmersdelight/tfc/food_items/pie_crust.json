@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:pie_crust"
+	},
+	"decay_modifier": 2.5,
+	"hunger": 4,
+	"saturation": 1,
+	"grain": 1,
+	"dairy": 1
+}

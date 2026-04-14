@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfc:food/rice_grain"
+  },
+  "block": "farmerstfc:rice_bag"
+}

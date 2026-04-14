@@ -1,54 +1,38 @@
 {
-  "type": "farmersdelight:cooking",
-  "container": {
-    "item": "minecraft:bowl"
-  },
-  "cookingtime": 200,
-  "experience": 1.0,
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:food/cooked/potato"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:food/rabbit"
-      }
-    },
-    [
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:crops/carrot"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "item": "tfc:food/carrot"
-        }
-      }
-    ],
-    [
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "item": "minecraft:brown_mushroom"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "item": "minecraft:red_mushroom"
-        }
-      }
-    ]
-  ],
-  "recipe_book_tab": "meals",
-  "result": {
-    "item": "minecraft:rabbit_stew"
-  }
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/baked_potato"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:mushrooms"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/carrot"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/rabbit"
+			}
+		}
+	],
+	"result": {
+		"item": "minecraft:rabbit_stew",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

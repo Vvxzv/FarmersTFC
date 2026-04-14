@@ -1,25 +1,20 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": [
-        {
-          "item": "tfc:food/beef"
-        },
-        {
-          "item": "minecraft:beef"
-        }
-      ]
-    }
-  ],
-  "tool": {
-    "tag": "forge:tools/knives"
-  },
-  "result": [
-    {
-      "item": "farmersdelight:minced_beef",
-      "count": 2
-    }
-  ]
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:raw_beef"
+			}
+		}
+	],
+	"result": [
+		{
+			"item": "farmersdelight:minced_beef",
+			"count": 2
+		}
+	],
+	"tool": {
+		"tag": "forge:tools/knives"
+	}
 }

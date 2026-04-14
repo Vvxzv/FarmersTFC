@@ -1,21 +1,22 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "BiB",
-    "BCB"
-  ],
-  "key": {
-    "i": {
-      "item": "tfc:wrought_iron_grill"
-    },
-    "B": {
-      "item": "minecraft:bricks"
-    },
-    "C": {
-      "tag": "forge:magma_block"
-    }
-  },
-  "result": {
-    "item": "farmersdelight:stove"
-  }
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "farmersdelight:stove",
+		"count": 1
+	},
+	"pattern": [
+		"aba",
+		"aca"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:bricks"
+		},
+		"b": {
+			"item": "tfc:wrought_iron_grill"
+		},
+		"c": {
+			"tag": "farmerstfc:magma_block"
+		}
+	}
 }

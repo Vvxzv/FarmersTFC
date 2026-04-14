@@ -1,7 +1,43 @@
 {
-  "conditions": [
-    {
-      "type": "forge:false"
-    }
-  ]
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"group": "fd_chocolate_pie",
+	"key": {
+		"a": {
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"tag": "tfc:milks"
+				},
+				"amount": 100
+			}
+		},
+		"b": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "firmalife:food/cocoa_powder"
+			}
+		},
+		"c": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:pie_crust"
+			}
+		}
+	},
+	"pattern": [
+		"a",
+		"b",
+		"c"
+	],
+	"result": {
+		"count": 1,
+		"item": "farmersdelight:chocolate_pie"
+	},
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "firmalife"
+		}
+	]
 }

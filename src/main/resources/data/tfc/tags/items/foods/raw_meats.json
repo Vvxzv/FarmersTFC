@@ -1,12 +1,11 @@
 {
-  "replace": false,
-  "values": [
-    "farmersdelight:minced_beef",
-    "farmersdelight:chicken_cuts",
-    "farmersdelight:bacon",
-    "farmersdelight:mutton_chops",
-    "farmersdelight:ham",
-    "farmersdelight:cod_slice",
-    "farmersdelight:salmon_slice"
-  ]
+	"values": [
+		"farmersdelight:minced_beef",
+		"farmersdelight:chicken_cuts",
+		"farmersdelight:bacon",
+		"farmersdelight:cod_slice",
+		"farmersdelight:salmon_slice",
+		"farmersdelight:mutton_chops",
+		"farmersdelight:ham"
+	]
 }

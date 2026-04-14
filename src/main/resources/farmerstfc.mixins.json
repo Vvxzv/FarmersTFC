@@ -6,12 +6,15 @@
   "refmap" : "farmerstfc.refmap.json",
   "mixins" : [
     "BlockItemMixin",
-    "FarmlandBlockEntityMixin",
+    "block.FeastBlockMixin",
     "HotCocoaItemMixin",
     "MelonJuiceItemMixin",
-    "RichSoilBlockMixin",
-    "SkilletBlockEntityMixin",
-    "StoveBlockEntityMixin"
+    "block.PieBlockMixin",
+    "block.RiceRollMedleyBlockMixin",
+    "block.RichSoilBlockMixin",
+    "block.entity.SkilletBlockEntityMixin",
+    "block.entity.StoveBlockEntityMixin",
+    "block.TFCCakeBlockMixin"
   ],
   "client" : [
   ],

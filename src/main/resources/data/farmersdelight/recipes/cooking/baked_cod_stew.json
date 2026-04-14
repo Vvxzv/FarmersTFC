@@ -1,36 +1,47 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": [
-        {"item": "minecraft:cod"},
-        {"item": "tfc:food/cod"}
-      ]
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/potato"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:eggs"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/tomato"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:baked_cod_stew"
-  },
-  "experience": 1.0,
-  "cookingtime": 1600
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"fluid": "minecraft:water"
+				},
+				"amount": 100
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:raw_fishes/cod"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:egg"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/potato"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/tomato"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:baked_cod_stew",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

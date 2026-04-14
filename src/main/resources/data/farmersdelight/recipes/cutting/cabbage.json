@@ -1,25 +1,20 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": [
-        {
-          "item": "tfc:food/cabbage"
-        },
-        {
-          "item": "farmersdelight:cabbage"
-        }
-      ]
-    }
-  ],
-  "tool": {
-    "tag": "forge:tools/knives"
-  },
-  "result": [
-    {
-      "item": "farmersdelight:cabbage_leaf",
-      "count": 2
-    }
-  ]
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:foods/cabbage"
+			}
+		}
+	],
+	"result": [
+		{
+			"item": "farmersdelight:cabbage_leaf",
+			"count": 2
+		}
+	],
+	"tool": {
+		"tag": "forge:tools/knives"
+	}
 }

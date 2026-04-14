@@ -1,9 +1,0 @@
-{
-  "ingredient": {
-    "item": "minecraft:golden_carrot"
-  },
-  "hunger": 6,
-  "saturation": 14,
-  "decay_modifier": 0,
-  "vegetables": 1.5
-}

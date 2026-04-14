@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:melon_juice"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 2,
+	"water": 16,
+	"fruit": 3.2
+}

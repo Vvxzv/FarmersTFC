@@ -1,20 +1,20 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "farmersdelight:kelp_roll"
-      }
-    }
-  ],
-  "tool": {
-    "tag": "forge:tools/knives"
-  },
-  "result": [
-    {
-      "item": "farmersdelight:kelp_roll_slice",
-      "count": 3
-    }
-  ]
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:kelp_roll"
+			}
+		}
+	],
+	"result": [
+		{
+			"item": "farmersdelight:kelp_roll_slice",
+			"count": 3
+		}
+	],
+	"tool": {
+		"tag": "forge:tools/knives"
+	}
 }

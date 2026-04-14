@@ -1,35 +1,47 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:raw_fowl"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:salad_ingredients"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/carrot"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:chicken_soup"
-  },
-  "experience": 1.0,
-  "cookingtime": 2400
+	"type": "farmersdelight:cooking",
+	"cookingtime": 600,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"fluid": "minecraft:water"
+				},
+				"amount": 100
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:raw_chicken"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/carrot"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/potato"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:salad_ingredients/cabbage"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:chicken_soup",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

@@ -1,23 +1,26 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "misc",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/tomato"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables/garlic"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:tomato_sauce"
-  },
-  "experience": 0.35,
-  "cookingtime": 100
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/tomato"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/tomato"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:tomato_sauce",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

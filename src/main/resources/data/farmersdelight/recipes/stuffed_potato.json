@@ -1,29 +1,30 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "tfc:food/baked_potato"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "farmersdelight:beef_patty"
-      }
-    },
-    {
-      "type": "tfc:fluid_item",
-      "fluid_ingredient": {
-        "ingredient": {
-          "tag": "tfc:milks"
-        },
-        "amount": 1000
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:stuffed_potato"
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "farmersdelight:stuffed_potato",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/baked_potato"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:cooked_beef"
+			}
+		},
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"tag": "tfc:milks"
+				},
+				"amount": 100
+			}
+		}
+	]
 }

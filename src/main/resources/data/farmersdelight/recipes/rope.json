@@ -1,17 +1,18 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "tag": "forge:straw"
-    },
-    {
-      "tag": "forge:straw"
-    },
-    {
-      "tag": "forge:straw"
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:rope"
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "farmersdelight:rope",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"item": "tfc:straw"
+		},
+		{
+			"item": "tfc:straw"
+		},
+		{
+			"item": "tfc:straw"
+		}
+	]
 }

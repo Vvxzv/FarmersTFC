@@ -1,57 +1,49 @@
 {
-  "type": "tfc:damage_inputs_shapeless_crafting",
-  "recipe": {
-    "type": "tfc:advanced_shapeless_crafting",
-    "ingredients": [
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:vegetables/tomato"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "tfc:foods/cooked_meats"
-        }
-      },
-      {
-        "tag": "tfc:knives"
-      },
-      {
-        "item": "minecraft:stick"
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:vegetables/onion"
-        }
-      }
-    ],
-    "result":{
-      "stack":{
-        "item":"farmersdelight:barbecue_stick"
-      },
-      "modifiers":[
-        {
-          "type":"tfc:meal",
-          "food":{
-            "hunger":6,
-            "water":10,
-            "saturation":3,
-            "decay_modifier":2
-          },
-          "portions":[
-            {
-              "nutrient_modifier":1,
-              "water_modifier":1,
-              "saturation_modifier":1
-            }
-          ]
-        }
-      ]
-    },
-    "input_row":0,
-    "input_column":0
-  }
+	"type": "tfc:advanced_shapeless_crafting",
+	"result": {
+		"stack": {
+			"item": "farmersdelight:barbecue_stick",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:meal",
+				"food": {
+					"hunger": 4,
+					"saturation": 3,
+					"decay_modifier": 3
+				},
+				"portions": [
+					{
+						"nutrient_modifier": 0.9,
+						"water_modifier": 0.8,
+						"saturation_modifier": 1
+					}
+				]
+			}
+		]
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/tomato"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/onion"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/cooked_meats"
+			}
+		},
+		{
+			"tag": "forge:rods/wooden"
+		}
+	]
 }

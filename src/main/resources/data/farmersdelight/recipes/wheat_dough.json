@@ -1,24 +1,7 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "BB",
-    "BC"
-  ],
-  "key": {
-    "B": {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "tfc:foods/flour"
-      }
-    },
-    "C": {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:eggs"
-      }
-    }
-  },
-  "result": {
-    "item": "farmersdelight:wheat_dough"
-  }
+	"conditions": [
+		{
+			"type": "forge:false"
+		}
+	]
 }

@@ -1,28 +1,24 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": [
-        {
-          "item": "tfc:food/salmon"
-        },
-        {
-          "item": "minecraft:salmon"
-        }
-      ]
-    }
-  ],
-  "tool": {
-    "tag": "forge:tools/knives"
-  },
-  "result": [
-    {
-      "item": "farmersdelight:salmon_slice",
-      "count": 2
-    },
-    {
-      "item": "minecraft:bone_meal"
-    }
-  ]
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:foods/salmon"
+			}
+		}
+	],
+	"result": [
+		{
+			"item": "farmersdelight:salmon_slice",
+			"count": 2
+		},
+		{
+			"item": "minecraft:bone_meal",
+			"count": 1
+		}
+	],
+	"tool": {
+		"tag": "forge:tools/knives"
+	}
 }

@@ -22,6 +22,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
 import java.util.Arrays;
@@ -33,7 +34,7 @@ public class SkilletCategory extends BaseRecipeCategory<HeatingRecipe> {
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, HeatingRecipe recipe, IFocusGroup focuses) {
+    public void setRecipe(IRecipeLayoutBuilder builder, HeatingRecipe recipe, @NotNull IFocusGroup focuses) {
         IRecipeSlotBuilder inputSlot = builder.addSlot(RecipeIngredientRole.INPUT, 21, 17);
         IRecipeSlotBuilder outputSlot = builder.addSlot(RecipeIngredientRole.OUTPUT, 85, 17);
 
@@ -47,17 +48,15 @@ public class SkilletCategory extends BaseRecipeCategory<HeatingRecipe> {
 
         if (!outputItems.isEmpty() && !outputItems.stream().allMatch(ItemStack::isEmpty)) {
             outputSlot.addItemStacks(outputItems);
-
-            // 添加概率提示（如果有）
             if (recipe.getChance() < 1.0F) {
-                outputSlot.addTooltipCallback((slot, tooltip) ->
-                        tooltip.add(1, Component.translatable("tfc.tooltip.chance",
-                                        String.format("%.0f", recipe.getChance() * 100.0F))
-                                .withStyle(ChatFormatting.ITALIC)));
+                outputSlot.addRichTooltipCallback((slot, tooltip) ->
+                        tooltip.add(Component.translatable(
+                                "tfc.tooltip.chance",
+                                String.format("%.0f", recipe.getChance() * 100.0F)
+                        ).withStyle(ChatFormatting.ITALIC)));
             }
         }
 
-        // 处理流体输出（如果有）
         FluidStack resultFluid = recipe.getDisplayOutputFluid();
         if (!resultFluid.isEmpty()) {
             outputSlot.addIngredient(JEIIntegration.FLUID_STACK, resultFluid)
@@ -68,7 +67,7 @@ public class SkilletCategory extends BaseRecipeCategory<HeatingRecipe> {
     }
 
     @Override
-    public void draw(HeatingRecipe recipe, IRecipeSlotsView recipeSlots, GuiGraphics graphics, double mouseX, double mouseY) {
+    public void draw(HeatingRecipe recipe, @NotNull IRecipeSlotsView recipeSlots, @NotNull GuiGraphics graphics, double mouseX, double mouseY) {
         this.fire.draw(graphics, 54, 16);
 
         MutableComponent temperatureText = TFCConfig.CLIENT.heatTooltipStyle.get()

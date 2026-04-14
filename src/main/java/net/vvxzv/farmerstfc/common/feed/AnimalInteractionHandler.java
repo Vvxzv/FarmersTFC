@@ -19,7 +19,7 @@ import vectorwing.farmersdelight.common.item.HorseFeedItem;
 import vectorwing.farmersdelight.common.registry.ModParticleTypes;
 import vectorwing.farmersdelight.common.utility.MathUtils;
 
-@Mod.EventBusSubscriber(modid = FarmersTFC.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = FarmersTFC.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class AnimalInteractionHandler {
 
     @SubscribeEvent
@@ -30,17 +30,15 @@ public class AnimalInteractionHandler {
         ItemStack stack = player.getItemInHand(hand);
 
         if (!(entity instanceof LivingEntity target)) {
-            return; // 若目标不是生物实体，直接返回，不干扰默认交互
+            return;
         }
 
-        // 1. 处理狗粮给狗添加效果
         if (stack.getItem() instanceof DogFoodItem && target instanceof Dog dog) {
             handleDogFoodInteraction(player, dog, stack);
             event.setCancellationResult(InteractionResult.SUCCESS);
-            event.setCanceled(true); // 取消默认交互，避免重复处理
+            event.setCanceled(true);
         }
 
-        // 2. 处理马饲料给马添加效果
         if (stack.getItem() instanceof HorseFeedItem && target instanceof TFCHorse horse) {
             handleHorseFeedInteraction(player, horse, stack);
             event.setCancellationResult(InteractionResult.SUCCESS);
@@ -51,15 +49,12 @@ public class AnimalInteractionHandler {
     private static void handleDogFoodInteraction(Player player, Dog dog, ItemStack stack) {
         if (!dog.isAlive()) return;
 
-        // 恢复生命值
         dog.setHealth(dog.getMaxHealth());
 
-        // 添加效果（这里示例添加速度和力量效果，可根据需要修改）
         dog.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 0));
         dog.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6000, 0));
         dog.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0));
 
-        // 播放音效
         dog.level().playSound(
                 null,
                 dog.blockPosition(),
@@ -69,10 +64,8 @@ public class AnimalInteractionHandler {
                 0.8F
         );
 
-        // 生成粒子效果
         spawnHearts(dog);
 
-        // 消耗物品（创造模式不消耗）
         if (!player.isCreative()) {
             stack.shrink(1);
         }
@@ -81,14 +74,11 @@ public class AnimalInteractionHandler {
     private static void handleHorseFeedInteraction(Player player, TFCHorse horse, ItemStack stack) {
         if (!horse.isAlive()) return;
 
-        // 恢复生命值
         horse.setHealth(horse.getMaxHealth());
 
-        // 添加效果（示例：抗性提升和速度）
         horse.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 1));
         horse.addEffect(new MobEffectInstance(MobEffects.JUMP, 6000, 0));
 
-        // 播放音效
         horse.level().playSound(
                 null,
                 horse.blockPosition(),
@@ -98,10 +88,8 @@ public class AnimalInteractionHandler {
                 0.9F
         );
 
-        // 生成粒子效果
         spawnHearts(horse);
 
-        // 消耗物品
         if (!player.isCreative()) {
             stack.shrink(1);
         }

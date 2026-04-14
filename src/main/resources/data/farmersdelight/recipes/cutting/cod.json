@@ -1,28 +1,24 @@
 {
-  "type": "farmersdelight:cutting",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": [
-        {
-          "item": "tfc:food/cod"
-        },
-        {
-          "item": "minecraft:cod"
-        }
-      ]
-    }
-  ],
-  "tool": {
-    "tag": "forge:tools/knives"
-  },
-  "result": [
-    {
-      "item": "farmersdelight:cod_slice",
-      "count": 2
-    },
-    {
-      "item": "minecraft:bone_meal"
-    }
-  ]
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:foods/cod"
+			}
+		}
+	],
+	"result": [
+		{
+			"item": "farmersdelight:cod_slice",
+			"count": 2
+		},
+		{
+			"item": "minecraft:bone_meal",
+			"count": 1
+		}
+	],
+	"tool": {
+		"tag": "forge:tools/knives"
+	}
 }

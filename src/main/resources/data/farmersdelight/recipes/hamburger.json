@@ -1,65 +1,58 @@
 {
-  "type": "tfc:damage_inputs_shapeless_crafting",
-  "recipe": {
-    "type": "tfc:advanced_shapeless_crafting",
-    "ingredients": [
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:bread"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "item": "farmersdelight:beef_patty"
-        }
-      },
-      {
-        "tag": "tfc:knives"
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "item": "farmersdelight:cabbage_leaf"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:vegetables/tomato"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:vegetables/onion"
-        }
-      }
-    ],
-    "result":{
-      "stack":{
-        "item":"farmersdelight:hamburger"
-      },
-      "modifiers":[
-        {
-          "type":"tfc:meal",
-          "food":{
-            "hunger":6,
-            "saturation":2,
-            "decay_modifier":1.5
-          },
-          "portions":[
-            {
-              "nutrient_modifier":1,
-              "water_modifier":1,
-              "saturation_modifier":1
-            }
-          ]
-        }
-      ]
-    },
-    "input_row":0,
-    "input_column":0
-  }
+	"type": "tfc:advanced_shapeless_crafting",
+	"result": {
+		"stack": {
+			"item": "farmersdelight:hamburger",
+			"count": 1
+		},
+		"modifiers": [
+			{
+				"type": "tfc:meal",
+				"food": {
+					"hunger": 4,
+					"saturation": 3,
+					"decay_modifier": 3
+				},
+				"portions": [
+					{
+						"nutrient_modifier": 0.9,
+						"water_modifier": 0.8,
+						"saturation_modifier": 1
+					}
+				]
+			}
+		]
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/breads"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:beef_patty"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:berry"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/usable_in_sandwich"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/usable_in_sandwich"
+			}
+		}
+	]
 }

@@ -1,35 +1,36 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:cooked_bacon"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:cooked_bacon"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:cooked_eggs"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:cooked_eggs"
-      }
-    },
-    {
-      "item": "minecraft:bowl"
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:bacon_and_eggs"
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "farmersdelight:bacon_and_eggs",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:cooked_bacon"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:cooked_bacon"
+			}
+		},
+		{
+			"item": "minecraft:bowl"
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:cooked_eggs"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:cooked_eggs"
+			}
+		}
+	]
 }

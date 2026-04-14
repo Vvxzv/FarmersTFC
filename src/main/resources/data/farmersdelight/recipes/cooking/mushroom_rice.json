@@ -1,35 +1,52 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "meals",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "minecraft:brown_mushroom"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "minecraft:red_mushroom"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:grain/rice"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:vegetables"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:mushroom_rice"
-  },
-  "experience": 1.0,
-  "cookingtime": 1600
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"fluid": "minecraft:water"
+				},
+				"amount": 100
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/rice_grain"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:brown_mushroom"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:red_mushroom"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": [
+				{
+					"item": "tfc:food/carrot"
+				},
+				{
+					"item": "tfc:food/potato"
+				}
+			]
+		}
+	],
+	"result": {
+		"item": "farmersdelight:mushroom_rice",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
 }

@@ -5,12 +5,11 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BushBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class MushroomBunchBlock extends BushBlock {
 
-    public MushroomBunchBlock(BlockBehaviour.Properties properties) {
+    public MushroomBunchBlock(Properties properties) {
         super(properties);
     }
 

@@ -1,0 +1,20 @@
+{
+	"type": "farmersdelight:cooking",
+	"cookingtime": 1800,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/carrot"
+			}
+		},
+		{
+			"item": "tfc:metal/ingot/gold"
+		}
+	],
+	"result": {
+		"item": "minecraft:golden_carrot",
+		"count": 1
+	}
+}

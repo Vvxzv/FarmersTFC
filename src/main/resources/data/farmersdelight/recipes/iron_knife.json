@@ -1,21 +1,29 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "xm",
-    "s "
-  ],
-  "key": {
-    "m": {
-      "item": "tfc:metal/knife_blade/wrought_iron"
-    },
-    "s": {
-      "item": "minecraft:stick"
-    },
-    "x": {
-      "tag": "forge:string"
-    }
-  },
-  "result": {
-    "item": "farmersdelight:iron_knife"
-  }
+	"type": "tfc:advanced_shaped_crafting",
+	"result": {
+		"stack": {
+			"item": "farmersdelight:iron_knife",
+			"count": 1,
+			"nbt": "{Damage:0}"
+		},
+		"modifiers": [
+			{
+				"type": "tfc:copy_forging_bonus"
+			}
+		]
+	},
+	"pattern": [
+		" a",
+		"b "
+	],
+	"key": {
+		"a": {
+			"item": "tfc:metal/knife_blade/wrought_iron"
+		},
+		"b": {
+			"tag": "forge:rods/wooden"
+		}
+	},
+	"input_row": 0,
+	"input_column": 1
 }

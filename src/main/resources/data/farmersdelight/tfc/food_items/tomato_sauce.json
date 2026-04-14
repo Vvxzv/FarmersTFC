@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:tomato_sauce"
+	},
+	"decay_modifier": 4,
+	"hunger": 4,
+	"saturation": 2,
+	"water": 10,
+	"vegetables": 3
+}

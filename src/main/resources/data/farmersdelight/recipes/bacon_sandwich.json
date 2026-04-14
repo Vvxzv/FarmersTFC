@@ -1,59 +1,33 @@
 {
-  "type": "tfc:damage_inputs_shapeless_crafting",
-  "recipe": {
-    "type": "tfc:advanced_shapeless_crafting",
-    "ingredients": [
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:bread"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:cooked_bacon"
-        }
-      },
-      {
-        "tag": "tfc:knives"
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "item": "farmersdelight:cabbage_leaf"
-        }
-      },
-      {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "forge:vegetables/tomato"
-        }
-      }
-    ],
-    "result":{
-      "stack":{
-        "item":"farmersdelight:bacon_sandwich"
-      },
-      "modifiers":[
-        {
-          "type":"tfc:meal",
-          "food":{
-            "hunger":5,
-            "saturation":3,
-            "decay_modifier":1.5
-          },
-          "portions":[
-            {
-              "nutrient_modifier":1,
-              "water_modifier":1,
-              "saturation_modifier":1
-            }
-          ]
-        }
-      ]
-    },
-    "input_row":0,
-    "input_column":0
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "farmersdelight:bacon_sandwich",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/breads"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:cooked_bacon"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:salad_ingredients/cabbage"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/tomato"
+			}
+		}
+	]
 }

@@ -1,31 +1,30 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "type": "tfc:fluid_item",
-      "fluid_ingredient": {
-        "ingredient": {
-          "tag": "tfc:milks"
-        },
-        "amount": 1000
-      }
-    },
-    {
-      "item": "minecraft:glass_bottle"
-    },
-    {
-      "item": "minecraft:glass_bottle"
-    },
-    {
-      "item": "minecraft:glass_bottle"
-    },
-    {
-      "item": "minecraft:glass_bottle"
-    }
-  ],
-  "result": {
-    "count": 4,
-    "item": "farmersdelight:milk_bottle"
-  }
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "farmersdelight:milk_bottle",
+		"count": 4
+	},
+	"ingredients": [
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"fluid": "minecraft:milk"
+				},
+				"amount": 1000
+			}
+		},
+		{
+			"item": "minecraft:glass_bottle"
+		},
+		{
+			"item": "minecraft:glass_bottle"
+		},
+		{
+			"item": "minecraft:glass_bottle"
+		},
+		{
+			"item": "minecraft:glass_bottle"
+		}
+	]
 }

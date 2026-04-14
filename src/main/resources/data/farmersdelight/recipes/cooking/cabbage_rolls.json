@@ -1,23 +1,29 @@
 {
-  "type": "farmersdelight:cooking",
-  "cookingtime": 100,
-  "experience": 0.35,
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:crops/cabbage"
-      }
-    },
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "farmersdelight:cabbage_roll_ingredients"
-      }
-    }
-  ],
-  "recipe_book_tab": "misc",
-  "result": {
-    "item": "farmersdelight:cabbage_rolls"
-  }
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:salad_ingredients/cabbage"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:salad_ingredients/cabbage"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/raw_meats"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:cabbage_rolls",
+		"count": 1
+	}
 }

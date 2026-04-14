@@ -1,17 +1,7 @@
 {
-  "type": "farmersdelight:cooking",
-  "recipe_book_tab": "misc",
-  "ingredients": [
-    {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:grain/rice"
-      }
-    }
-  ],
-  "result": {
-    "item": "farmersdelight:cooked_rice"
-  },
-  "experience": 0.35,
-  "cookingtime": 100
+	"conditions": [
+		{
+			"type": "forge:false"
+		}
+	]
 }

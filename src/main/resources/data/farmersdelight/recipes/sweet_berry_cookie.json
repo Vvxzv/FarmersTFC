@@ -1,27 +1,30 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "b",
-    "c"
-  ],
-  "key": {
-    "b": {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "tag": "forge:fruits/berries/red"
-      }
-    },
-    "c": {
-      "type": "tfc:not_rotten",
-      "ingredient": {
-        "item": "firmalife:food/chocolate_chip_cookie"
-      }
-    }
-  },
-  "result": {
-    "item": "farmersdelight:sweet_berry_cookie",
-    "modifiers": [
-      "tfc:copy_food"
-    ]
-  }
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"b",
+		"c"
+	],
+	"key": {
+		"b": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "farmerstfc:red_berry"
+			}
+		},
+		"c": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "firmalife:food/chocolate_chip_cookie"
+			}
+		}
+	},
+	"result": {
+		"item": "farmersdelight:sweet_berry_cookie"
+	},
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "firmalife"
+		}
+	]
 }
