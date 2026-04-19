@@ -1,9 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:cooked_rice"
-	},
-	"decay_modifier": 2,
-	"hunger": 4,
-	"saturation": 2,
-	"grain": 1
-}

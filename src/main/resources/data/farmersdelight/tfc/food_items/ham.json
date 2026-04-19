@@ -1,8 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:ham"
-	},
-	"decay_modifier": 2,
-	"hunger": 4,
-	"protein": 3
-}

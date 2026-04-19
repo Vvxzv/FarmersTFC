@@ -1,9 +1,0 @@
-{
-	"ingredient": {
-		"item": "minecraft:carrot"
-	},
-	"decay_modifier": 0.7,
-	"hunger": 4,
-	"saturation": 2,
-	"vegetables": 1
-}

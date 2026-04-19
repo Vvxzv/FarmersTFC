@@ -1,7 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:wheat_dough"
-	},
-	"decay_modifier": 2,
-	"hunger": 4
-}

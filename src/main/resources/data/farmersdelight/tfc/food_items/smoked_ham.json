@@ -1,9 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:smoked_ham"
-	},
-	"decay_modifier": 1,
-	"hunger": 4,
-	"saturation": 2,
-	"protein": 5
-}

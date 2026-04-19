@@ -1,8 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:beef_patty"
-	},
-	"decay_modifier": 1.5,
-	"hunger": 2,
-	"protein": 1.67
-}

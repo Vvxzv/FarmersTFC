@@ -1,8 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:rice_roll_medley_block"
-	},
-	"decay_modifier": 3,
-	"hunger": 4,
-	"saturation": 2
-}

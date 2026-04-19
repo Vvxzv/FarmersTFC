@@ -1,7 +1,0 @@
-{
-	"ingredient": {
-		"item": "minecraft:wheat"
-	},
-	"decay_modifier": 2,
-	"hunger": 2
-}

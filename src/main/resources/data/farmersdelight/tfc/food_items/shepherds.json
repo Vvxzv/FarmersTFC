@@ -1,9 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:shepherds"
-	},
-	"decay_modifier": 10,
-	"hunger": 1,
-	"saturation": 1,
-	"grain": 1
-}

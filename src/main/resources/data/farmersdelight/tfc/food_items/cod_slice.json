@@ -1,8 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:cod_slice"
-	},
-	"decay_modifier": 3,
-	"hunger": 2,
-	"protein": 0.67
-}

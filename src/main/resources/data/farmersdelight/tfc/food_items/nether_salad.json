@@ -1,9 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:nether_salad"
-	},
-	"decay_modifier": 3,
-	"hunger": 4,
-	"saturation": 2,
-	"vegetables": 2
-}

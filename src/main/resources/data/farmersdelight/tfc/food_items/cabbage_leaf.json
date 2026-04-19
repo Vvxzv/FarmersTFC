@@ -1,9 +1,0 @@
-{
-	"ingredient": {
-		"item": "farmersdelight:cabbage_leaf"
-	},
-	"decay_modifier": 3,
-	"hunger": 2,
-	"saturation": 0.5,
-	"vegetables": 0.67
-}
