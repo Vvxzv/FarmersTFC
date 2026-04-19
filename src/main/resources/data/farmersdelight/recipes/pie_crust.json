@@ -1,0 +1,31 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "farmersdelight:pie_crust",
+		"count": 1
+	},
+	"pattern": [
+		"aba",
+		" c "
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:sugar"
+		},
+		"b": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:dough"
+			}
+		},
+		"c": {
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"tag": "tfc:milks"
+				},
+				"amount": 100
+			}
+		}
+	}
+}

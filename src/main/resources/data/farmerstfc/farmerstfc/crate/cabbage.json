@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfc:food/cabbage"
+  },
+  "block": "farmerstfc:cabbage_crate"
+}

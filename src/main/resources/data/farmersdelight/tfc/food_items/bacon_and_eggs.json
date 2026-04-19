@@ -1,0 +1,10 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:bacon_and_eggs"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 2,
+	"protein": 6,
+	"dairy": 0.6
+}

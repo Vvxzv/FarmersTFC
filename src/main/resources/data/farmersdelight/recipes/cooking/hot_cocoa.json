@@ -1,0 +1,44 @@
+{
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"tag": "tfc:milks"
+				},
+				"amount": 100
+			}
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "firmalife:food/cocoa_powder"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "firmalife:food/cocoa_powder"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:hot_cocoa",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:glass_bottle"
+	},
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "firmalife"
+		}
+	]
+}

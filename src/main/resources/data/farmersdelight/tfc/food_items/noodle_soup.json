@@ -1,0 +1,13 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:noodle_soup"
+	},
+	"decay_modifier": 2,
+	"hunger": 4,
+	"saturation": 2,
+	"water": 30,
+	"grain": 1,
+	"vegetables": 0.5,
+	"protein": 3,
+	"dairy": 0.3
+}

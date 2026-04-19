@@ -1,0 +1,34 @@
+{
+	"values": [
+		"tfc:food/barley_dough",
+		"tfc:food/maize_dough",
+		"tfc:food/oat_dough",
+		"tfc:food/rye_dough",
+		"tfc:food/rice_dough",
+		"tfc:food/wheat_dough",
+		{
+			"id": "firmalife:food/oat_dough",
+			"required": false
+		},
+		{
+			"id": "firmalife:food/wheat_dough",
+			"required": false
+		},
+		{
+			"id": "firmalife:food/barley_dough",
+			"required": false
+		},
+		{
+			"id": "firmalife:food/maize_dough",
+			"required": false
+		},
+		{
+			"id": "firmalife:food/rice_dough",
+			"required": false
+		},
+		{
+			"id": "firmalife:food/rye_dough",
+			"required": false
+		}
+	]
+}

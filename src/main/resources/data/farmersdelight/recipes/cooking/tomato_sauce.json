@@ -1,0 +1,26 @@
+{
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/tomato"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/tomato"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:tomato_sauce",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"type": "farmersdelight:cutting",
+	"ingredients": [
+		{
+			"item": "tfc:wood/wood/acacia"
+		}
+	],
+	"result": [
+		{
+			"item": "tfc:wood/stripped_wood/acacia",
+			"count": 1
+		},
+		{
+			"item": "farmersdelight:tree_bark",
+			"count": 1
+		}
+	],
+	"tool": {
+		"type": "farmersdelight:tool_action",
+		"action": "axe_dig"
+	}
+}

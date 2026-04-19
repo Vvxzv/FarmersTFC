@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "farmersdelight:nether_salad",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:crimson_fungus"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "minecraft:warped_fungus"
+			}
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	]
+}

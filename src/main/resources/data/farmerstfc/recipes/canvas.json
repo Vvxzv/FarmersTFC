@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "farmersdelight:canvas",
+		"count": 1
+	},
+	"pattern": [
+		"aa",
+		"aa"
+	],
+	"key": {
+		"a": {
+			"item": "tfc:straw"
+		}
+	}
+}

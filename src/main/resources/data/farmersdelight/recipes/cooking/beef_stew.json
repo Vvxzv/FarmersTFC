@@ -1,0 +1,41 @@
+{
+	"type": "farmersdelight:cooking",
+	"cookingtime": 600,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"fluid": "minecraft:water"
+				},
+				"amount": 100
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:raw_beef"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/carrot"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/potato"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:beef_stew",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
+}

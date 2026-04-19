@@ -1,0 +1,40 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:smoker",
+    "tfc:firepit",
+    "tfc:grill",
+    {
+      "id": "firmalife:cured_oven_bottom",
+      "required": false
+    },
+    {
+      "id": "firmalife:insulated_oven_bottom",
+      "required": false
+    },
+    {
+      "id": "firmalife:cured_rustic_oven_bottom",
+      "required": false
+    },
+    {
+      "id": "firmalife:insulated_rustic_oven_bottom",
+      "required": false
+    },
+    {
+      "id": "firmalife:cured_tile_oven_bottom",
+      "required": false
+    },
+    {
+      "id": "firmalife:insulated_tile_oven_bottom",
+      "required": false
+    },
+    {
+      "id": "firmalife:cured_stone_oven_bottom",
+      "required": false
+    },
+    {
+      "id": "firmalife:insulated_stone_oven_bottom",
+      "required": false
+    }
+  ]
+}

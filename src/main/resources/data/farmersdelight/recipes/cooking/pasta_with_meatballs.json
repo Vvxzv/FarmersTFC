@@ -1,0 +1,32 @@
+{
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:minced_beef"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:raw_pasta"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:tomato_sauce"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:pasta_with_meatballs",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
+}

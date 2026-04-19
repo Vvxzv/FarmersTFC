@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "farmersdelight:egg_sandwich",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/breads"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:cooked_eggs"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:cooked_eggs"
+			}
+		}
+	]
+}

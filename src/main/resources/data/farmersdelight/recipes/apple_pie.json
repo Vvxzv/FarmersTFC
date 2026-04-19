@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "farmersdelight:apple_pie",
+		"count": 1
+	},
+	"pattern": [
+		"a",
+		"b",
+		"c"
+	],
+	"key": {
+		"a": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "tfc:food/red_apple"
+			}
+		},
+		"b": {
+			"item": "minecraft:sugar"
+		},
+		"c": {
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"item": "farmersdelight:pie_crust"
+			}
+		}
+	}
+}

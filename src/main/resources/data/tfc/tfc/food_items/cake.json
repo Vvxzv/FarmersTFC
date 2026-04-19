@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "tfc:cake"
+	},
+	"decay_modifier": 2.5,
+	"hunger": 4,
+	"saturation": 1,
+	"grain": 1,
+	"protein": 0.5,
+	"dairy": 1.1
+}

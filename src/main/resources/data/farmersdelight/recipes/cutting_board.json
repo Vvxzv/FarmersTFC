@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "farmersdelight:cutting_board",
+		"count": 1
+	},
+	"pattern": [
+		"abb",
+		"abb"
+	],
+	"key": {
+		"a": {
+			"tag": "forge:rods/wooden"
+		},
+		"b": {
+			"tag": "tfc:lumber"
+		}
+	}
+}

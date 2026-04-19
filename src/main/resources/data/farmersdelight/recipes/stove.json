@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"result": {
+		"item": "farmersdelight:stove",
+		"count": 1
+	},
+	"pattern": [
+		"aba",
+		"aca"
+	],
+	"key": {
+		"a": {
+			"item": "minecraft:bricks"
+		},
+		"b": {
+			"item": "tfc:wrought_iron_grill"
+		},
+		"c": {
+			"tag": "farmerstfc:magma_block"
+		}
+	}
+}

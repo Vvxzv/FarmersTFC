@@ -1,0 +1,38 @@
+{
+	"type": "farmersdelight:cooking",
+	"cookingtime": 1200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"fluid": "minecraft:water"
+				},
+				"amount": 1000
+			}
+		},
+		{
+			"item": "minecraft:bone"
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "forge:mushrooms"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/raw_meats"
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:bone_broth",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
+}
