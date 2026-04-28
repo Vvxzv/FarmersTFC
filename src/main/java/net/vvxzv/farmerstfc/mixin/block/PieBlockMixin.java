@@ -103,8 +103,7 @@ public abstract class PieBlockMixin extends Block implements EntityBlock {
     @Inject(method = "cutSlice", at = @At("HEAD"))
     private void servingCopyFood(Level level, BlockPos pos, BlockState state, Player player, Item knife, CallbackInfoReturnable<ItemInteractionResult> cir) {
         ItemStack newStack = Utils.copyFood(level, pos, this.getPieSliceItem());
-        Direction direction = player.getDirection().getOpposite();
-        ItemUtils.spawnItemEntity(level, newStack, pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5, direction.getStepX() * 0.15, 0.05, direction.getStepZ() * 0.15);
+        Helpers.spawnItem(level, pos, newStack);
     }
 
     @Inject(method = "consumeBite", at = @At("HEAD"), cancellable = true)

@@ -1,6 +1,6 @@
 {
 	"values": [
-		"tfc:food/cooked_mutton",
-		"tfc:food/cooked_chevon"
+		"tfc:food/mutton",
+		"tfc:food/chevon"
 	]
 }

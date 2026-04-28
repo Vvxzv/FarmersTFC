@@ -19,7 +19,7 @@ import java.util.Map;
 public class Utils {
     public static ItemStack copyFood(LevelAccessor level, BlockPos pos, ItemStack stack) {
         if(level.getBlockEntity(pos) instanceof DecayingFoodBlockEntity decaying) {
-            ItemStack blockItem = decaying.getStack();
+            ItemStack blockItem = decaying.copyStack();
             return copyFood(blockItem, stack);
         }
         return stack;

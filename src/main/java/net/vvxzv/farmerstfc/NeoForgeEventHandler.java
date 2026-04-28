@@ -78,9 +78,10 @@ public class NeoForgeEventHandler {
 
             if (level.getBlockEntity(placePos) instanceof DecayingFoodBlockEntity decaying) {
                 decaying.setStackWithCount(stack);
+                player.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
+            } else {
+                stack.shrink(1);
             }
-
-            player.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
 
             event.setCanceled(true);
         }
