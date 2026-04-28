@@ -10,6 +10,8 @@ import vectorwing.farmersdelight.common.block.PieBlock;
 
 @WailaPlugin
 public class JadeIntegration implements IWailaPlugin {
+
+    @Override
     public void registerClient(IWailaClientRegistration reg) {
         reg.registerBlockComponent(DecayingBlockComponentProvider.INSTANCE, FeastBlock.class);
         reg.registerBlockComponent(DecayingBlockComponentProvider.INSTANCE, PieBlock.class);

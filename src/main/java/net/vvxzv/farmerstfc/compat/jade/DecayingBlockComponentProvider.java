@@ -32,6 +32,7 @@ public enum DecayingBlockComponentProvider implements IBlockComponentProvider {
         }
     }
 
+    @Override
     public ResourceLocation getUid() {
         return ResourceLocation.fromNamespaceAndPath(FarmersTFC.MODID, "decaying");
     }

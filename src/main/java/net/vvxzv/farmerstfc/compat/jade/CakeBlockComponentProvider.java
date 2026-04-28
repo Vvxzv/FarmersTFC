@@ -79,6 +79,7 @@ public enum CakeBlockComponentProvider implements IBlockComponentProvider {
         lines.forEach(iTooltip::add);
     }
 
+    @Override
     public ResourceLocation getUid() {
         return ResourceLocation.fromNamespaceAndPath(FarmersTFC.MODID, "cake");
     }
