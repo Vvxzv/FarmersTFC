@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.NewRegistryEvent;
 import net.vvxzv.farmerstfc.common.data.DataManagers;
 import net.vvxzv.farmerstfc.common.registry.BlockEntities;
 import net.vvxzv.farmerstfc.common.registry.Blocks;
+import net.vvxzv.farmerstfc.common.registry.DataComponents;
 import net.vvxzv.farmerstfc.common.registry.Items;
 import net.vvxzv.farmerstfc.common.loot.LootModifiers;
 import net.vvxzv.farmerstfc.common.utils.FoodTraits;
@@ -27,6 +28,7 @@ public class FarmersTFC {
         LootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         DataManagers.MANAGERS.register(modEventBus);
         FoodTraits.TRAITS.register(modEventBus);
+        DataComponents.DATA_COMPONENT_TYPES.register(modEventBus);
 
         modEventBus.addListener(this::addCreativeTab);
         modEventBus.addListener(this::registerRegistries);

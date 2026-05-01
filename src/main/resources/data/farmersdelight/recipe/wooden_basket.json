@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"a": {
+			"tag": "c:rods/wooden"
+		},
+		"b": {
+			"item": "farmersdelight:canvas"
+		},
+		"c": {
+			"tag": "c:chests/wooden"
+		}
+	},
+	"pattern": [
+		"a a",
+		"bcb"
+	],
+	"result": {
+		"count": 1,
+		"id": "farmersdelight:wooden_basket"
+	}
+}

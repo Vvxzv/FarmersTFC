@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"result": {
-		"id": "farmersdelight:basket",
+		"id": "farmersdelight:bamboo_basket",
 		"count": 1
 	},
 	"pattern": [

@@ -4,14 +4,14 @@
   "package" : "net.vvxzv.farmerstfc.mixin",
   "compatibilityLevel" : "JAVA_21",
   "mixins" : [
-    "BlockItemMixin",
+    "SkilletItemMixin",
     "block.FeastBlockMixin",
     "block.PieBlockMixin",
     "block.RiceRollMedleyBlockMixin",
     "block.RichSoilBlockMixin",
+    "block.StoveBlockMixin",
     "block.TFCCakeBlockMixin",
-    "block.entity.SkilletBlockEntityMixin",
-    "block.entity.StoveBlockEntityMixin"
+    "block.entity.SkilletBlockEntityMixin"
   ],
   "client" : [
   ],

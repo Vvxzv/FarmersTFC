@@ -1,11 +1,12 @@
 package net.vvxzv.farmerstfc.mixin.block;
 
-import com.llamalad7.mixinextras.sugar.Local;
 import net.dries007.tfc.common.component.food.FoodCapability;
 import net.dries007.tfc.common.component.food.IFood;
 import net.dries007.tfc.util.Helpers;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -107,12 +108,7 @@ public abstract class FeastBlockMixin extends Block implements EntityBlock {
             ),
             name = "serving"
     )
-    private ItemStack servingCopyFood(
-            ItemStack originalServing,
-            @Local(argsOnly = true) LevelAccessor level,
-            @Local(argsOnly = true) BlockPos pos,
-            @Local(argsOnly = true) BlockState state
-    ) {
+    private ItemStack servingCopyFood(ItemStack serving, LevelAccessor level, BlockPos pos, BlockState state) {
         return Utils.copyFood(level, pos, this.getServingItem(state));
     }
 
@@ -128,6 +124,7 @@ public abstract class FeastBlockMixin extends Block implements EntityBlock {
     private void useItemOn(ItemStack heldStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<ItemInteractionResult> cir) {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingFoodBlockEntity decaying && decaying.isRotten()) {
+            player.displayClientMessage(Component.translatable("farmerstfc.eat.rotten_block").withStyle(ChatFormatting.GRAY), true);
             cir.setReturnValue(ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION);
         }
     }

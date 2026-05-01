@@ -2,6 +2,7 @@
   "config.jade.plugin_farmerstfc.decaying" : "Decaying Block",
   "config.jade.plugin_farmerstfc.cake" : "Cake Block",
   "config.jade.plugin_farmerstfc.crate" : "Crate Block",
+  "config.jade.plugin_farmerstfc.stove" : "Stove",
   "block.farmerstfc.brown_mushroom_bunch": "Brown Mushroom Bunch",
   "block.farmerstfc.red_mushroom_bunch": "Red Mushroom Bunch",
   "block.farmerstfc.pan": "Pan",
@@ -13,9 +14,7 @@
   "block.farmerstfc.rotten_stuffed_pumpkin_block": "Rotten Stuffed Pumpkin Block",
   "block.farmerstfc.rotten_honey_glazed_ham_block": "Rotten Honey Glazed Ham",
   "block.farmerstfc.rotten_shepherds_pie_block": "Rotten Shepherds Pie",
-  "block.farmerstfc.rotten_apple_pie": "Rotten Apple Pie",
-  "block.farmerstfc.rotten_sweet_berry_cheesecake": "Rotten Sweet Berry Cheesecake",
-  "block.farmerstfc.rotten_chocolate_pie": "Rotten Chocolate Pie",
+  "block.farmerstfc.rotten_salad_block": "Rotten Salad",
   "block.farmerstfc.carrot_crate": "Carrot Crate",
   "block.farmerstfc.potato_crate": "Potato Crate",
   "block.farmerstfc.beetroot_crate": "Beetroot Crate",
@@ -23,5 +22,7 @@
   "block.farmerstfc.tomato_crate": "Tomato Crate",
   "block.farmerstfc.onion_crate": "Onion Crate",
   "block.farmerstfc.rice_bale": "Rice Bale",
-  "block.farmerstfc.rice_bag": "rice_bag"
+  "block.farmerstfc.rice_bag": "rice_bag",
+  "farmerstfc.stove.fuel": "Fuels: ",
+  "farmerstfc.eat.rotten_block": "Ew~ It looks rotten. It's so gross. I'd not eat it"
 }

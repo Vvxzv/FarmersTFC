@@ -6,6 +6,8 @@
     "farmerstfc:remove_stuffed_pumpkin_block",
     "farmerstfc:remove_honey_glazed_ham_block",
     "farmerstfc:remove_shepherds_pie_block",
-    "farmerstfc:remove_rice_roll_medley_block"
+    "farmerstfc:remove_rice_roll_medley_block",
+    "farmerstfc:remove_gleaming_salad_block",
+    "farmerstfc:remove_stove"
   ]
 }

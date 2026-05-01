@@ -10,7 +10,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CampfireCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.vvxzv.farmerstfc.Config;
@@ -24,15 +23,14 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import vectorwing.farmersdelight.common.block.entity.SkilletBlockEntity;
 import vectorwing.farmersdelight.common.block.entity.SyncedBlockEntity;
-import vectorwing.farmersdelight.common.utility.ItemUtils;
 
 import java.util.Optional;
 
 @Mixin(SkilletBlockEntity.class)
 public class SkilletBlockEntityMixin extends SyncedBlockEntity {
     @Unique
-    private static float skilletTemperature() {
-        return (float) Config.heatingTemperature;
+    private static float skilletTemperature(){
+        return (float) Config.heatingTemperature + 1;
     }
 
     public SkilletBlockEntityMixin(BlockEntityType<?> tileEntityTypeIn, BlockPos pos, BlockState state) {
@@ -41,36 +39,16 @@ public class SkilletBlockEntityMixin extends SyncedBlockEntity {
 
     @Inject(
             method = "getMatchingRecipe",
-            at = @At("RETURN"),
+            at = @At("HEAD"),
             remap = false,
             cancellable = true
     )
     private void injectHeatingRecipe(ItemStack stack, CallbackInfoReturnable<Optional<RecipeHolder<CampfireCookingRecipe>>> cir) {
         if (FoodCapability.get(stack) != null) {
             HeatingRecipe matchingHeatingRecipe = HeatingRecipe.getRecipe(stack);
-            if(matchingHeatingRecipe == null) {
-                return;
+            if(matchingHeatingRecipe != null) {
+                cir.setReturnValue(Utils.heatingRecipeToCampfireCookingRecipe(matchingHeatingRecipe));
             }
-
-            if (matchingHeatingRecipe.getTemperature() > skilletTemperature()) {
-                return;
-            }
-
-            CampfireCookingRecipe fakeCookingRecipe = new CampfireCookingRecipe(
-                    matchingHeatingRecipe.getGroup(),
-                    CookingBookCategory.FOOD,
-                    matchingHeatingRecipe.getIngredient(),
-                    matchingHeatingRecipe.getResultItem(null),
-                    0,
-                    600
-            );
-
-            RecipeHolder<CampfireCookingRecipe> recipeHolder = new RecipeHolder<>(
-                    TFCRecipeTypes.HEATING.getId(),
-                    fakeCookingRecipe
-            );
-
-            cir.setReturnValue(Optional.of(recipeHolder));
         }
     }
 
@@ -78,23 +56,16 @@ public class SkilletBlockEntityMixin extends SyncedBlockEntity {
             method = "cookAndOutputItems",
             at = @At(
                     value = "INVOKE",
-                    target = "Lvectorwing/farmersdelight/common/utility/ItemUtils;spawnItemEntity(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;DDDDDD)V"
-            ),
-            remap = false
+                    target = "Lnet/minecraft/world/item/ItemStack;copy()Lnet/minecraft/world/item/ItemStack;"
+            )
     )
-    private void cookAndOutputItems(
-            Level level,
-            ItemStack stack,
-            double x, double y, double z,
-            double xMotion, double yMotion, double zMotion,
-            ItemStack cookingStack
-    ) {
-        IHeat heat = HeatCapability.get(stack);
-        if(heat != null) {
-            heat.setTemperatureIfWarmer(skilletTemperature());
-        }
+    private ItemStack cooked(ItemStack stack, ItemStack cookingStack) {
         ItemStack outputItem = Utils.copyFood(cookingStack, stack);
         FoodCapability.applyTrait(outputItem, FoodTraits.SKILLET_COOKED);
-        ItemUtils.spawnItemEntity(level, outputItem, x, y, z, xMotion, yMotion, zMotion);
+        IHeat heat = HeatCapability.get(outputItem);
+        if(heat != null) {
+            heat.setTemperature(skilletTemperature());
+        }
+        return outputItem;
     }
 }

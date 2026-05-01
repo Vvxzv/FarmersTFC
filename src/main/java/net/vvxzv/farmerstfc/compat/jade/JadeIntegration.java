@@ -7,6 +7,7 @@ import net.vvxzv.farmerstfc.compat.kubejs.block.DecayingBlockJS;
 import snownee.jade.api.*;
 import vectorwing.farmersdelight.common.block.FeastBlock;
 import vectorwing.farmersdelight.common.block.PieBlock;
+import vectorwing.farmersdelight.common.block.StoveBlock;
 
 @WailaPlugin
 public class JadeIntegration implements IWailaPlugin {
@@ -21,5 +22,7 @@ public class JadeIntegration implements IWailaPlugin {
         reg.registerBlockComponent(CakeBlockComponentProvider.INSTANCE, TFCCandleCakeBlock.class);
 
         reg.registerBlockComponent(CrateBlockComponentProvider.INSTANCE, CrateBlock.class);
+
+        reg.registerBlockComponent(StoveComponentProvider.INSTANCE, StoveBlock.class);
     }
 }
