@@ -3,8 +3,10 @@ package net.vvxzv.farmerstfc.mixin.block;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.IFood;
 import net.dries007.tfc.util.Helpers;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,7 +14,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -107,17 +108,12 @@ public abstract class FeastBlockMixin extends Block implements EntityBlock {
             name = "serving",
             remap = false
     )
-    private ItemStack servingCopyFood(
-            ItemStack originalServing,
-            LevelAccessor level,
-            BlockPos pos,
-            BlockState state
-    ) {
+    private ItemStack servingCopyFood(ItemStack serving, Level level, BlockPos pos, BlockState state) {
         return Utils.copyFood(level, pos, this.getServingItem(state));
     }
 
     @Inject(method = "takeServing", at = @At("HEAD"), cancellable = true, remap = false)
-    private void takeRottenServing(LevelAccessor level, BlockPos pos, BlockState state, Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir) {
+    private void takeRottenServing(Level level, BlockPos pos, BlockState state, Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> cir) {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingFoodBlockEntity decaying && decaying.isRotten()) {
             cir.setReturnValue(InteractionResult.PASS);
@@ -128,6 +124,7 @@ public abstract class FeastBlockMixin extends Block implements EntityBlock {
     private void use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingFoodBlockEntity decaying && decaying.isRotten()) {
+            player.displayClientMessage(Component.translatable("farmerstfc.eat.rotten_block").withStyle(ChatFormatting.GRAY), true);
             cir.setReturnValue(InteractionResult.PASS);
         }
     }

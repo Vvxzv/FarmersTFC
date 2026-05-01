@@ -2,19 +2,17 @@ package net.vvxzv.farmerstfc.mixin.block.entity;
 
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.heat.HeatCapability;
+import net.dries007.tfc.common.capabilities.heat.HeatHandler;
 import net.dries007.tfc.common.capabilities.heat.IHeat;
-import net.dries007.tfc.common.recipes.HeatingRecipe;
-import net.dries007.tfc.common.recipes.TFCRecipeTypes;
-import net.dries007.tfc.common.recipes.inventory.ItemStackInventory;
+import net.dries007.tfc.util.Helpers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.Container;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CampfireCookingRecipe;
-import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 import net.vvxzv.farmerstfc.Config;
 import net.vvxzv.farmerstfc.common.utils.FoodTraits;
 import net.vvxzv.farmerstfc.common.utils.Utils;
@@ -26,7 +24,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import vectorwing.farmersdelight.common.block.entity.SkilletBlockEntity;
 import vectorwing.farmersdelight.common.block.entity.SyncedBlockEntity;
-import vectorwing.farmersdelight.common.utility.ItemUtils;
 
 import java.util.Optional;
 
@@ -47,31 +44,10 @@ public abstract class SkilletBlockEntityMixin extends SyncedBlockEntity {
             cancellable = true
     )
     private void injectHeatingRecipe(Container recipeWrapper, CallbackInfoReturnable<Optional<CampfireCookingRecipe>> cir) {
-        if(this.level == null) {
-            return;
-        }
-
-        ItemStack inputStack = recipeWrapper.getItem(0);
-        if (FoodCapability.get(inputStack) == null) {
-            return;
-        }
-        Optional<HeatingRecipe> heatingRecipe = this.level.getRecipeManager()
-                .getRecipeFor(TFCRecipeTypes.HEATING.get(), new ItemStackInventory(inputStack), this.level);
-
-        if (heatingRecipe.isPresent()) {
-            HeatingRecipe recipe = heatingRecipe.get();
-            if (recipe.getTemperature() < this.skilletTemperature()) {
-                CampfireCookingRecipe fakeCampfireRecipe = new CampfireCookingRecipe(
-                        recipe.getId(),
-                        "",
-                        CookingBookCategory.FOOD,
-                        recipe.getIngredient(),
-                        recipe.assemble(new ItemStackInventory(inputStack), this.level.registryAccess()),
-                        0,
-                        600
-                );
-
-                cir.setReturnValue(Optional.of(fakeCampfireRecipe));
+        if(this.level != null) {
+            ItemStack inputStack = recipeWrapper.getItem(0);
+            if (FoodCapability.get(inputStack) != null) {
+                cir.setReturnValue(Utils.heatingRecipeToCampfireCookingRecipe(this.level, inputStack));
             }
         }
     }
@@ -80,24 +56,16 @@ public abstract class SkilletBlockEntityMixin extends SyncedBlockEntity {
             method = "cookAndOutputItems",
             at = @At(
                     value = "INVOKE",
-                    target = "Lvectorwing/farmersdelight/common/utility/ItemUtils;spawnItemEntity(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;DDDDDD)V"
+                    target = "Lnet/minecraft/world/item/ItemStack;copy()Lnet/minecraft/world/item/ItemStack;"
             )
     )
-    private void cookAndOutputItems(
-            Level level,
-            ItemStack stack,
-            double x, double y, double z,
-            double xMotion, double yMotion, double zMotion,
-            ItemStack cookingStack
-    ) {
-        IHeat heat = HeatCapability.get(stack);
-        if(heat != null) {
-            heat.setTemperatureIfWarmer(skilletTemperature());
-        }
-        SimpleContainer wrapper = new SimpleContainer(cookingStack);
-        ItemStack inputStack = wrapper.getItem(0);
-        ItemStack outputItem = Utils.copyFood(inputStack, stack);
+    private ItemStack cooked(ItemStack stack, ItemStack cookingStack) {
+        ItemStack outputItem = Utils.copyFood(cookingStack, stack);
         FoodCapability.applyTrait(outputItem, FoodTraits.SKILLET_COOKED);
-        ItemUtils.spawnItemEntity(level, outputItem, x, y, z, xMotion, yMotion, zMotion);
+        IHeat heat = HeatCapability.get(outputItem);
+        if(heat != null) {
+            heat.setTemperature(skilletTemperature());
+        }
+        return outputItem;
     }
 }

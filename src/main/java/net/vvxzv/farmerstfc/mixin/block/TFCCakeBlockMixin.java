@@ -28,7 +28,7 @@ public class TFCCakeBlockMixin {
             ),
             remap = false
     )
-    private static void eatCake(TFCFoodData instance, FoodData foodData, Level level, BlockPos pos, BlockState state, Player player) {
+    private static void eatCake(TFCFoodData instance, FoodData data, Level level, BlockPos pos, BlockState state, Player player) {
         ItemStack stack = state.getBlock().asItem().getDefaultInstance();
         FoodDefinition food = FoodCapability.getDefinition(stack);
         if(food != null) {

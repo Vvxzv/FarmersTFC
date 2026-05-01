@@ -1,0 +1,57 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"result": {
+		"item": "farmersdelight:gleaming_salad_block",
+		"count": 1
+	},
+	"ingredients": [
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/vegetables"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"item": "minecraft:golden_carrot"
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/fruits"
+			}
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/vegetables"
+			}
+		},
+		{
+			"item": "minecraft:bowl"
+		},
+		{
+			"type": "tfc:not_rotten",
+			"ingredient": {
+				"tag": "tfc:foods/vegetables"
+			}
+		}
+	]
+}

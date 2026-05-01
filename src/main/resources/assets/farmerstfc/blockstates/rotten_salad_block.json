@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "farmersdelight:block/gleaming_salad_block_leftovers",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "farmersdelight:block/gleaming_salad_block_leftovers"
+    },
+    "facing=south": {
+      "model": "farmersdelight:block/gleaming_salad_block_leftovers",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "farmersdelight:block/gleaming_salad_block_leftovers",
+      "y": 270
+    }
+  }
+}

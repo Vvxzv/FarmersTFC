@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -51,11 +52,6 @@ public class Blocks {
             )
     );
 
-    public static final Map<RottenPie, RegistryObject<Block>> ROTTEN_PIE_MAP = Helpers.mapOfKeys(
-            RottenPie.class,
-            (block) -> registerBlockNoItem(block.name().toLowerCase(Locale.ROOT), RottenPieBlock::new)
-    );
-
     public static final Map<Crate, RegistryObject<Block>> CRATE_BLOCK_MAP = Helpers.mapOfKeys(
             Crate.class,
             (block) -> registerBlock(block.getName(), CrateBlock::new)
@@ -63,14 +59,15 @@ public class Blocks {
 
     public enum RottenBlock {
         ROTTEN_ROAST_CHICKEN_BLOCK,
-        ROTTEN_STUFFED_PUMPKIN_BLOCK(Block.box(2.0F, 0.0F, 2.0F, 14.0F, 3.0F, 14.0F)),
+        ROTTEN_STUFFED_PUMPKIN_BLOCK(Block.box(2, 0, 2, 14, 2, 14)),
         ROTTEN_HONEY_GLAZED_HAM_BLOCK,
-        ROTTEN_SHEPHERDS_PIE_BLOCK;
+        ROTTEN_SHEPHERDS_PIE_BLOCK,
+        ROTTEN_SALAD_BLOCK(Shapes.or(Block.box(3, 0, 3, 13, 2, 13), Block.box(2, 2, 2, 14, 6, 14)));
 
         final VoxelShape shape;
 
         RottenBlock(){
-            this(Block.box(1.0F, 0.0F, 1.0F, 15.0F, 2.0F, 15.0F));
+            this(Block.box(1, 0, 1, 15, 2, 15));
         }
         RottenBlock(VoxelShape shape){
             this.shape = shape;
@@ -79,12 +76,6 @@ public class Blocks {
         public VoxelShape getShape() {
             return shape;
         }
-    }
-
-    public enum RottenPie {
-        ROTTEN_APPLE_PIE,
-        ROTTEN_SWEET_BERRY_CHEESECAKE,
-        ROTTEN_CHOCOLATE_PIE
     }
 
     public enum Crate {

@@ -1,0 +1,32 @@
+{
+	"type": "farmersdelight:cooking",
+	"cookingtime": 200,
+	"experience": 1,
+	"ingredients": [
+		{
+			"tag": "tfc:foods/breads"
+		},
+		{
+			"item": "tfc:food/onion"
+		},
+		{
+			"item": "tfc:food/onion"
+		},
+		{
+			"type": "tfc:fluid_item",
+			"fluid_ingredient": {
+				"ingredient": {
+					"tag": "tfc:milks"
+				},
+				"amount": 100
+			}
+		}
+	],
+	"result": {
+		"item": "farmersdelight:onion_soup",
+		"count": 1
+	},
+	"container": {
+		"item": "minecraft:bowl"
+	}
+}

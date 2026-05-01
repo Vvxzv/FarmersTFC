@@ -5,16 +5,16 @@
   "compatibilityLevel" : "JAVA_8",
   "refmap" : "farmerstfc.refmap.json",
   "mixins" : [
-    "BlockItemMixin",
-    "block.FeastBlockMixin",
     "HotCocoaItemMixin",
     "MelonJuiceItemMixin",
+    "SkilletItemMixin",
+    "block.FeastBlockMixin",
     "block.PieBlockMixin",
     "block.RiceRollMedleyBlockMixin",
     "block.RichSoilBlockMixin",
-    "block.entity.SkilletBlockEntityMixin",
-    "block.entity.StoveBlockEntityMixin",
-    "block.TFCCakeBlockMixin"
+    "block.StoveBlockMixin",
+    "block.TFCCakeBlockMixin",
+    "block.entity.SkilletBlockEntityMixin"
   ],
   "client" : [
   ],

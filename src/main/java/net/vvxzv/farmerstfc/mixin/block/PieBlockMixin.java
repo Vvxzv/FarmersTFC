@@ -3,8 +3,10 @@ package net.vvxzv.farmerstfc.mixin.block;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.IFood;
 import net.dries007.tfc.util.Helpers;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -21,6 +23,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.phys.BlockHitResult;
 import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
 import net.vvxzv.farmerstfc.common.data.DecayToRot;
 import net.vvxzv.farmerstfc.common.registry.BlockEntities;
@@ -36,7 +39,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import vectorwing.farmersdelight.common.block.PieBlock;
-import vectorwing.farmersdelight.common.utility.ItemUtils;
 
 import java.util.function.Supplier;
 
@@ -108,10 +110,11 @@ public abstract class PieBlockMixin extends Block implements EntityBlock {
         Helpers.spawnItem(level, pos, newStack);
     }
 
-    @Inject(method = "consumeBite", at = @At("HEAD"), cancellable = true, remap = false)
-    private void takeRottenServing(Level level, BlockPos pos, BlockState state, Player playerIn, CallbackInfoReturnable<InteractionResult> cir) {
+    @Inject(method = "use", at = @At("HEAD"), cancellable = true, remap = false)
+    private void takeRottenServing(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingFoodBlockEntity decaying && decaying.isRotten()) {
+            player.displayClientMessage(Component.translatable("farmerstfc.eat.rotten_block").withStyle(ChatFormatting.GRAY), true);
             cir.setReturnValue(InteractionResult.PASS);
         }
     }
@@ -123,8 +126,8 @@ public abstract class PieBlockMixin extends Block implements EntityBlock {
                     target = "Lnet/minecraft/world/food/FoodData;eat(Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/ItemStack;)V"
             )
     )
-    private void eatSlice(FoodData instance, Item pItem, ItemStack pStack, Level level, BlockPos pos, BlockState state, Player playerIn){
-        playerIn.eat(level, this.getPieSliceItem());
+    private void eatSlice(FoodData instance, Item pItem, ItemStack pStack, Level level, BlockPos pos, BlockState state, Player player){
+        player.eat(level, this.getPieSliceItem());
     }
 
     @Override

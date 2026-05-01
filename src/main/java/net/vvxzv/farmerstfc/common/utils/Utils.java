@@ -3,11 +3,17 @@ package net.vvxzv.farmerstfc.common.utils;
 import net.dries007.tfc.common.capabilities.food.FoodCapability;
 import net.dries007.tfc.common.capabilities.food.FoodTrait;
 import net.dries007.tfc.common.capabilities.food.IFood;
+import net.dries007.tfc.common.recipes.HeatingRecipe;
+import net.dries007.tfc.common.recipes.TFCRecipeTypes;
+import net.dries007.tfc.common.recipes.inventory.ItemStackInventory;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CampfireCookingRecipe;
+import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
@@ -15,6 +21,7 @@ import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class Utils {
     public static ItemStack copyFood(LevelAccessor level, BlockPos pos, ItemStack stack) {
@@ -70,5 +77,26 @@ public class Utils {
         }
 
         throw new IllegalArgumentException("Unknow ResourceLocation: " + string);
+    }
+
+    public static Optional<CampfireCookingRecipe> heatingRecipeToCampfireCookingRecipe(Level level, ItemStack stack) {
+        Optional<HeatingRecipe> heatingRecipe = level.getRecipeManager()
+                .getRecipeFor(TFCRecipeTypes.HEATING.get(), new ItemStackInventory(stack), level);
+
+        if (heatingRecipe.isPresent()) {
+            HeatingRecipe recipe = heatingRecipe.get();
+            CampfireCookingRecipe fakeCampfireRecipe = new CampfireCookingRecipe(
+                    recipe.getId(),
+                    "",
+                    CookingBookCategory.FOOD,
+                    recipe.getIngredient(),
+                    recipe.assemble(new ItemStackInventory(stack), level.registryAccess()),
+                    0,
+                    600
+            );
+
+            return Optional.of(fakeCampfireRecipe);
+        }
+        return Optional.empty();
     }
 }

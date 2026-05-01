@@ -1,0 +1,11 @@
+{
+	"ingredient": {
+		"item": "farmersdelight:pumpkin_pie_slice"
+	},
+	"decay_modifier": 4,
+	"hunger": 4,
+	"saturation": 1,
+	"water": 1,
+	"grain": 1,
+	"fruit": 1.5
+}

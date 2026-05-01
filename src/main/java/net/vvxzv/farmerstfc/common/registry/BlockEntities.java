@@ -5,10 +5,12 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 import net.vvxzv.farmerstfc.FarmersTFC;
 import net.vvxzv.farmerstfc.common.block.CrateBlock;
 import net.vvxzv.farmerstfc.common.block.entity.DecayingFoodBlockEntity;
 import net.vvxzv.farmerstfc.common.block.entity.RichSoilFarmlandBlockEntity;
+import net.vvxzv.farmerstfc.common.block.entity.StoveBlockEntity;
 import net.vvxzv.farmerstfc.compat.kubejs.block.DecayingBlockJS;
 import net.vvxzv.farmerstfc.compat.kubejs.block.entity.DecayingBlockEntityJS;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
@@ -28,7 +30,9 @@ public class BlockEntities {
                 ModBlocks.RICE_ROLL_MEDLEY_BLOCK,
                 ModBlocks.APPLE_PIE,
                 ModBlocks.SWEET_BERRY_CHEESECAKE,
-                ModBlocks.CHOCOLATE_PIE
+                ModBlocks.CHOCOLATE_PIE,
+                ModBlocks.GLEAMING_SALAD_BLOCK,
+                ModBlocks.PUMPKIN_PIE
         ).map(Supplier::get);
 
         Stream<Block> crateBlocks = BuiltInRegistries.BLOCK.stream()
@@ -60,6 +64,14 @@ public class BlockEntities {
             () -> BlockEntityType.Builder.of(
                     RichSoilFarmlandBlockEntity::new,
                     Blocks.RICH_SOIL_FARMLAND.get()
+            ).build(null)
+    );
+
+    public static final RegistryObject<BlockEntityType<StoveBlockEntity>> STOVE = BLOCK_ENTITIES.register(
+            "stove",
+            () -> BlockEntityType.Builder.of(
+                    StoveBlockEntity::new,
+                    ModBlocks.STOVE.get()
             ).build(null)
     );
 }
