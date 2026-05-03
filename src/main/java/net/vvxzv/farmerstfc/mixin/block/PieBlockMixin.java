@@ -110,7 +110,7 @@ public abstract class PieBlockMixin extends Block implements EntityBlock {
         Helpers.spawnItem(level, pos, newStack);
     }
 
-    @Inject(method = "use", at = @At("HEAD"), cancellable = true, remap = false)
+    @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     private void takeRottenServing(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
         BlockEntity entity = level.getBlockEntity(pos);
         if (entity instanceof DecayingFoodBlockEntity decaying && decaying.isRotten()) {

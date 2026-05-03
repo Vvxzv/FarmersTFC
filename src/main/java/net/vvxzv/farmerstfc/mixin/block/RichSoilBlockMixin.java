@@ -15,6 +15,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import vectorwing.farmersdelight.common.block.RichSoilBlock;
 
@@ -34,10 +35,22 @@ public abstract class RichSoilBlockMixin extends Block {
         cir.setReturnValue(toolAction.equals(ToolActions.HOE_TILL) && context.getLevel().getBlockState(context.getClickedPos().above()).isAir() ? Blocks.RICH_SOIL_FARMLAND.get().defaultBlockState() : null);
     }
 
-    @Redirect(method = "randomTick", at = @At(value = "INVOKE", target = "Lvectorwing/farmersdelight/common/block/RichSoilBlock;tryBoostingPlantsAboveAndBelow(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V"), remap = false)
-    private void tryBoostingPlantsAboveAndBelow(ServerLevel level, BlockPos pos, RandomSource random) {
-        if(Config.tryBoosting) {
-            RichSoilBlock.tryBoostingPlantsAboveAndBelow(level, pos, random);
+    @Shadow(remap = false)
+    public abstract boolean convertMushroomToColony(BlockState targetState, BlockPos targetPos, ServerLevel level);
+
+    @Inject(
+            method = "randomTick",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    private void tryBoostingPlantsAboveAndBelow(BlockState state, ServerLevel level, BlockPos pos, RandomSource random, CallbackInfo ci) {
+        BlockPos abovePos = pos.above();
+        BlockState aboveState = level.getBlockState(abovePos);
+        if (!this.convertMushroomToColony(aboveState, abovePos, level)) {
+            if (Config.tryBoosting) {
+                RichSoilBlock.tryBoostingPlantsAboveAndBelow(level, pos, random);
+            }
         }
+        ci.cancel();
     }
 }

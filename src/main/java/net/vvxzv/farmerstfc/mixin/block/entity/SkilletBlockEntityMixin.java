@@ -27,7 +27,7 @@ import vectorwing.farmersdelight.common.block.entity.SyncedBlockEntity;
 
 import java.util.Optional;
 
-@Mixin(value = SkilletBlockEntity.class, remap = false)
+@Mixin(SkilletBlockEntity.class)
 public abstract class SkilletBlockEntityMixin extends SyncedBlockEntity {
     @Unique
     private float skilletTemperature(){
@@ -41,7 +41,8 @@ public abstract class SkilletBlockEntityMixin extends SyncedBlockEntity {
     @Inject(
             method = "getMatchingRecipe",
             at = @At("HEAD"),
-            cancellable = true
+            cancellable = true,
+            remap = false
     )
     private void injectHeatingRecipe(Container recipeWrapper, CallbackInfoReturnable<Optional<CampfireCookingRecipe>> cir) {
         if(this.level != null) {
