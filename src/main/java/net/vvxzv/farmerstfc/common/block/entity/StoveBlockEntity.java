@@ -75,7 +75,7 @@ public class StoveBlockEntity extends TFCBlockEntity {
             IHeatConsumer heat = level.getCapability(BlockCapabilities.HEAT, pos.above(), Direction.DOWN);
             if(heat != null) {
                 float currentTemp = heat.getTemperature();
-                heat.setTemperature(HeatCapability.adjustTempTowards(currentTemp, temperature));
+                heat.setTemperature(HeatCapability.adjustTempTowards(currentTemp, temperature, 2));
             }
         }
     }

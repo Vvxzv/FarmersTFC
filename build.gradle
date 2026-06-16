@@ -153,10 +153,10 @@ dependencies {
     runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
 
     //KubeJS
-    implementation "curse.maven:kubejs-238086:7278501"
+    implementation "curse.maven:kubejs-238086:8083208"
     implementation "curse.maven:rhino-416294:7104526"
 
-    implementation "curse.maven:probejs-585406:7105159"
+    implementation "curse.maven:probejs-585406:8122173"
 
     implementation "curse.maven:javascriptjs-1238318:6855084"
 

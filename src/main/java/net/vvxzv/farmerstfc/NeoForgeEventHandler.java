@@ -20,6 +20,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
@@ -186,6 +187,7 @@ public class NeoForgeEventHandler {
                     if(!player.isCreative()) {
                         stack.shrink(1);
                     }
+                    event.setCancellationResult(ItemInteractionResult.SUCCESS);
                     event.setCanceled(true);
                 }
             }

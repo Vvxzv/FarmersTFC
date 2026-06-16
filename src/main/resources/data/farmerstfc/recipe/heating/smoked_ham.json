@@ -7,12 +7,7 @@
 	"result_item": {
 		"stack": {
 			"id": "farmersdelight:smoked_ham",
-			"count": 1,
-			"components": {
-				"tfc:food": {
-					"creation_date": -1
-				}
-			}
+			"count": 1
 		},
 		"modifiers": [
 			{

@@ -9,6 +9,8 @@
   "tfc.jei.skillet_heating": "煎锅加热",
   "farmerstfc.tooltip.food_trait.skillet_cooked": "煎锅煎制",
   "farmerstfc.tooltip.food_trait.cellar_preserved": "保存于地窖",
+  "farmerstfc.tooltip.food_trait.cellar_preserved_2": "保存于地窖",
+  "farmerstfc.tooltip.food_trait.cellar_preserved_3": "保存于地窖",
   "block.farmerstfc.rich_soil_farmland": "沃土耕地",
   "block.farmerstfc.rotten_roast_chicken_block": "腐烂的烤鸡",
   "block.farmerstfc.rotten_stuffed_pumpkin_block": "腐烂的填馅南瓜",

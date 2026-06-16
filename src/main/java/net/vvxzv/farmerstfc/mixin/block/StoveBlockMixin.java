@@ -92,15 +92,6 @@ public abstract class StoveBlockMixin extends AbstractStoveBlock {
                 for (ItemStack fuel : stove.getFuels()) {
                     Helpers.spawnItem(level, pos, fuel);
                 }
-
-                ItemStack stoveItem = new ItemStack(ModBlocks.STOVE.get());
-                if(Config.stoveNeedsFuel) {
-                    CustomData data = stoveItem.get(DataComponents.TAG);
-                    CompoundTag tag = data != null? data.copyTag(): new CompoundTag();
-                    tag.putBoolean("extinguish", true);
-                    stoveItem.set(DataComponents.TAG, CustomData.of(tag));
-                }
-                Helpers.spawnItem(level, pos, stoveItem);
             }
         }
 

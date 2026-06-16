@@ -1,0 +1,12 @@
+{
+  "type": "farmerstfc:add_components",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "farmersdelight:blocks/stove"
+    }
+  ],
+  "target": "farmersdelight:stove",
+  "components": {"farmerstfc:tag": {"extinguish": true}
+  }
+}

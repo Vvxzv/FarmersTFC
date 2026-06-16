@@ -14,5 +14,6 @@ public class LootModifiers {
 
     static {
         LOOT_MODIFIER_SERIALIZERS.register("remove_items", () -> RemoveItemsModifier.CODEC);
+        LOOT_MODIFIER_SERIALIZERS.register("add_components", () -> AddComponentsModifier.CODEC);
     }
 }

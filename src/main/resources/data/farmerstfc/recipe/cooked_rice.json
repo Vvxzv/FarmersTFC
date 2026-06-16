@@ -2,12 +2,7 @@
 	"type": "minecraft:crafting_shapeless",
 	"result": {
 		"id": "farmersdelight:cooked_rice",
-		"count": 1,
-		"components": {
-			"tfc:food": {
-				"creation_date": 276912000
-			}
-		}
+		"count": 1
 	},
 	"ingredients": [
 		{
