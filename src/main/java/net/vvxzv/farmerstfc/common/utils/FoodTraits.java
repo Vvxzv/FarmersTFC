@@ -13,6 +13,8 @@ public class FoodTraits {
     }
 
     public static final FoodTrait SKILLET_COOKED  = register("skillet_cooked", 0.9F);
-    public static final FoodTrait CELLAR_PRESERVED = register("cellar_preserved", 0.5F);
+    public static final FoodTrait CELLAR_PRESERVED  = register("cellar_preserved", 0.35F);
+    public static final FoodTrait CELLAR_PRESERVED_2  = register("cellar_preserved_2", 0.3F);
+    public static final FoodTrait CELLAR_PRESERVED_3  = register("cellar_preserved_3", 0.2F);
 
 }

@@ -2,6 +2,7 @@ package net.vvxzv.farmerstfc.common.block.entity;
 
 import net.dries007.tfc.common.blockentities.TFCBlockEntity;
 import net.dries007.tfc.common.capabilities.heat.HeatCapability;
+import net.dries007.tfc.common.capabilities.heat.IHeatBlock;
 import net.dries007.tfc.util.Fuel;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.minecraft.core.BlockPos;

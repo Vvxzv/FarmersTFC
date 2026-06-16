@@ -9,6 +9,8 @@
   "tfc.jei.skillet_heating": "Skillet Heating",
   "farmerstfc.tooltip.food_trait.skillet_cooked": "Skillet Cooked",
   "farmerstfc.tooltip.food_trait.cellar_preserved": "Cellar Preserved",
+  "farmerstfc.tooltip.food_trait.cellar_preserved_2": "Cellar Preserved",
+  "farmerstfc.tooltip.food_trait.cellar_preserved_3": "Cellar Preserved",
   "block.farmerstfc.rich_soil_farmland": "Rich Soil Farmland",
   "block.farmerstfc.rotten_roast_chicken_block": "Rotten Roast Chicken",
   "block.farmerstfc.rotten_stuffed_pumpkin_block": "Rotten Stuffed Pumpkin Block",
