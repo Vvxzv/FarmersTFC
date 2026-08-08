@@ -155,12 +155,7 @@ StartupEvents.registry('block', event => {
 3. 在 ```/kubejs/server_scripts/crateData.js```定义物品箱装数据
 ```JavaScript
 FarmersTFCEvent.data(event => {
-    event.crate({
-        ingredient: {
-            item: "tfc:food/red_apple"
-        }, 
-        block: 'kubejs:red_apple_crate' 
-    }, 'kubejs:example')
+    event.crate("tfc:food/red_apple", 'kubejs:red_apple_crate')
 })
 ```
 
@@ -323,11 +318,6 @@ StartupEvents.registry('block', event => {
 3. In  ```/kubejs/server_scripts/crateData.js``` define data for crate block
 ```JavaScript
 FarmersTFCEvent.data(event => {
-    event.crate({
-        ingredient: {
-            item: "tfc:food/red_apple"
-        }, 
-        block: 'kubejs:red_apple_crate' 
-    }, 'kubejs:example')
+    event.crate("tfc:food/red_apple", 'kubejs:red_apple_crate')
 })
 ```

@@ -8,19 +8,26 @@ import net.vvxzv.farmerstfc.Config;
 import net.vvxzv.farmerstfc.common.registry.BlockEntities;
 import org.jetbrains.annotations.NotNull;
 
-public class RichSoilFarmlandBlockEntity extends FarmlandBlockEntity{
+public class RichSoilFarmlandBlockEntity extends FarmlandBlockEntity {
 
     public RichSoilFarmlandBlockEntity(BlockPos pos, BlockState state) {
         super(BlockEntities.FARMLAND.get(), pos, state);
     }
 
-    private static float getFertilizerTimesValue(){
+    private float getFertilizerTimesValue(){
         return (float) Config.fertilizerOnRichFarmland;
     }
 
     @Override
-    public void addNutrients(@NotNull Fertilizer fertilizer, float multiplier) {
-        float richMultiplier = multiplier * getFertilizerTimesValue();
-        super.addNutrients(fertilizer, richMultiplier);
+    public void addNutrient(FarmlandBlockEntity.@NotNull NutrientType type, float value) {
+        this.setNutrient(type, this.getNutrient(type) + value * this.getFertilizerTimesValue());
+    }
+
+    @Override
+    public void addNutrients(Fertilizer fertilizer, float multiplier) {
+        this.addNutrient(NutrientType.NITROGEN, fertilizer.nitrogen() * multiplier);
+        this.addNutrient(NutrientType.PHOSPHOROUS, fertilizer.phosphorus() * multiplier);
+        this.addNutrient(NutrientType.POTASSIUM, fertilizer.potassium() * multiplier);
+        this.markForSync();
     }
 }

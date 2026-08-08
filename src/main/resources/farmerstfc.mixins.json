@@ -11,6 +11,8 @@
     "block.RichSoilBlockMixin",
     "block.StoveBlockMixin",
     "block.TFCCakeBlockMixin",
+    "block.entity.CookingPotBlockEntityMixin",
+    "block.entity.FLBeehiveBlockEntityMixin",
     "block.entity.SkilletBlockEntityMixin"
   ],
   "client" : [

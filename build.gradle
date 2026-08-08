@@ -140,13 +140,13 @@ dependencies {
     runtimeOnly "curse.maven:patchouli-306770:6842247"
 
     // tfc
-    implementation "curse.maven:terrafirmacraft-302973:7875771"
+    implementation "curse.maven:terrafirmacraft-302973:8467670"
 
     // firmalife
     implementation "curse.maven:firmalife-453394:7876126"
 
     // farmers delight
-    implementation "curse.maven:farmers-delight-398521:8007613"
+    implementation "curse.maven:farmers-delight-398521:8083481"
 
     //JEI
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
