@@ -2,7 +2,15 @@
 	"type": "farmersdelight:cutting",
 	"ingredients": [
 		{
-			"item": "tfc:melon"
+			"children": [
+				{
+					"type": "tfc:not_rotten"
+				},
+				{
+					"item": "tfc:melon"
+				}
+			],
+			"type": "neoforge:intersection"
 		}
 	],
 	"result": [
