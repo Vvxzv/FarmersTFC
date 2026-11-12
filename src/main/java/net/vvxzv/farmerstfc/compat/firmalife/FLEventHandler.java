@@ -1,7 +1,6 @@
 package net.vvxzv.farmerstfc.compat.firmalife;
 
 import com.eerussianguy.firmalife.common.blocks.FLBlocks;
-import com.eerussianguy.firmalife.common.blocks.greenhouse.ClimateStationBlock;
 import com.eerussianguy.firmalife.common.util.Mechanics;
 import com.eerussianguy.firmalife.config.FLConfig;
 import net.dries007.tfc.common.component.food.FoodCapability;
